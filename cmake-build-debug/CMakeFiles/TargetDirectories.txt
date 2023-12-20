@@ -1,0 +1,3 @@
+C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/AmericanDemocracySimulator.dir
+C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
