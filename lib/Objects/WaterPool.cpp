@@ -22,7 +22,7 @@ namespace Game::Objects
     }
 
     void WaterPool::AddToHolder() {
-        holder.addObject("animation",baseAnimation->GetEndFrameSprite());
+        holder.addObject("water_animation",baseAnimation->GetEndFrameSprite());
 
     }
 

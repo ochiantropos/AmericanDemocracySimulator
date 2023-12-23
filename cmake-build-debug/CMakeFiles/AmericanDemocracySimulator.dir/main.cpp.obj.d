@@ -532,4 +532,5 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/Objects/Objects.h \
  C:/AmericanDemocracySimulator/lib/Objects/WaterPool.h \
  C:\AmericanDemocracySimulator\lib/Scenes/GamePlayScene.h \
- C:/AmericanDemocracySimulator/lib/Objects/Objects.h
+ C:/AmericanDemocracySimulator/lib/Objects/Objects.h \
+ C:/AmericanDemocracySimulator/lib/Objects/Ship.h

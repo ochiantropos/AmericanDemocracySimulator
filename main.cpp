@@ -11,7 +11,7 @@ const int screenWidth = 900;
 const int screenHeight = 560;
 float deltaTime = 0;
 
-void DebugInspector(map<int, vector<GameObject *>> objects);
+void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer);
 
 
 sf::RenderWindow windowContext(sf::VideoMode(screenWidth,  screenHeight), "Main");
@@ -27,7 +27,7 @@ int main()
 {
 
     sf::Clock clock;
-    GamePlayScene scene = GamePlayScene( new Scene("MainScene", "Main"), y_size, x_size);
+    GamePlayScene scene = GamePlayScene( new Scene("MainScene", "Main"), windowContext.getSize().y, windowContext.getSize().x);
 
     auto sceneManager = SceneManager::GetInstance();
     sceneManager->AddScene(scene.scene);
@@ -41,7 +41,7 @@ int main()
     // log all
     sceneManager->activeScene->getObjects();
     auto objects = sceneManager->activeScene->getObjects();
-    DebugInspector(objects);
+    DebugInspector(objects, 2);
     while (windowContext.isOpen())
     {
         sf::Event event {};
@@ -73,14 +73,25 @@ int main()
 }
 
 
-void DebugInspector(map<int, vector<GameObject *>> objects){
+void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer = 5){
     for (auto& layer : objects) {
+
         std::vector<GameObject*>& gameObjects = layer.second;
+
+        int count = 0;
+        std::string tabs;
+        for (int i = 1; i <= layer.first; i++) tabs.append("\t");
+        auto layerIndexName = std::string(" ["  + to_string(layer.first) + "] ");
+        GameObject *last;
         for (auto* gameObject : gameObjects) {
-            auto layerIndexName = std::string(" ["  + to_string(layer.first) + "] ");
-            std::string tabs;
-            for (int i = 1; i <= layer.first; i++) tabs.append("\t");
-            Debugger::Log(  layerIndexName + tabs + gameObject->gameObjectName , Game::Debugger::Color::BLUE);
+
+            if (count < max_in_layer)
+                Debugger::Log( layerIndexName + tabs = " "  + std::string(to_string(count)) + "-" + gameObject->gameObjectName , Game::Debugger::Color::BLUE);
+            else if (count == max_in_layer)
+                Debugger::Log( tabs + std::string(" ..... "),  Game::Debugger::Color::BLUE);
+            last = gameObject;
+            count++;
         }
+        if (count >= max_in_layer) Debugger::Log( layerIndexName + tabs = " "  + std::string(to_string(count-1)) + "-" + last->gameObjectName , Game::Debugger::Color::BLUE);
     }
 }

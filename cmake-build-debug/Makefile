@@ -152,6 +152,30 @@ lib/Animations/Animation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.s
 .PHONY : lib/Animations/Animation.cpp.s
 
+lib/Animations/GroundAnimation.obj: lib/Animations/GroundAnimation.cpp.obj
+.PHONY : lib/Animations/GroundAnimation.obj
+
+# target to build an object file
+lib/Animations/GroundAnimation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj
+.PHONY : lib/Animations/GroundAnimation.cpp.obj
+
+lib/Animations/GroundAnimation.i: lib/Animations/GroundAnimation.cpp.i
+.PHONY : lib/Animations/GroundAnimation.i
+
+# target to preprocess a source file
+lib/Animations/GroundAnimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.i
+.PHONY : lib/Animations/GroundAnimation.cpp.i
+
+lib/Animations/GroundAnimation.s: lib/Animations/GroundAnimation.cpp.s
+.PHONY : lib/Animations/GroundAnimation.s
+
+# target to generate assembly for a file
+lib/Animations/GroundAnimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.s
+.PHONY : lib/Animations/GroundAnimation.cpp.s
+
 lib/Animations/WaterAnimation.obj: lib/Animations/WaterAnimation.cpp.obj
 .PHONY : lib/Animations/WaterAnimation.obj
 
@@ -320,6 +344,54 @@ lib/Objects/Ground.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.s
 .PHONY : lib/Objects/Ground.cpp.s
 
+lib/Objects/Ship.obj: lib/Objects/Ship.cpp.obj
+.PHONY : lib/Objects/Ship.obj
+
+# target to build an object file
+lib/Objects/Ship.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj
+.PHONY : lib/Objects/Ship.cpp.obj
+
+lib/Objects/Ship.i: lib/Objects/Ship.cpp.i
+.PHONY : lib/Objects/Ship.i
+
+# target to preprocess a source file
+lib/Objects/Ship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.i
+.PHONY : lib/Objects/Ship.cpp.i
+
+lib/Objects/Ship.s: lib/Objects/Ship.cpp.s
+.PHONY : lib/Objects/Ship.s
+
+# target to generate assembly for a file
+lib/Objects/Ship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.s
+.PHONY : lib/Objects/Ship.cpp.s
+
+lib/Objects/ShipDieAnimated.obj: lib/Objects/ShipDieAnimated.cpp.obj
+.PHONY : lib/Objects/ShipDieAnimated.obj
+
+# target to build an object file
+lib/Objects/ShipDieAnimated.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj
+.PHONY : lib/Objects/ShipDieAnimated.cpp.obj
+
+lib/Objects/ShipDieAnimated.i: lib/Objects/ShipDieAnimated.cpp.i
+.PHONY : lib/Objects/ShipDieAnimated.i
+
+# target to preprocess a source file
+lib/Objects/ShipDieAnimated.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.i
+.PHONY : lib/Objects/ShipDieAnimated.cpp.i
+
+lib/Objects/ShipDieAnimated.s: lib/Objects/ShipDieAnimated.cpp.s
+.PHONY : lib/Objects/ShipDieAnimated.s
+
+# target to generate assembly for a file
+lib/Objects/ShipDieAnimated.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.s
+.PHONY : lib/Objects/ShipDieAnimated.cpp.s
+
 lib/Objects/WaterPool.obj: lib/Objects/WaterPool.cpp.obj
 .PHONY : lib/Objects/WaterPool.obj
 
@@ -404,6 +476,9 @@ help:
 	@echo ... lib/Animations/Animation.obj
 	@echo ... lib/Animations/Animation.i
 	@echo ... lib/Animations/Animation.s
+	@echo ... lib/Animations/GroundAnimation.obj
+	@echo ... lib/Animations/GroundAnimation.i
+	@echo ... lib/Animations/GroundAnimation.s
 	@echo ... lib/Animations/WaterAnimation.obj
 	@echo ... lib/Animations/WaterAnimation.i
 	@echo ... lib/Animations/WaterAnimation.s
@@ -425,6 +500,12 @@ help:
 	@echo ... lib/Objects/Ground.obj
 	@echo ... lib/Objects/Ground.i
 	@echo ... lib/Objects/Ground.s
+	@echo ... lib/Objects/Ship.obj
+	@echo ... lib/Objects/Ship.i
+	@echo ... lib/Objects/Ship.s
+	@echo ... lib/Objects/ShipDieAnimated.obj
+	@echo ... lib/Objects/ShipDieAnimated.i
+	@echo ... lib/Objects/ShipDieAnimated.s
 	@echo ... lib/Objects/WaterPool.obj
 	@echo ... lib/Objects/WaterPool.i
 	@echo ... lib/Objects/WaterPool.s

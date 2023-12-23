@@ -34,6 +34,13 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Scenes/GamePlayScene.h
         lib/Objects/Ground.cpp
         lib/Objects/Ground.h
+        lib/Animations/GroundAnimation.cpp
+        lib/Animations/GroundAnimation.h
+        lib/Animations/GroundAnimation.h
+        lib/Objects/Ship.cpp
+        lib/Objects/Ship.h
+        lib/Objects/ShipDieAnimated.cpp
+        lib/Objects/ShipDieAnimated.h
 ) # add  target
 
 set(SFML_DIR "C:\\AmericanDemocracySimulator\\lib\\SFML\\SFML-2.6.1\\lib\\cmake\\SFML") # link the graphic directory

@@ -109,6 +109,12 @@
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/Animations.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/GroundAnimation.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/GroundAnimation.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/WaterAnimation.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
@@ -167,6 +173,18 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Objects.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Ship.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Ship.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/ShipDieAnimated.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/ShipDieAnimated.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/WaterPool.cpp">

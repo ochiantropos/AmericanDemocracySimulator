@@ -242,6 +242,7 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
+ C:/AmericanDemocracySimulator/lib/Objects/Ship.h \
  C:/AmericanDemocracySimulator/lib/Debugger/Debugger.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/windows.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -487,4 +488,5 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/winsvc.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/mcx.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/imm.h
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/imm.h \
+ C:/AmericanDemocracySimulator/lib/Objects/Ground.h

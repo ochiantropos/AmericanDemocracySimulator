@@ -16,11 +16,16 @@ namespace Game::Objects {
             sf::Texture texture;
             sf::Sprite sprite;
         public:
-            void UpdateDrawObjects() override;
-            void AddToHolder();
+            int x_position = 0;
+            int y_position = 0;
 
+            void UpdateDrawObjects() override;
+
+            explicit Ground(sf::RenderWindow *windowContext, const sf::Sprite& sprite1, int _x, int _y);
             explicit Ground(sf::RenderWindow *windowContext, int x = 0, int y = 0);
             explicit Ground(sf::RenderWindow* windowContext);
+
+            void AddToHolder();
         };
 
     } // Objects

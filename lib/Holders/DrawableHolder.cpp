@@ -17,7 +17,6 @@ namespace Game {
 
     void DrawableHolder::addObject(const std::string &key, sf::Sprite object) {
         objects[key] = std::move(object);
-
     }
 
     void DrawableHolder::DeleteDrawable(const sf::Sprite& object, const std::string &name) {

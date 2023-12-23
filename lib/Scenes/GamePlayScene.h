@@ -7,6 +7,7 @@
 
 
 #include "../Objects/Objects.h"
+#include "../Objects/Ship.h"
 
 namespace Game {
 
@@ -21,11 +22,17 @@ namespace Game {
         int y_size = 0;
         Scene *scene{};
 
-        sf::Sprite groundSprite;
-        sf::Texture groundTexture;
+        std::vector<Objects::Ship*> *active_ships = new std::vector<Objects::Ship*>();
+
+        sf::Sprite shipSprite;
+        sf::Texture shipTexture;
 
         void CreatePool() const;
-        void CreateGround();
+        void CreateGround() const;
+
+        void LoadShipTexture();
+
+        void CreateShip(float x, float y) const;
     };
 
 } // Game
