@@ -29,7 +29,7 @@ namespace Game {
         explicit Scene(const std::map<int, std::vector<GameObject *>> &layers);
         explicit Scene(std::string name);
         explicit Scene(std::string name, std::string contextName);
-        void addObject(GameObject* object, int layer);
+        void addObject(GameObject *object, int layer);
 
         std::map<int, std::vector<GameObject*>>& getObjects() {return layers;}
 

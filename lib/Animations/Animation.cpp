@@ -61,7 +61,7 @@ namespace Game {
     }
 // ----------------------- data funk -----------------------
     void Animation::DataParse(){
-        if (!texture.loadFromFile(R"(C:\AmericanDemocracySimulator\textures\sea_game_pool.png)"))
+        if (!texture.loadFromFile(R"(C:\AmericanDemocracySimulator\textures\sea_game_pool_water.png)"))
             std::cout << "Error loading texture!" << std::endl;
         sprite.setTexture(texture);
         sprite.setTextureRect(sf::IntRect(0 * frameWidth, 0 * frameHeight, frameWidth, frameHeight));
@@ -117,5 +117,6 @@ namespace Game {
         int row = currentFrame / (texture.getSize().x / frameWidth);
 //        Debugger::Log("Next animation frame " + std::to_string(column) + " " + std::to_string(row), Debugger::Color::YELLOW);
         sprite.setTextureRect(sf::IntRect(column * frameWidth, row * frameHeight, frameWidth, frameHeight));
+        sprite.setPosition((float)x, (float)y);
     }
 } // Game

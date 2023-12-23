@@ -1,13 +1,14 @@
 ﻿#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "lib/Game.h"
+#include "lib/Scenes/GamePlayScene.h"
 #include <vector>
 
 using namespace std;
 using namespace Game;
 //Declare ini
-const int screenWidth = 600;
-const int screenHeight = 400;
+const int screenWidth = 900;
+const int screenHeight = 560;
 float deltaTime = 0;
 
 void DebugInspector(map<int, vector<GameObject *>> objects);
@@ -19,25 +20,27 @@ std::map<std::string, sf::RenderWindow*> m_screens = {
 };
 SceneManager* SceneManager::singleton_= nullptr;
 
+int y_size = windowContext.getSize().y / 80;
+int x_size = windowContext.getSize().x / 80;
+
 int main()
 {
 
     sf::Clock clock;
-    Scene main = Scene("MainScene", "Main");
+    GamePlayScene scene = GamePlayScene( new Scene("MainScene", "Main"), y_size, x_size);
 
     auto sceneManager = SceneManager::GetInstance();
-    sceneManager->AddScene(&main);
+    sceneManager->AddScene(scene.scene);
 
     SceneManager::PrintScenes();
     SceneManager::SwitchScene("Main");
-    Objects::WaterPool pool = Objects::WaterPool(&windowContext);;
 
-    main.addObject(&pool,1);
+
+
 
     // log all
     sceneManager->activeScene->getObjects();
     auto objects = sceneManager->activeScene->getObjects();
-
     DebugInspector(objects);
     while (windowContext.isOpen())
     {

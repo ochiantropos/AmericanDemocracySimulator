@@ -12,7 +12,10 @@ namespace Game {
     Scene::Scene(const std::map<int, std::vector<GameObject *>> &layers) : layers(layers) {runContextCreation();}
     Scene::Scene(std::string name, std::string contextName) :  Name(std::move(name)), ContextName(std::move(contextName)) , layers({{0, std::vector<GameObject*>()}}){runContextCreation();}
 
-    void Scene::addObject(GameObject* object, int layer=0) {
+    void Scene::runContextCreation() {
+
+    }
+    void Scene::addObject(GameObject *object, int layer) {
         // Якщо лейер не вказаний або вказано неправильно
         if (layers.find(layer) == layers.end() || layer <= 0) {
             // Знайдемо перший вільний лейер або створимо новий
@@ -23,10 +26,6 @@ namespace Game {
             layer = freeLayer;
         }
         layers[layer].push_back(object);
-    }
-
-    void Scene::runContextCreation() {
-
     }
 
 

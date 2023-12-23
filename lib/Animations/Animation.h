@@ -25,8 +25,8 @@ namespace Game {
         sf::Clock animationTimer;
 
     public:
-
-
+        int x = 0;
+        int y = 0;
         float frameTime = 0.2f;
         std::string animationName = "base_animation";
         sf::Vector2<unsigned int> size;

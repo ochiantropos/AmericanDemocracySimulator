@@ -296,6 +296,30 @@ lib/Holders/DrawableHolder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.s
 .PHONY : lib/Holders/DrawableHolder.cpp.s
 
+lib/Objects/Ground.obj: lib/Objects/Ground.cpp.obj
+.PHONY : lib/Objects/Ground.obj
+
+# target to build an object file
+lib/Objects/Ground.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj
+.PHONY : lib/Objects/Ground.cpp.obj
+
+lib/Objects/Ground.i: lib/Objects/Ground.cpp.i
+.PHONY : lib/Objects/Ground.i
+
+# target to preprocess a source file
+lib/Objects/Ground.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.i
+.PHONY : lib/Objects/Ground.cpp.i
+
+lib/Objects/Ground.s: lib/Objects/Ground.cpp.s
+.PHONY : lib/Objects/Ground.s
+
+# target to generate assembly for a file
+lib/Objects/Ground.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.s
+.PHONY : lib/Objects/Ground.cpp.s
+
 lib/Objects/WaterPool.obj: lib/Objects/WaterPool.cpp.obj
 .PHONY : lib/Objects/WaterPool.obj
 
@@ -319,6 +343,30 @@ lib/Objects/WaterPool.s: lib/Objects/WaterPool.cpp.s
 lib/Objects/WaterPool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.s
 .PHONY : lib/Objects/WaterPool.cpp.s
+
+lib/Scenes/GamePlayScene.obj: lib/Scenes/GamePlayScene.cpp.obj
+.PHONY : lib/Scenes/GamePlayScene.obj
+
+# target to build an object file
+lib/Scenes/GamePlayScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj
+.PHONY : lib/Scenes/GamePlayScene.cpp.obj
+
+lib/Scenes/GamePlayScene.i: lib/Scenes/GamePlayScene.cpp.i
+.PHONY : lib/Scenes/GamePlayScene.i
+
+# target to preprocess a source file
+lib/Scenes/GamePlayScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.i
+.PHONY : lib/Scenes/GamePlayScene.cpp.i
+
+lib/Scenes/GamePlayScene.s: lib/Scenes/GamePlayScene.cpp.s
+.PHONY : lib/Scenes/GamePlayScene.s
+
+# target to generate assembly for a file
+lib/Scenes/GamePlayScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.s
+.PHONY : lib/Scenes/GamePlayScene.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -374,9 +422,15 @@ help:
 	@echo ... lib/Holders/DrawableHolder.obj
 	@echo ... lib/Holders/DrawableHolder.i
 	@echo ... lib/Holders/DrawableHolder.s
+	@echo ... lib/Objects/Ground.obj
+	@echo ... lib/Objects/Ground.i
+	@echo ... lib/Objects/Ground.s
 	@echo ... lib/Objects/WaterPool.obj
 	@echo ... lib/Objects/WaterPool.i
 	@echo ... lib/Objects/WaterPool.s
+	@echo ... lib/Scenes/GamePlayScene.obj
+	@echo ... lib/Scenes/GamePlayScene.i
+	@echo ... lib/Scenes/GamePlayScene.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

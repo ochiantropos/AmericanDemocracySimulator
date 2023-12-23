@@ -9,8 +9,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "AbstractGameObject.h"
 #include "Scene.h"
-#include "Animation.h"
-#include "WaterAnimation.h"
+#include "../Animations/Animation.h"
 
 namespace Game {
 
@@ -31,7 +30,7 @@ namespace Game {
 
     public:
         Scene *currentContext = nullptr;
-        WaterAnimation *baseAnimation;
+        Animation *baseAnimation;
     };
 
     } // Game
