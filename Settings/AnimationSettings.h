@@ -29,6 +29,25 @@ namespace Game {
 
         const std::string WaterPoolPath = R"(C:\AmericanDemocracySimulator\textures\sea_game_pool_sheet.png)";
 
+        const float PointWidth = 20.0f;
+        const float PointHeight = 20.0f;
+        const float WPointAnimationFrameTime = 0.15f;
+        const int PointAnimationFrame = 19;
+        const std::string PointPath = R"(C:\AmericanDemocracySimulator\textures\point.png)";
+
+        const float DeadWidth = 20.0f;
+        const float  DeadHeight = 20.0f;
+        const float  DeadAnimationFrameTime = 0.15f;
+        const int DeadAnimationFrame = 19;
+        const std::string  DeadPath = R"(C:\AmericanDemocracySimulator\textures\point.png)";
+
+        const float BoomWidth = 100.0f;
+        const float  BoomHeight = 100.0f;
+        const float  BoomAnimationFrameTime = 0.1f;
+        const int BoomAnimationFrame = 23;
+        const std::string  BoomPath = R"(C:\AmericanDemocracySimulator\textures\boom.png)";
+
+
     };
 }
 

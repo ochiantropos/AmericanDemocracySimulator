@@ -1,0 +1,16 @@
+//
+// Created by OchiAnthropos on 24.12.2023.
+//
+
+#ifndef AMERICANDEMOCRACYSIMULATOR_DEADANIMATION_H
+#define AMERICANDEMOCRACYSIMULATOR_DEADANIMATION_H
+
+namespace Game {
+
+    class DeadAnimation {
+
+    };
+
+} // Game
+
+#endif //AMERICANDEMOCRACYSIMULATOR_DEADANIMATION_H

@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/AmericanDemocracySimulator/lib/Animations/Animation.cpp" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj" "gcc" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj.d"
+  "C:/AmericanDemocracySimulator/lib/Animations/DeadAnimation.cpp" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/DeadAnimation.cpp.obj" "gcc" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/DeadAnimation.cpp.obj.d"
   "C:/AmericanDemocracySimulator/lib/Animations/GroundAnimation.cpp" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj" "gcc" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj.d"
+  "C:/AmericanDemocracySimulator/lib/Animations/PointAnimation.cpp" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PointAnimation.cpp.obj" "gcc" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PointAnimation.cpp.obj.d"
   "C:/AmericanDemocracySimulator/lib/Animations/WaterAnimation.cpp" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj" "gcc" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj.d"
   "C:/AmericanDemocracySimulator/lib/Architect/Base/AbstractColliderType.cpp" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/AbstractColliderType.cpp.obj" "gcc" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/AbstractColliderType.cpp.obj.d"
   "C:/AmericanDemocracySimulator/lib/Architect/Base/Collider.cpp" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Collider.cpp.obj" "gcc" "CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Collider.cpp.obj.d"

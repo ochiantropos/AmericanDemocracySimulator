@@ -52,6 +52,10 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Architect/Base/Colliders/CircleCollider.cpp
         Settings/GamePlaySceneSettings.h
         Settings/AnimationSettings.h
+        lib/Animations/PointAnimation.cpp
+        lib/Animations/PointAnimation.h
+        lib/Animations/DeadAnimation.cpp
+        lib/Animations/DeadAnimation.h
 ) # add  target
 
 set(SFML_DIR "C:\\AmericanDemocracySimulator\\lib\\SFML\\SFML-2.6.1\\lib\\cmake\\SFML") # link the graphic directory

@@ -152,6 +152,30 @@ lib/Animations/Animation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.s
 .PHONY : lib/Animations/Animation.cpp.s
 
+lib/Animations/DeadAnimation.obj: lib/Animations/DeadAnimation.cpp.obj
+.PHONY : lib/Animations/DeadAnimation.obj
+
+# target to build an object file
+lib/Animations/DeadAnimation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/DeadAnimation.cpp.obj
+.PHONY : lib/Animations/DeadAnimation.cpp.obj
+
+lib/Animations/DeadAnimation.i: lib/Animations/DeadAnimation.cpp.i
+.PHONY : lib/Animations/DeadAnimation.i
+
+# target to preprocess a source file
+lib/Animations/DeadAnimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/DeadAnimation.cpp.i
+.PHONY : lib/Animations/DeadAnimation.cpp.i
+
+lib/Animations/DeadAnimation.s: lib/Animations/DeadAnimation.cpp.s
+.PHONY : lib/Animations/DeadAnimation.s
+
+# target to generate assembly for a file
+lib/Animations/DeadAnimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/DeadAnimation.cpp.s
+.PHONY : lib/Animations/DeadAnimation.cpp.s
+
 lib/Animations/GroundAnimation.obj: lib/Animations/GroundAnimation.cpp.obj
 .PHONY : lib/Animations/GroundAnimation.obj
 
@@ -175,6 +199,30 @@ lib/Animations/GroundAnimation.s: lib/Animations/GroundAnimation.cpp.s
 lib/Animations/GroundAnimation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.s
 .PHONY : lib/Animations/GroundAnimation.cpp.s
+
+lib/Animations/PointAnimation.obj: lib/Animations/PointAnimation.cpp.obj
+.PHONY : lib/Animations/PointAnimation.obj
+
+# target to build an object file
+lib/Animations/PointAnimation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PointAnimation.cpp.obj
+.PHONY : lib/Animations/PointAnimation.cpp.obj
+
+lib/Animations/PointAnimation.i: lib/Animations/PointAnimation.cpp.i
+.PHONY : lib/Animations/PointAnimation.i
+
+# target to preprocess a source file
+lib/Animations/PointAnimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PointAnimation.cpp.i
+.PHONY : lib/Animations/PointAnimation.cpp.i
+
+lib/Animations/PointAnimation.s: lib/Animations/PointAnimation.cpp.s
+.PHONY : lib/Animations/PointAnimation.s
+
+# target to generate assembly for a file
+lib/Animations/PointAnimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PointAnimation.cpp.s
+.PHONY : lib/Animations/PointAnimation.cpp.s
 
 lib/Animations/WaterAnimation.obj: lib/Animations/WaterAnimation.cpp.obj
 .PHONY : lib/Animations/WaterAnimation.obj
@@ -644,9 +692,15 @@ help:
 	@echo ... lib/Animations/Animation.obj
 	@echo ... lib/Animations/Animation.i
 	@echo ... lib/Animations/Animation.s
+	@echo ... lib/Animations/DeadAnimation.obj
+	@echo ... lib/Animations/DeadAnimation.i
+	@echo ... lib/Animations/DeadAnimation.s
 	@echo ... lib/Animations/GroundAnimation.obj
 	@echo ... lib/Animations/GroundAnimation.i
 	@echo ... lib/Animations/GroundAnimation.s
+	@echo ... lib/Animations/PointAnimation.obj
+	@echo ... lib/Animations/PointAnimation.i
+	@echo ... lib/Animations/PointAnimation.s
 	@echo ... lib/Animations/WaterAnimation.obj
 	@echo ... lib/Animations/WaterAnimation.i
 	@echo ... lib/Animations/WaterAnimation.s

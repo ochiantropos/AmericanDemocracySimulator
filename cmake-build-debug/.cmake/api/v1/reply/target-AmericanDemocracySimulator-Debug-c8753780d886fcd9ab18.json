@@ -142,22 +142,6 @@
 				},
 				{
 					"backtrace" : 14,
-					"path" : "C:/AmericanDemocracySimulator/lib/Holders,"
-				},
-				{
-					"backtrace" : 14,
-					"path" : "C:/AmericanDemocracySimulator/lib/Objects,"
-				},
-				{
-					"backtrace" : 14,
-					"path" : "C:/AmericanDemocracySimulator/lib/Scenes,"
-				},
-				{
-					"backtrace" : 14,
-					"path" : "C:/AmericanDemocracySimulator/lib/Scenes"
-				},
-				{
-					"backtrace" : 14,
 					"path" : "C:/AmericanDemocracySimulator/lib/Architect,"
 				},
 				{
@@ -167,6 +151,18 @@
 				{
 					"backtrace" : 14,
 					"path" : "C:/AmericanDemocracySimulator/lib/Architect/Base/Colliders,"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "C:/AmericanDemocracySimulator/lib/Holders,"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "C:/AmericanDemocracySimulator/lib/Objects,"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "C:/AmericanDemocracySimulator/lib/Scenes"
 				},
 				{
 					"backtrace" : 2,
@@ -190,22 +186,24 @@
 				3,
 				5,
 				7,
-				11,
+				10,
+				13,
 				15,
-				17,
+				18,
 				20,
 				22,
 				24,
 				26,
 				28,
-				30,
-				32,
+				31,
+				33,
 				34,
+				36,
 				38,
 				40,
 				42,
-				44,
-				46
+				45,
+				47
 			]
 		}
 	],
@@ -282,22 +280,24 @@
 				3,
 				5,
 				7,
-				11,
+				10,
+				13,
 				15,
-				17,
+				18,
 				20,
 				22,
 				24,
 				26,
 				28,
-				30,
-				32,
+				31,
+				33,
 				34,
+				36,
 				38,
 				40,
 				42,
-				44,
-				46
+				45,
+				47
 			]
 		},
 		{
@@ -309,28 +309,27 @@
 				6,
 				8,
 				9,
-				10,
+				11,
 				12,
-				13,
 				14,
 				16,
-				18,
+				17,
 				19,
 				21,
 				23,
 				25,
 				27,
 				29,
-				31,
-				33,
+				30,
+				32,
 				35,
-				36,
 				37,
 				39,
 				41,
 				43,
-				45,
-				47
+				44,
+				46,
+				48
 			]
 		}
 	],
@@ -388,11 +387,6 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "lib/Architect/Architect.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
 			"path" : "lib/Architect/AbstractGameObject.h",
 			"sourceGroupIndex" : 1
 		},
@@ -405,11 +399,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "lib/Architect/SceneManager.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/Animations/Animations.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -512,14 +501,25 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "lib/Architect/Base/SceneHolder.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "lib/Architect/Base/SceneHolder.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "lib/Architect/Base/SceneHolder.h",
+			"path" : "lib/Architect/Base/IColliderCompare.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Architect/Base/IColliderCompare.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
@@ -529,8 +529,47 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "lib/Architect/Base/Coroutine.h",
+			"path" : "lib/Architect/Base/Collider.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Architect/Base/Collider.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Architect/Base/AbstractColliderType.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Architect/Base/AbstractColliderType.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Architect/Base/Colliders/RectangleCollider.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Architect/Base/Colliders/RectangleCollider.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "lib/Architect/Base/Colliders/CircleCollider.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "lib/Architect/Base/Colliders/CircleCollider.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
@@ -545,56 +584,23 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "lib/Architect/Base/Collider.cpp",
+			"path" : "lib/Animations/PointAnimation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "lib/Architect/Base/Collider.h",
+			"path" : "lib/Animations/PointAnimation.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "lib/Architect/Base/AbstractColliderType.cpp",
+			"path" : "lib/Animations/DeadAnimation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "lib/Architect/Base/AbstractColliderType.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/Architect/Base/IColliderCompare.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/Architect/Base/IColliderCompare.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/Architect/Base/Colliders/RectangleCollider.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/Architect/Base/Colliders/RectangleCollider.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "lib/Architect/Base/Colliders/CircleCollider.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/Architect/Base/Colliders/CircleCollider.h",
+			"path" : "lib/Animations/DeadAnimation.h",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -1,0 +1,16 @@
+//
+// Created by OchiAnthropos on 24.12.2023.
+//
+
+#ifndef AMERICANDEMOCRACYSIMULATOR_POINTANIMATION_H
+#define AMERICANDEMOCRACYSIMULATOR_POINTANIMATION_H
+
+namespace Game {
+
+    class PointAnimation {
+
+    };
+
+} // Game
+
+#endif //AMERICANDEMOCRACYSIMULATOR_POINTANIMATION_H
