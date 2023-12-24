@@ -125,6 +125,7 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
  C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
+ C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderWindow.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTarget.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/View.hpp \
@@ -196,7 +197,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stream_iterator.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/String.inl \
- C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
  C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
@@ -240,4 +240,5 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
+ C:/AmericanDemocracySimulator/Settings/AnimationSettings.h \
  C:/AmericanDemocracySimulator/lib/Animations/WaterAnimation.h

@@ -19,6 +19,7 @@ namespace Game {
         explicit Collider(TColliderType coll);
 
         bool CompareCollider(Collider collider2) {
+            return true;
         }
     };
 

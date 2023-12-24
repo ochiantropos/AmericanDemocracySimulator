@@ -4,7 +4,6 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_SCENE_H
 #define AMERICANDEMOCRACYSIMULATOR_SCENE_H
-#pragma once
 
 #include <iostream>
 #include <map>

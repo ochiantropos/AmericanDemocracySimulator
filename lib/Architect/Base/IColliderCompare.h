@@ -8,13 +8,13 @@
 namespace Game {
 
     class IColliderCompare {
-        bool CheckCollision(CircleCollider collider1, CircleCollider collider2);
-
-        bool CheckCollision(CircleCollider collider1, RectangleCollider collider2);
-
-        bool CheckCollision(RectangleCollider collider1, CircleCollider collider2);
-
-        bool CheckCollision(RectangleCollider collider1, RectangleCollider collider2);
+//        bool CheckCollision(CircleCollider collider1, CircleCollider collider2);
+//
+//        bool CheckCollision(CircleCollider collider1, RectangleCollider collider2);
+//
+//        bool CheckCollision(RectangleCollider collider1, CircleCollider collider2);
+//
+//        bool CheckCollision(RectangleCollider collider1, RectangleCollider collider2);
     };
 
 } // Game

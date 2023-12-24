@@ -6,7 +6,6 @@
 #define AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
 #pragma once
 
-#include <SFML/Graphics/RenderWindow.hpp>
 #include "AbstractGameObject.h"
 #include "Scene.h"
 #include "../Animations/Animation.h"

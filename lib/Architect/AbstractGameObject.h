@@ -5,6 +5,7 @@
 #ifndef AMERICANDEMOCRACYSIMULATOR_ABSTRACTGAMEOBJECT_H
 #define AMERICANDEMOCRACYSIMULATOR_ABSTRACTGAMEOBJECT_H
 
+#include <SFML/Graphics/RenderWindow.hpp>
 #include "HolderableObject.h"
 
 namespace Game{

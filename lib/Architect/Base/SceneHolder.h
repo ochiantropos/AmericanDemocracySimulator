@@ -6,7 +6,6 @@
 #define AMERICANDEMOCRACYSIMULATOR_SCENEHOLDER_H
 #include <iostream>
 #include <map>
-#include <SFML/System/Clock.hpp>
 #include "Coroutine.h"
 #include "../Scene.h"
 

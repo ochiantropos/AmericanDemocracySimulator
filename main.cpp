@@ -1,6 +1,7 @@
 ﻿#include <SFML/Graphics.hpp>
-#include "lib/Game.h"
 #include "GamePlayScene.h"
+#include "lib/Architect/SceneManager.h"
+#include "lib/Debugger/Debugger.h"
 #include <vector>
 using namespace std;
 using namespace Game;
@@ -32,13 +33,27 @@ GamePlayScene *scene = new GamePlayScene( new Scene("MainScene", "Main"), (int)w
 
 int main()
 {
-    sf::Clock clock; // main game clock
 
-//    auto sceneManager = SceneManager::GetInstance(); // get scene manager instance
+    auto sceneManager = SceneManager::GetInstance(); // get scene manager instance
 //
 //    auto objects = PoolSceneManager(sceneManager); // pooling the scenes and objects
 //
-//    StartGameCicle(sceneManager, objects); // start  main game cicle
+    sceneManager->AddScene(scene->scene);
+    SceneManager::PrintScenes();
+    SceneManager::SwitchScene("Main");
+    sceneManager->activeScene->scene->getObjects();
+    sceneManager->activeScene->Start();
+    auto objects = sceneManager->activeScene->scene->getObjects();
+    DebugInspector(objects, 2);
+    while (windowContext.isOpen())
+    {
+        EventLoopDispatch();
+        objects = sceneManager->activeScene->scene->getObjects();
+        windowContext.clear(sf::Color::White);
+        DrawActiveScene(objects);
+        windowContext.display();
+        sceneManager->activeScene->Next();
+    }
 //
 //    Collider<RectangleCollider> collider1;
 //    Collider<RectangleCollider> collider2;
