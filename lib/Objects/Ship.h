@@ -11,13 +11,7 @@
 namespace Game::Objects {
 
     class Ship : public GameObject{
-
-    protected:
-        sf::Texture texture;
-        sf::Sprite sprite;
     public:
-        float x_position = 0;
-        float y_position = 0;
 
         void UpdateDrawObjects() override;
 
@@ -25,9 +19,8 @@ namespace Game::Objects {
         explicit Ship(sf::RenderWindow *windowContext, int x = 0, int y = 0);
         explicit Ship(sf::RenderWindow* windowContext);
 
-        void AddToHolder();
-
-        void SetPosition(float x, float y);
+        void SetPosition(float x, float y ) override;
+        void MovePosition(float x, float y) override;
     };
 
 } // Objects

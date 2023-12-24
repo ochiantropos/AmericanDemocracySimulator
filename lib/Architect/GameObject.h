@@ -18,7 +18,12 @@ namespace Game {
     class GameObject : public AbstractGameObject{
 
     public:
-
+        sf::Texture texture;
+        sf::Sprite sprite;
+        float width = 0;
+        float height = 0;
+        float x_position = 0;
+        float y_position = 0;
         GameObject();
         explicit GameObject(Scene *context);
         void update(float deltaTime) override;
@@ -27,7 +32,8 @@ namespace Game {
         std::string gameObjectName = "GameObject";
 
         virtual void  UpdateDrawObjects() = 0;
-
+        virtual void SetPosition(float x, float y ) {};
+        virtual void MovePosition(float x, float y)  {};
     public:
         Scene *currentContext = nullptr;
         Animation *baseAnimation;

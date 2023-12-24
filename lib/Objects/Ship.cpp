@@ -11,7 +11,6 @@ namespace Game::Objects {
         holder.addObject("ShipObject", sprite);
     }
 
-    void Ship::AddToHolder() {}
 
     Ship::Ship(sf::RenderWindow *windowContext) {
         if (currentContext != nullptr) currentContext->windowContext = windowContext;
@@ -39,10 +38,16 @@ namespace Game::Objects {
     }
 
     void Ship::SetPosition(float x, float y) {
-        gameObjectName = std::string(
-                "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
         x_position = x;
         y_position = y;
+        gameObjectName = std::string(
+                "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
+    }
+    void Ship::MovePosition(float x, float y) {
+        x_position += x;
+        y_position += y;
+        gameObjectName = std::string(
+                "Ship [x:" + std::to_string(x_position) + std::string(" y:") + std::to_string(y_position) + std::string("]"));
     }
 } // Objects
 // Game

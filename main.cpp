@@ -3,6 +3,7 @@
 #include "lib/Architect/SceneManager.h"
 #include "lib/Debugger/Debugger.h"
 #include <vector>
+
 using namespace std;
 using namespace Game;
 //Declare ini
@@ -19,6 +20,7 @@ SceneManager* SceneManager::singleton_= nullptr;
 
 int y_size = windowContext.getSize().y / 80;
 int x_size = windowContext.getSize().x / 80;
+
 // funck declatation
 void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer);
 void DrawActiveScene(map<int, vector<GameObject *>> &objects);
@@ -31,17 +33,12 @@ void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &
 
 // scenes creation
 GamePlayScene *scene = new GamePlayScene( new Scene("MainScene", "Main"), (int)windowContext.getSize().y, (int)windowContext.getSize().x);
+
 int main()
 {
-
     auto sceneManager = SceneManager::GetInstance(); // get scene manager instance
-    Debugger::Log(scene->scene->ContextName);
-    sceneManager->AddScene(scene);
-    SceneManager::PrintScenes();
-    SceneManager::SwitchScene("Main");
     auto objects = PoolSceneManager(sceneManager); // pooling the scenes and objects
     StartGameCicle(sceneManager,objects);
-
     return 0;
 }
 
@@ -66,19 +63,6 @@ void EventLoopDispatch() {
     }
 }
 
-void DrawActiveScene(map<int, vector<GameObject *>> &objects) {
-    for (auto& layer : objects) {
-        auto& gameObjects = layer.second;
-        for (auto* gameObject : gameObjects)
-        {
-            auto draw_objects =  gameObject->holder.objects;
-            gameObject->UpdateDrawObjects();
-            for (const auto& sprite : draw_objects)
-                windowContext.draw(sprite.second);
-        }
-    }
-}
-
 
 map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager) {
 
@@ -90,6 +74,19 @@ map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager) {
     auto objects = sceneManager->activeScene->scene->getObjects();
     DebugInspector(objects, 2);
     return objects;
+}
+
+void DrawActiveScene(map<int, vector<GameObject *>> &objects) {
+    for (auto& layer : objects) {
+        auto& gameObjects = layer.second;
+        for (auto* gameObject : gameObjects)
+        {
+            auto draw_objects =  gameObject->holder.objects;
+            gameObject->UpdateDrawObjects();
+            for (const auto& sprite : draw_objects)
+                windowContext.draw(sprite.second);
+        }
+    }
 }
 
 void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer = 5){
