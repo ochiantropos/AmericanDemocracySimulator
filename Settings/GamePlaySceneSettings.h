@@ -4,6 +4,7 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_GAMEPLAYSCENESETTINGS_H
 #define AMERICANDEMOCRACYSIMULATOR_GAMEPLAYSCENESETTINGS_H
+#pragma once
 
 #include <string>
 #include "AnimationSettings.h"

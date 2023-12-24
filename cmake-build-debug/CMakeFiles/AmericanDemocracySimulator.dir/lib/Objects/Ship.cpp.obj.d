@@ -2,11 +2,10 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:\AmericanDemocracySimulator\lib\Objects\Ship.cpp \
  C:\AmericanDemocracySimulator\lib\Objects\Ship.h \
  C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
- C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderWindow.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Texture.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Export.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Config.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTarget.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Image.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Color.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Rect.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Vector2.hpp \
@@ -66,15 +65,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Rect.inl \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/View.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transform.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/BlendMode.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderStates.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/PrimitiveType.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Vertex.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Image.hpp \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
@@ -131,10 +121,20 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Window.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/ContextSettings.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/GlResource.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Export.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderWindow.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTarget.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/View.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transform.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/BlendMode.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderStates.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/PrimitiveType.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Vertex.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Window.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/ContextSettings.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/WindowBase.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Cursor.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/VideoMode.hpp \
@@ -196,6 +196,7 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stream_iterator.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/String.inl \
+ C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
  C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
@@ -205,46 +206,15 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Sprite.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Drawable.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transformable.hpp \
- C:/AmericanDemocracySimulator/lib/Architect/Scene.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Err.hpp \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
- C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Texture.hpp \
- C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
- C:/AmericanDemocracySimulator/Settings/AnimationSettings.h \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Err.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/FileInputStream.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/InputStream.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Lock.hpp \
@@ -268,6 +238,8 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Touch.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/CircleShape.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Shape.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Drawable.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transformable.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/VertexArray.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/ConvexShape.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Font.hpp \
@@ -277,5 +249,33 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Shader.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Glsl.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Glsl.inl \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Sprite.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Text.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/VertexBuffer.hpp
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
+ C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
+ C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
+ C:/AmericanDemocracySimulator/Settings/AnimationSettings.h \
+ C:/AmericanDemocracySimulator/lib/Architect/Scene.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h

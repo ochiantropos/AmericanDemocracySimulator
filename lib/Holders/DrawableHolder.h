@@ -5,11 +5,9 @@
 #ifndef AMERICANDEMOCRACYSIMULATOR_DRAWABLEHOLDER_H
 #define AMERICANDEMOCRACYSIMULATOR_DRAWABLEHOLDER_H
 #include <map>
+#include <SFML/Graphics.hpp>
 #include <string>
-#include <SFML/Graphics/Sprite.hpp>
-
 namespace Game {
-
     class DrawableHolder {
     public:
         std::map<std::string,sf::Sprite> objects;
@@ -22,7 +20,5 @@ namespace Game {
         void addObject( const std::string& key, sf::Sprite object);
         void removeObject(const std::string &key);
     };
-
 } // Game
-
 #endif //AMERICANDEMOCRACYSIMULATOR_DRAWABLEHOLDER_H

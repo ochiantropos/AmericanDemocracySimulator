@@ -4,13 +4,11 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_ANIMATION_H
 #define AMERICANDEMOCRACYSIMULATOR_ANIMATION_H
+#include <SFML/Graphics.hpp>
+
 #pragma once
-#include <SFML/Graphics/Sprite.hpp>
-#include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/RenderWindow.hpp>
 #include "../Architect/HolderableObject.h"
 #include "../../Settings/AnimationSettings.h"
-
 namespace Game {
 
     class Animation  {

@@ -4,7 +4,6 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_ANIMATIONSETTINGS_H
 #define AMERICANDEMOCRACYSIMULATOR_ANIMATIONSETTINGS_H
-
 #include <string>
 
 namespace Game {
@@ -17,7 +16,7 @@ namespace Game {
 
         const float GroundAnimationHeight = 320;
         const float GroundAnimationWidth = 120;
-        const float GroundAnimationFrameTime = 0.3f;
+        const float GroundAnimationFrameTime = 0.5f;
         const int GroundAnimationFrame = 14;
 
         const std::string ground_path = R"(C:\AmericanDemocracySimulator\textures\ground_sheet.png)";
@@ -31,15 +30,15 @@ namespace Game {
 
         const float PointWidth = 20.0f;
         const float PointHeight = 20.0f;
-        const float WPointAnimationFrameTime = 0.15f;
+        const float PointAnimationFrameTime = 0.15f;
         const int PointAnimationFrame = 19;
         const std::string PointPath = R"(C:\AmericanDemocracySimulator\textures\point.png)";
 
-        const float DeadWidth = 20.0f;
-        const float  DeadHeight = 20.0f;
-        const float  DeadAnimationFrameTime = 0.15f;
-        const int DeadAnimationFrame = 19;
-        const std::string  DeadPath = R"(C:\AmericanDemocracySimulator\textures\point.png)";
+        const float DeadWidth = 100.0f;
+        const float  DeadHeight = 30.0f;
+        const float  DeadAnimationFrameTime = 0.12f;
+        const int DeadAnimationFrame = 12;
+        const std::string  DeadPath = R"(C:\AmericanDemocracySimulator\textures\ship_type_second_sheet.png)";
 
         const float BoomWidth = 100.0f;
         const float  BoomHeight = 100.0f;

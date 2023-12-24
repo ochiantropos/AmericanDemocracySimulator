@@ -10,13 +10,13 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Debugger/Debugger.h
         lib/Animations/Animation.cpp
         lib/Animations/Animation.h
+        Settings/GamePlaySceneSettings.h
         lib/Architect/Scene.cpp
         lib/Architect/Scene.h
         lib/Architect/GameObject.cpp
         lib/Architect/GameObject.h
         lib/Architect/AbstractGameObject.h
         lib/Architect/SceneManager.cpp
-        lib/Architect/SceneManager.h
         lib/Objects/Objects.h
         lib/Objects/WaterPool.cpp
         lib/Objects/WaterPool.h
@@ -33,6 +33,19 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Animations/GroundAnimation.cpp
         lib/Animations/GroundAnimation.h
         lib/Animations/GroundAnimation.h
+        Settings/AnimationSettings.h
+        lib/Animations/PointAnimation.cpp
+        lib/Animations/PointAnimation.h
+        lib/Animations/DeadAnimation.cpp
+        lib/Animations/DeadAnimation.h
+        lib/Animations/BoomAnimation.cpp
+        lib/Animations/BoomAnimation.h
+        lib/Objects/DeadShip.cpp
+        lib/Objects/DeadShip.h
+        lib/Objects/Point.cpp
+        lib/Objects/Point.h
+        lib/Objects/Boom.cpp
+        lib/Objects/Boom.h
         lib/Objects/Ship.cpp
         lib/Objects/Ship.h
         lib/Objects/ShipDieAnimated.cpp
@@ -50,12 +63,8 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Architect/Base/Colliders/RectangleCollider.cpp
         lib/Architect/Base/Colliders/CircleCollider.h
         lib/Architect/Base/Colliders/CircleCollider.cpp
-        Settings/GamePlaySceneSettings.h
-        Settings/AnimationSettings.h
-        lib/Animations/PointAnimation.cpp
-        lib/Animations/PointAnimation.h
-        lib/Animations/DeadAnimation.cpp
-        lib/Animations/DeadAnimation.h
+        lib/Architect/Architect.h
+
 ) # add  target
 
 set(SFML_DIR "C:\\AmericanDemocracySimulator\\lib\\SFML\\SFML-2.6.1\\lib\\cmake\\SFML") # link the graphic directory

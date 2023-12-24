@@ -4,7 +4,6 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_HOLDERABLEOBJECT_H
 #define AMERICANDEMOCRACYSIMULATOR_HOLDERABLEOBJECT_H
-
 #include "../Holders/DrawableHolder.h"
 
 namespace Game

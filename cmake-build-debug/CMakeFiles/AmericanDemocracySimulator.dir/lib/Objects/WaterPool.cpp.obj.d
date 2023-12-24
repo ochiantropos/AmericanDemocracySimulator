@@ -1,6 +1,7 @@
 CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:\AmericanDemocracySimulator\lib\Objects\WaterPool.cpp \
  C:\AmericanDemocracySimulator\lib\Objects\WaterPool.h \
+ C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Texture.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Export.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Config.hpp \
@@ -124,8 +125,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Export.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
- C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
- C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderWindow.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTarget.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/View.hpp \
@@ -197,6 +196,7 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stream_iterator.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/String.inl \
+ C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
  C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
@@ -206,16 +206,57 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Sprite.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Drawable.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transformable.hpp \
- C:/AmericanDemocracySimulator/lib/Architect/Scene.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Err.hpp \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/FileInputStream.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/InputStream.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Lock.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/MemoryInputStream.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Mutex.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Sleep.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Thread.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Thread.inl \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/ThreadLocal.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/ThreadLocalPtr.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/ThreadLocalPtr.inl \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Vector3.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Vector3.inl \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Clipboard.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Context.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Event.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Joystick.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Keyboard.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Mouse.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Sensor.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Touch.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/CircleShape.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Shape.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Drawable.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transformable.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/VertexArray.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/ConvexShape.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Font.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Glyph.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RectangleShape.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTexture.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Shader.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Glsl.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Glsl.inl \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Sprite.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Text.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
+ C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
+ C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
+ C:/AmericanDemocracySimulator/Settings/AnimationSettings.h \
+ C:/AmericanDemocracySimulator/lib/Architect/Scene.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
@@ -238,7 +279,4 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
- C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
- C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
- C:/AmericanDemocracySimulator/Settings/AnimationSettings.h \
  C:/AmericanDemocracySimulator/lib/Animations/WaterAnimation.h

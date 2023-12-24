@@ -4,6 +4,7 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_ABSTRACTGAMEOBJECT_H
 #define AMERICANDEMOCRACYSIMULATOR_ABSTRACTGAMEOBJECT_H
+#pragma once
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "HolderableObject.h"

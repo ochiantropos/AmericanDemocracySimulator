@@ -1,4 +1,6 @@
-﻿#include <SFML/Graphics.hpp>
+﻿
+#include <SFML/Graphics.hpp>
+
 #include "GamePlayScene.h"
 #include "lib/Architect/SceneManager.h"
 #include "lib/Debugger/Debugger.h"
@@ -25,10 +27,10 @@ int y_size = windowContext.getSize().y / 80;
 int x_size = windowContext.getSize().x / 80;
 
 // funck declatation
-void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer);
-void DrawActiveScene(map<int, vector<GameObject *>> &objects);
-void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &objects);
-void EventLoopDispatch(SceneManager *sceneManager);
+ void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer);
+ void DrawActiveScene(map<int, vector<GameObject *>> &objects);
+ void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &objects);
+ void EventLoopDispatch(SceneManager *sceneManager);
 map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager);
 // scenes creation
 GamePlayScene *scene = new GamePlayScene( new Scene("MainScene", "Main"), (int)windowContext.getSize().y, (int)windowContext.getSize().x);
@@ -41,12 +43,12 @@ int main()
     return 0;
 }
 
-void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &objects) {
+void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &objects)  {
     while (windowContext.isOpen())
     {
         EventLoopDispatch(sceneManager);
         objects = sceneManager->activeScene->scene->getObjects();
-        windowContext.clear(sf::Color::White);
+//        windowContext.clear(sf::Color::White);
         DrawActiveScene(objects);
         windowContext.display();
         sceneManager->activeScene->Next();
@@ -91,7 +93,6 @@ void EventLoopDispatch(SceneManager *sceneManager) {
         }
     }
 }
-
 
 map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager) {
 

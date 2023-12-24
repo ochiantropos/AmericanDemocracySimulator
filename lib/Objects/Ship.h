@@ -5,6 +5,7 @@
 #ifndef AMERICANDEMOCRACYSIMULATOR_SHIP_H
 #define AMERICANDEMOCRACYSIMULATOR_SHIP_H
 
+#pragma once
 
 #include "../Architect/GameObject.h"
 

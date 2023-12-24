@@ -152,6 +152,30 @@ lib/Animations/Animation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.s
 .PHONY : lib/Animations/Animation.cpp.s
 
+lib/Animations/BoomAnimation.obj: lib/Animations/BoomAnimation.cpp.obj
+.PHONY : lib/Animations/BoomAnimation.obj
+
+# target to build an object file
+lib/Animations/BoomAnimation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/BoomAnimation.cpp.obj
+.PHONY : lib/Animations/BoomAnimation.cpp.obj
+
+lib/Animations/BoomAnimation.i: lib/Animations/BoomAnimation.cpp.i
+.PHONY : lib/Animations/BoomAnimation.i
+
+# target to preprocess a source file
+lib/Animations/BoomAnimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/BoomAnimation.cpp.i
+.PHONY : lib/Animations/BoomAnimation.cpp.i
+
+lib/Animations/BoomAnimation.s: lib/Animations/BoomAnimation.cpp.s
+.PHONY : lib/Animations/BoomAnimation.s
+
+# target to generate assembly for a file
+lib/Animations/BoomAnimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/BoomAnimation.cpp.s
+.PHONY : lib/Animations/BoomAnimation.cpp.s
+
 lib/Animations/DeadAnimation.obj: lib/Animations/DeadAnimation.cpp.obj
 .PHONY : lib/Animations/DeadAnimation.obj
 
@@ -536,6 +560,54 @@ lib/Holders/DrawableHolder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.s
 .PHONY : lib/Holders/DrawableHolder.cpp.s
 
+lib/Objects/Boom.obj: lib/Objects/Boom.cpp.obj
+.PHONY : lib/Objects/Boom.obj
+
+# target to build an object file
+lib/Objects/Boom.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Boom.cpp.obj
+.PHONY : lib/Objects/Boom.cpp.obj
+
+lib/Objects/Boom.i: lib/Objects/Boom.cpp.i
+.PHONY : lib/Objects/Boom.i
+
+# target to preprocess a source file
+lib/Objects/Boom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Boom.cpp.i
+.PHONY : lib/Objects/Boom.cpp.i
+
+lib/Objects/Boom.s: lib/Objects/Boom.cpp.s
+.PHONY : lib/Objects/Boom.s
+
+# target to generate assembly for a file
+lib/Objects/Boom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Boom.cpp.s
+.PHONY : lib/Objects/Boom.cpp.s
+
+lib/Objects/DeadShip.obj: lib/Objects/DeadShip.cpp.obj
+.PHONY : lib/Objects/DeadShip.obj
+
+# target to build an object file
+lib/Objects/DeadShip.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/DeadShip.cpp.obj
+.PHONY : lib/Objects/DeadShip.cpp.obj
+
+lib/Objects/DeadShip.i: lib/Objects/DeadShip.cpp.i
+.PHONY : lib/Objects/DeadShip.i
+
+# target to preprocess a source file
+lib/Objects/DeadShip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/DeadShip.cpp.i
+.PHONY : lib/Objects/DeadShip.cpp.i
+
+lib/Objects/DeadShip.s: lib/Objects/DeadShip.cpp.s
+.PHONY : lib/Objects/DeadShip.s
+
+# target to generate assembly for a file
+lib/Objects/DeadShip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/DeadShip.cpp.s
+.PHONY : lib/Objects/DeadShip.cpp.s
+
 lib/Objects/Ground.obj: lib/Objects/Ground.cpp.obj
 .PHONY : lib/Objects/Ground.obj
 
@@ -559,6 +631,30 @@ lib/Objects/Ground.s: lib/Objects/Ground.cpp.s
 lib/Objects/Ground.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.s
 .PHONY : lib/Objects/Ground.cpp.s
+
+lib/Objects/Point.obj: lib/Objects/Point.cpp.obj
+.PHONY : lib/Objects/Point.obj
+
+# target to build an object file
+lib/Objects/Point.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Point.cpp.obj
+.PHONY : lib/Objects/Point.cpp.obj
+
+lib/Objects/Point.i: lib/Objects/Point.cpp.i
+.PHONY : lib/Objects/Point.i
+
+# target to preprocess a source file
+lib/Objects/Point.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Point.cpp.i
+.PHONY : lib/Objects/Point.cpp.i
+
+lib/Objects/Point.s: lib/Objects/Point.cpp.s
+.PHONY : lib/Objects/Point.s
+
+# target to generate assembly for a file
+lib/Objects/Point.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Point.cpp.s
+.PHONY : lib/Objects/Point.cpp.s
 
 lib/Objects/Ship.obj: lib/Objects/Ship.cpp.obj
 .PHONY : lib/Objects/Ship.obj
@@ -692,6 +788,9 @@ help:
 	@echo ... lib/Animations/Animation.obj
 	@echo ... lib/Animations/Animation.i
 	@echo ... lib/Animations/Animation.s
+	@echo ... lib/Animations/BoomAnimation.obj
+	@echo ... lib/Animations/BoomAnimation.i
+	@echo ... lib/Animations/BoomAnimation.s
 	@echo ... lib/Animations/DeadAnimation.obj
 	@echo ... lib/Animations/DeadAnimation.i
 	@echo ... lib/Animations/DeadAnimation.s
@@ -740,9 +839,18 @@ help:
 	@echo ... lib/Holders/DrawableHolder.obj
 	@echo ... lib/Holders/DrawableHolder.i
 	@echo ... lib/Holders/DrawableHolder.s
+	@echo ... lib/Objects/Boom.obj
+	@echo ... lib/Objects/Boom.i
+	@echo ... lib/Objects/Boom.s
+	@echo ... lib/Objects/DeadShip.obj
+	@echo ... lib/Objects/DeadShip.i
+	@echo ... lib/Objects/DeadShip.s
 	@echo ... lib/Objects/Ground.obj
 	@echo ... lib/Objects/Ground.i
 	@echo ... lib/Objects/Ground.s
+	@echo ... lib/Objects/Point.obj
+	@echo ... lib/Objects/Point.i
+	@echo ... lib/Objects/Point.s
 	@echo ... lib/Objects/Ship.obj
 	@echo ... lib/Objects/Ship.i
 	@echo ... lib/Objects/Ship.s

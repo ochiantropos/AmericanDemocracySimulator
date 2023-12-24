@@ -116,6 +116,12 @@
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/Animation.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/BoomAnimation.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/BoomAnimation.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/DeadAnimation.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
@@ -141,6 +147,9 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Architect.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/AbstractColliderType.cpp">
@@ -218,6 +227,18 @@
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Boom.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Boom.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/DeadShip.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/DeadShip.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Ground.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
@@ -225,6 +246,12 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Objects.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Point.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Point.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Ship.cpp">

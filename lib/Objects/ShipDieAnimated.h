@@ -4,6 +4,8 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_SHIPDIEANIMATED_H
 #define AMERICANDEMOCRACYSIMULATOR_SHIPDIEANIMATED_H
+#pragma once
+#include "../Architect/GameObject.h"
 
 
 namespace Game::Object {

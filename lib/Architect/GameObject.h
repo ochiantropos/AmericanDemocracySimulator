@@ -4,19 +4,20 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
 #define AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
+
+
 #pragma once
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+
 #include "AbstractGameObject.h"
-#include "Scene.h"
 #include "../Animations/Animation.h"
+#include "Scene.h"
 
 namespace Game {
 
     class Scene;
-
     class GameObject : public AbstractGameObject{
-
     public:
         sf::Texture texture;
         sf::Sprite sprite;
@@ -30,11 +31,9 @@ namespace Game {
         void draw(sf::RenderWindow& window) override;
         std::map<std::string, sf::Sprite>& getObjects() {return holder.objects;}
         std::string gameObjectName = "GameObject";
-
         virtual void  UpdateDrawObjects() = 0;
         virtual void SetPosition(float x, float y ) {};
         virtual void MovePosition(float x, float y)  {};
-    public:
         Scene *currentContext = nullptr;
         Animation *baseAnimation;
     };
