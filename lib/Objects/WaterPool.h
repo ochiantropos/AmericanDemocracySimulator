@@ -5,7 +5,6 @@
 #ifndef AMERICANDEMOCRACYSIMULATOR_WATERPOOL_H
 #define AMERICANDEMOCRACYSIMULATOR_WATERPOOL_H
 
-#include <SFML/Graphics/Texture.hpp>
 #include "../Architect/GameObject.h"
 
 namespace Game::Objects {

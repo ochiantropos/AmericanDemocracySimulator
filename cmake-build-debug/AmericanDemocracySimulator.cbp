@@ -106,9 +106,6 @@
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/Animation.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
-		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/Animations.h">
-			<Option target="AmericanDemocracySimulator"/>
-		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/GroundAnimation.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
@@ -122,9 +119,6 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h">
-			<Option target="AmericanDemocracySimulator"/>
-		</Unit>
-		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Architect.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/GameObject.cpp">
@@ -152,12 +146,6 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Debugger/Debugger.h">
-			<Option target="AmericanDemocracySimulator"/>
-		</Unit>
-		<Unit filename="C:/AmericanDemocracySimulator/lib/Game.h">
-			<Option target="AmericanDemocracySimulator"/>
-		</Unit>
-		<Unit filename="C:/AmericanDemocracySimulator/lib/GameObjects.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.cpp">

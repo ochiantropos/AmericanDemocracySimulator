@@ -14,12 +14,9 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Architect/Scene.h
         lib/Architect/GameObject.cpp
         lib/Architect/GameObject.h
-        lib/Architect/Architect.h
         lib/Architect/AbstractGameObject.h
         lib/Architect/SceneManager.cpp
         lib/Architect/SceneManager.h
-        lib/Game.h
-        lib/Animations/Animations.h
         lib/Objects/Objects.h
         lib/Objects/WaterPool.cpp
         lib/Objects/WaterPool.h
@@ -27,7 +24,6 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Holders/DrawableHolder.cpp
         lib/Holders/DrawableHolder.h
         lib/Architect/HolderableObject.h
-        lib/GameObjects.h
         lib/Animations/WaterAnimation.cpp
         lib/Animations/WaterAnimation.h
         lib/Scenes/GamePlayScene.cpp

@@ -43,13 +43,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 48,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 60,
+				"line" : 56,
 				"parent" : 0
 			},
 			{
@@ -109,7 +109,7 @@
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 50,
+				"line" : 46,
 				"parent" : 0
 			}
 		]
@@ -178,15 +178,15 @@
 				3,
 				5,
 				7,
-				11,
-				16,
+				10,
+				13,
+				15,
 				18,
+				20,
 				22,
 				24,
 				26,
-				28,
-				30,
-				32
+				28
 			]
 		}
 	],
@@ -263,15 +263,15 @@
 				3,
 				5,
 				7,
-				11,
-				16,
+				10,
+				13,
+				15,
 				18,
+				20,
 				22,
 				24,
 				26,
-				28,
-				30,
-				32
+				28
 			]
 		},
 		{
@@ -283,21 +283,17 @@
 				6,
 				8,
 				9,
-				10,
+				11,
 				12,
-				13,
 				14,
-				15,
+				16,
 				17,
 				19,
-				20,
 				21,
 				23,
 				25,
 				27,
-				29,
-				31,
-				33
+				29
 			]
 		}
 	],
@@ -355,11 +351,6 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "lib/Architect/Architect.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
 			"path" : "lib/Architect/AbstractGameObject.h",
 			"sourceGroupIndex" : 1
 		},
@@ -372,16 +363,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "lib/Architect/SceneManager.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/Game.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/Animations/Animations.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -414,11 +395,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "lib/Architect/HolderableObject.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "lib/GameObjects.h",
 			"sourceGroupIndex" : 1
 		},
 		{

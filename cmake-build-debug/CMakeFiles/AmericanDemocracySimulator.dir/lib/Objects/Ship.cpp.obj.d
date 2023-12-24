@@ -2,10 +2,10 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:\AmericanDemocracySimulator\lib\Objects\Ship.cpp \
  C:\AmericanDemocracySimulator\lib\Objects\Ship.h \
  C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderWindow.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Texture.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Export.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Config.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTarget.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Image.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Color.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Rect.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Vector2.hpp \
@@ -65,15 +65,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Rect.inl \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/View.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transform.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/BlendMode.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderStates.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/PrimitiveType.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Vertex.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Image.hpp \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
@@ -130,10 +121,20 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Window.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/ContextSettings.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/GlResource.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Export.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderWindow.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTarget.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/View.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Transform.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/BlendMode.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderStates.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/PrimitiveType.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Vertex.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Window.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/ContextSettings.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/WindowBase.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Cursor.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/VideoMode.hpp \
@@ -238,5 +239,4 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Texture.hpp \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h

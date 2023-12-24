@@ -1,6 +1,7 @@
 CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:\AmericanDemocracySimulator\lib\Objects\WaterPool.cpp \
  C:\AmericanDemocracySimulator\lib\Objects\WaterPool.h \
+ C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Texture.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Export.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Config.hpp \
@@ -124,7 +125,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window/Export.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
- C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderWindow.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/RenderTarget.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/View.hpp \

@@ -5,7 +5,7 @@
 #ifndef AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
 #define AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
 #pragma once
-
+#include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "AbstractGameObject.h"
 #include "Scene.h"

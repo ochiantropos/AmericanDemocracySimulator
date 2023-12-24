@@ -250,14 +250,11 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Sprite.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Text.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
- C:\AmericanDemocracySimulator\lib/Game.h \
- C:/AmericanDemocracySimulator/lib/Architect/Architect.h \
- C:/AmericanDemocracySimulator/lib/Architect/Architect.h \
- C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
- C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
- C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
+ C:\AmericanDemocracySimulator\lib/Architect/GameObject.h \
+ C:\AmericanDemocracySimulator\lib/Architect/AbstractGameObject.h \
+ C:\AmericanDemocracySimulator\lib/Architect/HolderableObject.h \
  C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.h \
- C:/AmericanDemocracySimulator/lib/Architect/Scene.h \
+ C:\AmericanDemocracySimulator\lib/Architect/Scene.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
@@ -280,8 +277,12 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
- C:/AmericanDemocracySimulator/lib/Architect/SceneManager.h \
- C:/AmericanDemocracySimulator/lib/Debugger/Debugger.h \
+ C:\AmericanDemocracySimulator\lib/Architect/SceneManager.h \
+ C:/AmericanDemocracySimulator/lib/Scenes/GamePlayScene.h \
+ C:/AmericanDemocracySimulator/lib/Objects/Objects.h \
+ C:/AmericanDemocracySimulator/lib/Objects/WaterPool.h \
+ C:/AmericanDemocracySimulator/lib/Objects/Ship.h \
+ C:\AmericanDemocracySimulator\lib/Debugger/Debugger.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/windows.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/excpt.h \
@@ -526,11 +527,4 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/stralign_s.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/winsvc.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/mcx.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/imm.h \
- C:/AmericanDemocracySimulator/lib/Animations/Animations.h \
- C:/AmericanDemocracySimulator/lib/Animations/WaterAnimation.h \
- C:/AmericanDemocracySimulator/lib/Objects/Objects.h \
- C:/AmericanDemocracySimulator/lib/Objects/WaterPool.h \
- C:\AmericanDemocracySimulator\lib/Scenes/GamePlayScene.h \
- C:/AmericanDemocracySimulator/lib/Objects/Objects.h \
- C:/AmericanDemocracySimulator/lib/Objects/Ship.h
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/imm.h

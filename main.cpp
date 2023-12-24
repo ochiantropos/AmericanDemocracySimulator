@@ -1,8 +1,10 @@
 ﻿#include <iostream>
 #include <SFML/Graphics.hpp>
-#include "lib/Game.h"
-#include "lib/Scenes/GamePlayScene.h"
 #include <vector>
+#include "lib/Architect/GameObject.h"
+#include "lib/Architect/SceneManager.h"
+#include "GamePlayScene.h"
+#include "lib/Debugger/Debugger.h"
 
 using namespace std;
 using namespace Game;
@@ -34,8 +36,6 @@ int main()
 
     SceneManager::PrintScenes();
     SceneManager::SwitchScene("Main");
-
-
 
 
     // log all
