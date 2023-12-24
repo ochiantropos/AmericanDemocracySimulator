@@ -28,6 +28,8 @@
 					<Add directory="C:/AmericanDemocracySimulator/lib/Debuger,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Animations,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Architect,"/>
+					<Add directory="C:/AmericanDemocracySimulator/lib/Architect/Base,"/>
+					<Add directory="C:/AmericanDemocracySimulator/lib/Architect/Base/Colliders,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Holders,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Objects,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Scenes"/>
@@ -59,6 +61,8 @@
 					<Add directory="C:/AmericanDemocracySimulator/lib/Debuger,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Animations,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Architect,"/>
+					<Add directory="C:/AmericanDemocracySimulator/lib/Architect/Base,"/>
+					<Add directory="C:/AmericanDemocracySimulator/lib/Architect/Base/Colliders,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Holders,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Objects,"/>
 					<Add directory="C:/AmericanDemocracySimulator/lib/Scenes"/>
@@ -100,6 +104,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/AmericanDemocracySimulator/Settings/AnimationSettings.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/Settings/GamePlaySceneSettings.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/Animation.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
@@ -119,6 +129,48 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/AbstractColliderType.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/AbstractColliderType.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Collider.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Collider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Colliders/CircleCollider.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Colliders/CircleCollider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Colliders/RectangleCollider.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Colliders/RectangleCollider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Coroutine.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Coroutine.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/IColliderCompare.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/IColliderCompare.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/SceneHolder.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/SceneHolder.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/GameObject.cpp">

@@ -200,6 +200,174 @@ lib/Animations/WaterAnimation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.s
 .PHONY : lib/Animations/WaterAnimation.cpp.s
 
+lib/Architect/Base/AbstractColliderType.obj: lib/Architect/Base/AbstractColliderType.cpp.obj
+.PHONY : lib/Architect/Base/AbstractColliderType.obj
+
+# target to build an object file
+lib/Architect/Base/AbstractColliderType.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/AbstractColliderType.cpp.obj
+.PHONY : lib/Architect/Base/AbstractColliderType.cpp.obj
+
+lib/Architect/Base/AbstractColliderType.i: lib/Architect/Base/AbstractColliderType.cpp.i
+.PHONY : lib/Architect/Base/AbstractColliderType.i
+
+# target to preprocess a source file
+lib/Architect/Base/AbstractColliderType.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/AbstractColliderType.cpp.i
+.PHONY : lib/Architect/Base/AbstractColliderType.cpp.i
+
+lib/Architect/Base/AbstractColliderType.s: lib/Architect/Base/AbstractColliderType.cpp.s
+.PHONY : lib/Architect/Base/AbstractColliderType.s
+
+# target to generate assembly for a file
+lib/Architect/Base/AbstractColliderType.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/AbstractColliderType.cpp.s
+.PHONY : lib/Architect/Base/AbstractColliderType.cpp.s
+
+lib/Architect/Base/Collider.obj: lib/Architect/Base/Collider.cpp.obj
+.PHONY : lib/Architect/Base/Collider.obj
+
+# target to build an object file
+lib/Architect/Base/Collider.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Collider.cpp.obj
+.PHONY : lib/Architect/Base/Collider.cpp.obj
+
+lib/Architect/Base/Collider.i: lib/Architect/Base/Collider.cpp.i
+.PHONY : lib/Architect/Base/Collider.i
+
+# target to preprocess a source file
+lib/Architect/Base/Collider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Collider.cpp.i
+.PHONY : lib/Architect/Base/Collider.cpp.i
+
+lib/Architect/Base/Collider.s: lib/Architect/Base/Collider.cpp.s
+.PHONY : lib/Architect/Base/Collider.s
+
+# target to generate assembly for a file
+lib/Architect/Base/Collider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Collider.cpp.s
+.PHONY : lib/Architect/Base/Collider.cpp.s
+
+lib/Architect/Base/Colliders/CircleCollider.obj: lib/Architect/Base/Colliders/CircleCollider.cpp.obj
+.PHONY : lib/Architect/Base/Colliders/CircleCollider.obj
+
+# target to build an object file
+lib/Architect/Base/Colliders/CircleCollider.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Colliders/CircleCollider.cpp.obj
+.PHONY : lib/Architect/Base/Colliders/CircleCollider.cpp.obj
+
+lib/Architect/Base/Colliders/CircleCollider.i: lib/Architect/Base/Colliders/CircleCollider.cpp.i
+.PHONY : lib/Architect/Base/Colliders/CircleCollider.i
+
+# target to preprocess a source file
+lib/Architect/Base/Colliders/CircleCollider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Colliders/CircleCollider.cpp.i
+.PHONY : lib/Architect/Base/Colliders/CircleCollider.cpp.i
+
+lib/Architect/Base/Colliders/CircleCollider.s: lib/Architect/Base/Colliders/CircleCollider.cpp.s
+.PHONY : lib/Architect/Base/Colliders/CircleCollider.s
+
+# target to generate assembly for a file
+lib/Architect/Base/Colliders/CircleCollider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Colliders/CircleCollider.cpp.s
+.PHONY : lib/Architect/Base/Colliders/CircleCollider.cpp.s
+
+lib/Architect/Base/Colliders/RectangleCollider.obj: lib/Architect/Base/Colliders/RectangleCollider.cpp.obj
+.PHONY : lib/Architect/Base/Colliders/RectangleCollider.obj
+
+# target to build an object file
+lib/Architect/Base/Colliders/RectangleCollider.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Colliders/RectangleCollider.cpp.obj
+.PHONY : lib/Architect/Base/Colliders/RectangleCollider.cpp.obj
+
+lib/Architect/Base/Colliders/RectangleCollider.i: lib/Architect/Base/Colliders/RectangleCollider.cpp.i
+.PHONY : lib/Architect/Base/Colliders/RectangleCollider.i
+
+# target to preprocess a source file
+lib/Architect/Base/Colliders/RectangleCollider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Colliders/RectangleCollider.cpp.i
+.PHONY : lib/Architect/Base/Colliders/RectangleCollider.cpp.i
+
+lib/Architect/Base/Colliders/RectangleCollider.s: lib/Architect/Base/Colliders/RectangleCollider.cpp.s
+.PHONY : lib/Architect/Base/Colliders/RectangleCollider.s
+
+# target to generate assembly for a file
+lib/Architect/Base/Colliders/RectangleCollider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Colliders/RectangleCollider.cpp.s
+.PHONY : lib/Architect/Base/Colliders/RectangleCollider.cpp.s
+
+lib/Architect/Base/Coroutine.obj: lib/Architect/Base/Coroutine.cpp.obj
+.PHONY : lib/Architect/Base/Coroutine.obj
+
+# target to build an object file
+lib/Architect/Base/Coroutine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Coroutine.cpp.obj
+.PHONY : lib/Architect/Base/Coroutine.cpp.obj
+
+lib/Architect/Base/Coroutine.i: lib/Architect/Base/Coroutine.cpp.i
+.PHONY : lib/Architect/Base/Coroutine.i
+
+# target to preprocess a source file
+lib/Architect/Base/Coroutine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Coroutine.cpp.i
+.PHONY : lib/Architect/Base/Coroutine.cpp.i
+
+lib/Architect/Base/Coroutine.s: lib/Architect/Base/Coroutine.cpp.s
+.PHONY : lib/Architect/Base/Coroutine.s
+
+# target to generate assembly for a file
+lib/Architect/Base/Coroutine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Coroutine.cpp.s
+.PHONY : lib/Architect/Base/Coroutine.cpp.s
+
+lib/Architect/Base/IColliderCompare.obj: lib/Architect/Base/IColliderCompare.cpp.obj
+.PHONY : lib/Architect/Base/IColliderCompare.obj
+
+# target to build an object file
+lib/Architect/Base/IColliderCompare.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/IColliderCompare.cpp.obj
+.PHONY : lib/Architect/Base/IColliderCompare.cpp.obj
+
+lib/Architect/Base/IColliderCompare.i: lib/Architect/Base/IColliderCompare.cpp.i
+.PHONY : lib/Architect/Base/IColliderCompare.i
+
+# target to preprocess a source file
+lib/Architect/Base/IColliderCompare.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/IColliderCompare.cpp.i
+.PHONY : lib/Architect/Base/IColliderCompare.cpp.i
+
+lib/Architect/Base/IColliderCompare.s: lib/Architect/Base/IColliderCompare.cpp.s
+.PHONY : lib/Architect/Base/IColliderCompare.s
+
+# target to generate assembly for a file
+lib/Architect/Base/IColliderCompare.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/IColliderCompare.cpp.s
+.PHONY : lib/Architect/Base/IColliderCompare.cpp.s
+
+lib/Architect/Base/SceneHolder.obj: lib/Architect/Base/SceneHolder.cpp.obj
+.PHONY : lib/Architect/Base/SceneHolder.obj
+
+# target to build an object file
+lib/Architect/Base/SceneHolder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/SceneHolder.cpp.obj
+.PHONY : lib/Architect/Base/SceneHolder.cpp.obj
+
+lib/Architect/Base/SceneHolder.i: lib/Architect/Base/SceneHolder.cpp.i
+.PHONY : lib/Architect/Base/SceneHolder.i
+
+# target to preprocess a source file
+lib/Architect/Base/SceneHolder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/SceneHolder.cpp.i
+.PHONY : lib/Architect/Base/SceneHolder.cpp.i
+
+lib/Architect/Base/SceneHolder.s: lib/Architect/Base/SceneHolder.cpp.s
+.PHONY : lib/Architect/Base/SceneHolder.s
+
+# target to generate assembly for a file
+lib/Architect/Base/SceneHolder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/SceneHolder.cpp.s
+.PHONY : lib/Architect/Base/SceneHolder.cpp.s
+
 lib/Architect/GameObject.obj: lib/Architect/GameObject.cpp.obj
 .PHONY : lib/Architect/GameObject.obj
 
@@ -482,6 +650,27 @@ help:
 	@echo ... lib/Animations/WaterAnimation.obj
 	@echo ... lib/Animations/WaterAnimation.i
 	@echo ... lib/Animations/WaterAnimation.s
+	@echo ... lib/Architect/Base/AbstractColliderType.obj
+	@echo ... lib/Architect/Base/AbstractColliderType.i
+	@echo ... lib/Architect/Base/AbstractColliderType.s
+	@echo ... lib/Architect/Base/Collider.obj
+	@echo ... lib/Architect/Base/Collider.i
+	@echo ... lib/Architect/Base/Collider.s
+	@echo ... lib/Architect/Base/Colliders/CircleCollider.obj
+	@echo ... lib/Architect/Base/Colliders/CircleCollider.i
+	@echo ... lib/Architect/Base/Colliders/CircleCollider.s
+	@echo ... lib/Architect/Base/Colliders/RectangleCollider.obj
+	@echo ... lib/Architect/Base/Colliders/RectangleCollider.i
+	@echo ... lib/Architect/Base/Colliders/RectangleCollider.s
+	@echo ... lib/Architect/Base/Coroutine.obj
+	@echo ... lib/Architect/Base/Coroutine.i
+	@echo ... lib/Architect/Base/Coroutine.s
+	@echo ... lib/Architect/Base/IColliderCompare.obj
+	@echo ... lib/Architect/Base/IColliderCompare.i
+	@echo ... lib/Architect/Base/IColliderCompare.s
+	@echo ... lib/Architect/Base/SceneHolder.obj
+	@echo ... lib/Architect/Base/SceneHolder.i
+	@echo ... lib/Architect/Base/SceneHolder.s
 	@echo ... lib/Architect/GameObject.obj
 	@echo ... lib/Architect/GameObject.i
 	@echo ... lib/Architect/GameObject.s

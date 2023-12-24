@@ -1,12 +1,19 @@
 CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:\AmericanDemocracySimulator\main.cpp \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Config.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Clock.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Time.hpp \
+ C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Err.hpp \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
@@ -140,16 +147,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Window.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Config.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Clock.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Export.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Time.hpp \
- C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/Err.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/FileInputStream.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/InputStream.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/System/NonCopyable.hpp \
@@ -250,11 +247,17 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Sprite.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/Text.hpp \
  C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
- C:\AmericanDemocracySimulator\lib/Architect/GameObject.h \
- C:\AmericanDemocracySimulator\lib/Architect/AbstractGameObject.h \
- C:\AmericanDemocracySimulator\lib/Architect/HolderableObject.h \
+ C:/AmericanDemocracySimulator/lib/Scenes/GamePlayScene.h \
+ C:/AmericanDemocracySimulator/lib/Objects/Objects.h \
+ C:/AmericanDemocracySimulator/lib/Objects/WaterPool.h \
+ C:/AmericanDemocracySimulator/lib/Architect/GameObject.h \
+ C:/AmericanDemocracySimulator/lib/Architect/AbstractGameObject.h \
+ C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
  C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.h \
- C:\AmericanDemocracySimulator\lib/Architect/Scene.h \
+ C:/AmericanDemocracySimulator/lib/Architect/Scene.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
@@ -277,11 +280,49 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  C:/AmericanDemocracySimulator/lib/Animations/Animation.h \
  C:/AmericanDemocracySimulator/lib/Architect/HolderableObject.h \
- C:\AmericanDemocracySimulator\lib/Architect/SceneManager.h \
- C:/AmericanDemocracySimulator/lib/Scenes/GamePlayScene.h \
- C:/AmericanDemocracySimulator/lib/Objects/Objects.h \
- C:/AmericanDemocracySimulator/lib/Objects/WaterPool.h \
  C:/AmericanDemocracySimulator/lib/Objects/Ship.h \
+ C:/AmericanDemocracySimulator/lib/Architect/Base/SceneHolder.h \
+ C:/AmericanDemocracySimulator/lib/Architect/Base/Coroutine.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_map \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/enable_special_members.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/math.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/gamma.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/special_function_util.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/bessel_function.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/beta_function.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/ell_integral.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/exp_integral.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/hypergeometric.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/legendre_function.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/modified_bessel_func.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
+ C:/AmericanDemocracySimulator/Settings/GamePlaySceneSettings.h \
+ C:/AmericanDemocracySimulator/Settings/AnimationSettings.h \
+ C:\AmericanDemocracySimulator\lib/Architect/SceneManager.h \
+ C:\AmericanDemocracySimulator\lib/Architect/Base/SceneHolder.h \
  C:\AmericanDemocracySimulator\lib/Debugger/Debugger.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/windows.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -321,7 +362,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/lzcntintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/lwpintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/movdirintrin.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitxintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pconfigintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/popcntintrin.h \
@@ -344,10 +384,6 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xtestintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/hresetintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/immintrin.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/tmmintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/smmintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/wmmintrin.h \

@@ -7,14 +7,12 @@
 #include "../Objects/Ship.h"
 
 namespace Game {
-    GamePlayScene::GamePlayScene(Scene *_scene, int _y_size, int _x_size): scene(_scene), y_size(_y_size), x_size(_x_size)  {
+    GamePlayScene::GamePlayScene(Scene *_scene, int _y_size, int _x_size): SceneHolder(_scene, _y_size, _x_size)  {
+        this->scene = _scene;
         CreatePool();
         CreateGround();
-
-
         LoadShipTexture();
         CreateShip(0,0);
-
     }
 
     void GamePlayScene::CreatePool() const {
@@ -46,6 +44,30 @@ namespace Game {
         active_ships->push_back(ship);
 
         scene->addObject(ship,3);
+
+    }
+
+    void GamePlayScene::Start() {
+        SceneHolder::Start();
+    }
+
+    void GamePlayScene::Update() {
+        SceneHolder::Update();
+    }
+
+    bool GamePlayScene::checkCollision(const sf::Vector2f &newPos) const {
+        return false;
+    }
+
+    void GamePlayScene::GenerateRandomPosition() const {
+
+    }
+
+    void GamePlayScene::MoveShips() const {
+
+    }
+
+    void GamePlayScene::MoveShipLogger() const {
 
     }
 
