@@ -1,77 +1,97 @@
-﻿#include <iostream>
-#include <SFML/Graphics.hpp>
+﻿#include <SFML/Graphics.hpp>
 #include "lib/Game.h"
-#include "lib/Scenes/GamePlayScene.h"
+#include "GamePlayScene.h"
 #include <vector>
-
 using namespace std;
 using namespace Game;
 //Declare ini
 const int screenWidth = 900;
 const int screenHeight = 560;
 float deltaTime = 0;
-
-void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer);
-
-
-sf::RenderWindow windowContext(sf::VideoMode(screenWidth,  screenHeight), "Main");
+// contexts
+sf::RenderWindow windowContext(sf::VideoMode(screenWidth, screenHeight), "Main");
 std::map<std::string, sf::RenderWindow*> m_screens = {
         { "Main",&windowContext }
 };
+//main scene manager
 SceneManager* SceneManager::singleton_= nullptr;
-
 int y_size = windowContext.getSize().y / 80;
 int x_size = windowContext.getSize().x / 80;
+// funck declatation
+void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer);
+void DrawActiveScene(map<int, vector<GameObject *>> &objects);
+
+map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager);
+
+void EventLoopDispatch();
+
+void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &objects);
+
+// scenes creation
+GamePlayScene *scene = new GamePlayScene( new Scene("MainScene", "Main"), (int)windowContext.getSize().y, (int)windowContext.getSize().x);
 
 int main()
 {
+    sf::Clock clock; // main game clock
 
-    sf::Clock clock;
-    GamePlayScene scene = GamePlayScene( new Scene("MainScene", "Main"), windowContext.getSize().y, windowContext.getSize().x);
+//    auto sceneManager = SceneManager::GetInstance(); // get scene manager instance
+//
+//    auto objects = PoolSceneManager(sceneManager); // pooling the scenes and objects
+//
+//    StartGameCicle(sceneManager, objects); // start  main game cicle
+//
+//    Collider<RectangleCollider> collider1;
+//    Collider<RectangleCollider> collider2;
+//    collider2.CompareCollider(collider1);
 
-    auto sceneManager = SceneManager::GetInstance();
-    sceneManager->AddScene(scene.scene);
 
-    SceneManager::PrintScenes();
-    SceneManager::SwitchScene("Main");
-
-
-
-
-    // log all
-    sceneManager->activeScene->getObjects();
-    auto objects = sceneManager->activeScene->getObjects();
-    DebugInspector(objects, 2);
-    while (windowContext.isOpen())
-    {
-        sf::Event event {};
-
-        while (windowContext.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                windowContext.close();
-        }
-        objects = sceneManager->activeScene->getObjects();
-        windowContext.clear(sf::Color::White);
-
-        for (auto& layer : objects) {
-            auto& gameObjects = layer.second;
-            for (auto* gameObject : gameObjects)
-            {
-                auto draw_objects =  gameObject->holder.objects;
-                gameObject->UpdateDrawObjects();
-                for (const auto& sprite : draw_objects)
-                {
-                    windowContext.draw(sprite.second);
-                }
-            }
-        }
-
-        windowContext.display();
-    }
     return 0;
 }
 
+void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &objects) {
+    while (windowContext.isOpen())
+    {
+        EventLoopDispatch();
+        objects = sceneManager->activeScene->scene->getObjects();
+        windowContext.clear(sf::Color::White);
+        DrawActiveScene(objects);
+        windowContext.display();
+        sceneManager->activeScene->Next();
+    }
+}
+
+void EventLoopDispatch() {
+    sf::Event event {};
+    while (windowContext.pollEvent(event))
+    {
+        if (event.type == sf::Event::Closed)
+            windowContext.close();
+    }
+}
+
+void DrawActiveScene(map<int, vector<GameObject *>> &objects) {
+    for (auto& layer : objects) {
+        auto& gameObjects = layer.second;
+        for (auto* gameObject : gameObjects)
+        {
+            auto draw_objects =  gameObject->holder.objects;
+            gameObject->UpdateDrawObjects();
+            for (const auto& sprite : draw_objects)
+                windowContext.draw(sprite.second);
+        }
+    }
+}
+
+map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager) {
+    sceneManager->AddScene(scene->scene);
+    SceneManager::PrintScenes();
+    SceneManager::SwitchScene("Main");
+    sceneManager->activeScene->scene->getObjects();
+    sceneManager->activeScene->Start();
+    auto objects = sceneManager->activeScene->scene->getObjects();
+    DebugInspector(objects, 2);
+    return objects;
+}
 
 void DebugInspector(map<int, vector<GameObject *>> objects, int max_in_layer = 5){
     for (auto& layer : objects) {

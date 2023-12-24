@@ -41,6 +41,22 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Objects/Ship.h
         lib/Objects/ShipDieAnimated.cpp
         lib/Objects/ShipDieAnimated.h
+        lib/Architect/Base/SceneHolder.cpp
+        lib/Architect/Base/SceneHolder.h
+        lib/Architect/Base/Coroutine.cpp
+        lib/Architect/Base/Coroutine.h
+        Settings/GamePlaySceneSettings.h
+        Settings/AnimationSettings.h
+        lib/Architect/Base/Collider.cpp
+        lib/Architect/Base/Collider.h
+        lib/Architect/Base/AbstractColliderType.cpp
+        lib/Architect/Base/AbstractColliderType.h
+        lib/Architect/Base/IColliderCompare.cpp
+        lib/Architect/Base/IColliderCompare.h
+        lib/Architect/Base/Colliders/RectangleCollider.cpp
+        lib/Architect/Base/Colliders/RectangleCollider.h
+        lib/Architect/Base/Colliders/CircleCollider.cpp
+        lib/Architect/Base/Colliders/CircleCollider.h
 ) # add  target
 
 set(SFML_DIR "C:\\AmericanDemocracySimulator\\lib\\SFML\\SFML-2.6.1\\lib\\cmake\\SFML") # link the graphic directory

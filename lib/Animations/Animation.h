@@ -9,6 +9,7 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "../Architect/HolderableObject.h"
+#include "../../Settings/AnimationSettings.h"
 
 namespace Game {
 
@@ -23,6 +24,7 @@ namespace Game {
 
         int frameCount = 0;
         sf::Clock animationTimer;
+        AnimationSettings settings = AnimationSettings();
 
     public:
         int x = 0;

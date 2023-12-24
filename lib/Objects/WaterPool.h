@@ -22,7 +22,8 @@ namespace Game::Objects {
 
         void UpdateDrawObjects() override;
         void AddToHolder();
-
+        void SetPosition(float x, float y ) override;
+        void MovePosition(float x, float y) override;
     };
 } // Objects
 

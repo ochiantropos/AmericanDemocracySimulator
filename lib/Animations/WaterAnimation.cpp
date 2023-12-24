@@ -6,10 +6,10 @@
 
 namespace Game {
     WaterAnimation::WaterAnimation() {
-        this->frameTime = 0.11f;
+        this->frameTime = settings.WaterPoolAnimationFrameTime;
         this->animationName = "water";
-        SetFrame(80, 80, 21);
-        DataParse(R"(C:\AmericanDemocracySimulator\textures\sea_game_pool_sheet.png)");
+        SetFrame(settings.WaterPoolHeight, settings.WaterPoolWidth, settings.WaterPoolAnimationFrame);
+        DataParse(settings.WaterPoolPath);
         size = texture.getSize();
 
     }

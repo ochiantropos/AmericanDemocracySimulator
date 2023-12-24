@@ -16,8 +16,7 @@ namespace Game::Objects {
             sf::Texture texture;
             sf::Sprite sprite;
         public:
-            int x_position = 0;
-            int y_position = 0;
+
 
             void UpdateDrawObjects() override;
 
@@ -26,6 +25,9 @@ namespace Game::Objects {
             explicit Ground(sf::RenderWindow* windowContext);
 
             void AddToHolder();
+
+            void SetPosition(float x, float y ) override;
+            void MovePosition(float x, float y) override;
         };
 
     } // Objects

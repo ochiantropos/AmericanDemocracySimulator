@@ -11,36 +11,36 @@
 namespace Game {
     Scene *SceneManager::createScene() {
         auto scene = new Scene();
-        scenes["none"] = scene;
+        scenes["none"]->scene  = scene;
         return scene;
     }
 
     Scene *SceneManager::createScene(std::string name) {
         auto scene = new Scene(std::move(name));
-        scenes["none"] = scene;
+        scenes["none"]->scene  = scene;
         return scene;
     }
     Scene *SceneManager::createScene(std::string name, const std::string& contextName) {
         auto scene = new Scene(std::move(name));
-        scenes[contextName] = scene;
+        scenes[contextName]->scene  = scene;
         return scene;
     }
 
     void SceneManager::AddScene(){}
 
     void SceneManager::AddScene(Scene *scene){
-        scenes[scene->ContextName] = scene;
+        scenes[scene->ContextName]->scene = scene;
     }
 
-    void SceneManager::setActiveScene(Scene *scene) {
-        activeScene = scene;
+    void SceneManager::setActiveScene(Scene *scene) const {
+        activeScene->scene = scene;
     }
 
     void SceneManager::SwitchScene(const std::string& sceneName)
     {
         auto it = SceneManager::GetInstance()->scenes.find(sceneName);
         if (it != SceneManager::GetInstance()->scenes.end()) {
-            SceneManager::GetInstance()->setActiveScene(it->second);
+            SceneManager::GetInstance()->setActiveScene(it->second->scene );
             Debugger::Log("Switched to scene: " + sceneName, Debugger::Color::GREEN);
         } else {
             Debugger::Log("Scene not found: " + sceneName, Debugger::Color::RED);

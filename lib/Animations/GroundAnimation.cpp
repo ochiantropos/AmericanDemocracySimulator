@@ -10,10 +10,10 @@ namespace Game {
     }
 
     GroundAnimation::GroundAnimation() {
-        this->frameTime = 0.3f;
+        this->frameTime = settings.GroundAnimationFrameTime;
         this->animationName = "ground";
-        SetFrame(320, 120, 14);
-        DataParse(R"(C:\AmericanDemocracySimulator\textures\ground_sheet.png)");
+        SetFrame(settings.GroundAnimationHeight, settings.GroundAnimationWidth, settings.GroundAnimationFrame);
+        DataParse(settings.ground_path);
         size = texture.getSize();
     }
 } // Game
