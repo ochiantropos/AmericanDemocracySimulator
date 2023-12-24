@@ -16,7 +16,7 @@ namespace Game {
 
         const AnimationSettings animationSettings = AnimationSettings();
 
-        const std::string ship_type_one_path = R"(C:\AmericanDemocracySimulator\textures\ship.png)";
+        const std::string ship_type_one_path = R"(C:\AmericanDemocracySimulator\textures\ship_type_second.png)";
         const std::string ship_type_one_path_die;
         const float ship_type_one_speed = 5.0f;
         const float ship_type_one_width = 100.0f;

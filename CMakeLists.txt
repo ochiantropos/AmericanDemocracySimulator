@@ -14,11 +14,9 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Architect/Scene.h
         lib/Architect/GameObject.cpp
         lib/Architect/GameObject.h
-        lib/Architect/Architect.h
         lib/Architect/AbstractGameObject.h
         lib/Architect/SceneManager.cpp
         lib/Architect/SceneManager.h
-        lib/Animations/Animations.h
         lib/Objects/Objects.h
         lib/Objects/WaterPool.cpp
         lib/Objects/WaterPool.h
@@ -39,24 +37,22 @@ add_executable(AmericanDemocracySimulator main.cpp
         lib/Objects/Ship.h
         lib/Objects/ShipDieAnimated.cpp
         lib/Objects/ShipDieAnimated.h
-        lib/Architect/Base/SceneHolder.cpp
         lib/Architect/Base/SceneHolder.h
+        lib/Architect/Base/SceneHolder.cpp
+        lib/Architect/Base/IColliderCompare.h
+        lib/Architect/Base/IColliderCompare.cpp
         lib/Architect/Base/Coroutine.cpp
-        lib/Architect/Base/Coroutine.h
+        lib/Architect/Base/Collider.h
+        lib/Architect/Base/Collider.cpp
+        lib/Architect/Base/AbstractColliderType.h
+        lib/Architect/Base/AbstractColliderType.cpp
+        lib/Architect/Base/Colliders/RectangleCollider.h
+        lib/Architect/Base/Colliders/RectangleCollider.cpp
+        lib/Architect/Base/Colliders/CircleCollider.h
+        lib/Architect/Base/Colliders/CircleCollider.cpp
         Settings/GamePlaySceneSettings.h
         Settings/AnimationSettings.h
-        lib/Architect/Base/Collider.cpp
-        lib/Architect/Base/Collider.h
-        lib/Architect/Base/AbstractColliderType.cpp
-        lib/Architect/Base/AbstractColliderType.h
-        lib/Architect/Base/IColliderCompare.cpp
-        lib/Architect/Base/IColliderCompare.h
-        lib/Architect/Base/Colliders/RectangleCollider.cpp
-        lib/Architect/Base/Colliders/RectangleCollider.h
-        lib/Architect/Base/Colliders/CircleCollider.cpp
-        lib/Architect/Base/Colliders/CircleCollider.h
 ) # add  target
-
 
 set(SFML_DIR "C:\\AmericanDemocracySimulator\\lib\\SFML\\SFML-2.6.1\\lib\\cmake\\SFML") # link the graphic directory
 
@@ -65,14 +61,14 @@ target_link_libraries(AmericanDemocracySimulator sfml-graphics)
 target_include_directories(AmericanDemocracySimulator PUBLIC # add other directory
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/Debuger,
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/Animations,
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/Holders,
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/Objects,
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/Scenes,
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/Scenes
 
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/Architect,
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/Architect/Base,
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/Architect/Base/Colliders,
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/Holders,
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/Objects,
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/Scenes
 )
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")

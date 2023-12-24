@@ -33,10 +33,12 @@ namespace Game {
 
     protected:
         // fun, current time, border
-        std::map<std::string, Game::Coroutine*> void_stack{};
-
+        SceneHolder(Scene *_scene, int _y_size, int _x_size);
         bool updateRunStatus = true;
         bool fixedUpdateRunStatus = false;
+        int x_size = 0;
+        int y_size = 0;
+        std::map<std::string, Game::Coroutine*> void_stack{};
 
         sf::Clock clock;
         float liveTime = 0;
@@ -45,11 +47,12 @@ namespace Game {
         float deltaTime = 0;
 
     public:
+        SceneHolder();
+
         virtual void Update() {};
         virtual void FixedUpdate() {};
         virtual void Start() {};
 
-        Scene *scene;
         void deleteCoroutineFunk(const std::string& name);
 
         virtual void Next() {
@@ -61,6 +64,8 @@ namespace Game {
         void addCCoroutineFunk(Coroutine *coroutine, const std::string &name);
 
         void addCCoroutineFunk(const std::string &name, Coroutine *coroutine);
+
+        Scene *scene{};
     };
 
 } // Game

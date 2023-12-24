@@ -12,7 +12,6 @@ namespace Game::Objects {
         holder.addObject("ShipObject", sprite);
     }
 
-    void Ship::AddToHolder() {}
 
     Ship::Ship(sf::RenderWindow *windowContext) {
         if (currentContext != nullptr) currentContext->windowContext = windowContext;
