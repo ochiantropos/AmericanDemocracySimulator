@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.27"
+						"string" : "3.17"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "AmericanDemocracySimulator::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-AmericanDemocracySimulator-Debug-41c670dd847fa4f43452.json",
+					"jsonFile" : "target-AmericanDemocracySimulator-Debug-c8b4ea08534f3d91449f.json",
 					"name" : "AmericanDemocracySimulator",
 					"projectIndex" : 0
 				}

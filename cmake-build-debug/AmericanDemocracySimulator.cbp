@@ -5,7 +5,7 @@
 		<Option title="AmericanDemocracySimulator"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\SFML\;CMake Files\lib\SFML\SFML-2.6.1\;CMake Files\lib\SFML\SFML-2.6.1\lib\;CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\;CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/AmericanDemocracySimulator/cmake-build-debug"/>
@@ -24,6 +24,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
@@ -47,6 +49,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/include"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
@@ -84,11 +88,179 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/AmericanDemocracySimulator/Settings/AnimationSettings.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/Settings/GamePlaySceneSettings.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Architect.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/AbstractGameObject.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Base.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Coroutine.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/Coroutine.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/GameObject.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/GameObject.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/SceneManager.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Base/SceneManager.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Holders/DrawableHolder.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Holders/DrawableHolder.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Holders/Holders.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Holders/SceneHolder.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Holders/SceneHolder.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Animations/Animation.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Animations/Animation.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Animations/Animations.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Animations/GroundAnimation.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Animations/GroundAnimation.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Animations/WaterAnimation.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Animations/WaterAnimation.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/AbstractCollider.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/AbstractCollider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/CircleCollider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/Collider.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/Collider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/Colliders.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/ICollider.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/ICollider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Colliders/RectangleCollider.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/GameObjects.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/Ground.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/Ground.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/Ship.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/Ship.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/ShipDieAnimated.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/WaterPool.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/GameObjects/WaterPool.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Objects/Objects.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Scenes/GamePlayScene.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Scenes/GamePlayScene.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Scenes/Scene.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Scenes/Scene.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Architect/Scenes/Scenes.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Debugger/Debugger.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Debugger/Debugger.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Game.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/main.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-release.cmake">
+			<Option virtualFolder="CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets.cmake">
+			<Option virtualFolder="CMake Files\lib\SFML\SFML-2.6.1\lib\cmake\SFML\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

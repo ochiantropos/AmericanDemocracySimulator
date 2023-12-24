@@ -128,6 +128,438 @@ AmericanDemocracySimulator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/build
 .PHONY : AmericanDemocracySimulator/fast
 
+lib/Architect/Base/Coroutine.obj: lib/Architect/Base/Coroutine.cpp.obj
+.PHONY : lib/Architect/Base/Coroutine.obj
+
+# target to build an object file
+lib/Architect/Base/Coroutine.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Coroutine.cpp.obj
+.PHONY : lib/Architect/Base/Coroutine.cpp.obj
+
+lib/Architect/Base/Coroutine.i: lib/Architect/Base/Coroutine.cpp.i
+.PHONY : lib/Architect/Base/Coroutine.i
+
+# target to preprocess a source file
+lib/Architect/Base/Coroutine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Coroutine.cpp.i
+.PHONY : lib/Architect/Base/Coroutine.cpp.i
+
+lib/Architect/Base/Coroutine.s: lib/Architect/Base/Coroutine.cpp.s
+.PHONY : lib/Architect/Base/Coroutine.s
+
+# target to generate assembly for a file
+lib/Architect/Base/Coroutine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/Coroutine.cpp.s
+.PHONY : lib/Architect/Base/Coroutine.cpp.s
+
+lib/Architect/Base/GameObject.obj: lib/Architect/Base/GameObject.cpp.obj
+.PHONY : lib/Architect/Base/GameObject.obj
+
+# target to build an object file
+lib/Architect/Base/GameObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/GameObject.cpp.obj
+.PHONY : lib/Architect/Base/GameObject.cpp.obj
+
+lib/Architect/Base/GameObject.i: lib/Architect/Base/GameObject.cpp.i
+.PHONY : lib/Architect/Base/GameObject.i
+
+# target to preprocess a source file
+lib/Architect/Base/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/GameObject.cpp.i
+.PHONY : lib/Architect/Base/GameObject.cpp.i
+
+lib/Architect/Base/GameObject.s: lib/Architect/Base/GameObject.cpp.s
+.PHONY : lib/Architect/Base/GameObject.s
+
+# target to generate assembly for a file
+lib/Architect/Base/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/GameObject.cpp.s
+.PHONY : lib/Architect/Base/GameObject.cpp.s
+
+lib/Architect/Base/SceneManager.obj: lib/Architect/Base/SceneManager.cpp.obj
+.PHONY : lib/Architect/Base/SceneManager.obj
+
+# target to build an object file
+lib/Architect/Base/SceneManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/SceneManager.cpp.obj
+.PHONY : lib/Architect/Base/SceneManager.cpp.obj
+
+lib/Architect/Base/SceneManager.i: lib/Architect/Base/SceneManager.cpp.i
+.PHONY : lib/Architect/Base/SceneManager.i
+
+# target to preprocess a source file
+lib/Architect/Base/SceneManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/SceneManager.cpp.i
+.PHONY : lib/Architect/Base/SceneManager.cpp.i
+
+lib/Architect/Base/SceneManager.s: lib/Architect/Base/SceneManager.cpp.s
+.PHONY : lib/Architect/Base/SceneManager.s
+
+# target to generate assembly for a file
+lib/Architect/Base/SceneManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Base/SceneManager.cpp.s
+.PHONY : lib/Architect/Base/SceneManager.cpp.s
+
+lib/Architect/Holders/DrawableHolder.obj: lib/Architect/Holders/DrawableHolder.cpp.obj
+.PHONY : lib/Architect/Holders/DrawableHolder.obj
+
+# target to build an object file
+lib/Architect/Holders/DrawableHolder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Holders/DrawableHolder.cpp.obj
+.PHONY : lib/Architect/Holders/DrawableHolder.cpp.obj
+
+lib/Architect/Holders/DrawableHolder.i: lib/Architect/Holders/DrawableHolder.cpp.i
+.PHONY : lib/Architect/Holders/DrawableHolder.i
+
+# target to preprocess a source file
+lib/Architect/Holders/DrawableHolder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Holders/DrawableHolder.cpp.i
+.PHONY : lib/Architect/Holders/DrawableHolder.cpp.i
+
+lib/Architect/Holders/DrawableHolder.s: lib/Architect/Holders/DrawableHolder.cpp.s
+.PHONY : lib/Architect/Holders/DrawableHolder.s
+
+# target to generate assembly for a file
+lib/Architect/Holders/DrawableHolder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Holders/DrawableHolder.cpp.s
+.PHONY : lib/Architect/Holders/DrawableHolder.cpp.s
+
+lib/Architect/Holders/SceneHolder.obj: lib/Architect/Holders/SceneHolder.cpp.obj
+.PHONY : lib/Architect/Holders/SceneHolder.obj
+
+# target to build an object file
+lib/Architect/Holders/SceneHolder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Holders/SceneHolder.cpp.obj
+.PHONY : lib/Architect/Holders/SceneHolder.cpp.obj
+
+lib/Architect/Holders/SceneHolder.i: lib/Architect/Holders/SceneHolder.cpp.i
+.PHONY : lib/Architect/Holders/SceneHolder.i
+
+# target to preprocess a source file
+lib/Architect/Holders/SceneHolder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Holders/SceneHolder.cpp.i
+.PHONY : lib/Architect/Holders/SceneHolder.cpp.i
+
+lib/Architect/Holders/SceneHolder.s: lib/Architect/Holders/SceneHolder.cpp.s
+.PHONY : lib/Architect/Holders/SceneHolder.s
+
+# target to generate assembly for a file
+lib/Architect/Holders/SceneHolder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Holders/SceneHolder.cpp.s
+.PHONY : lib/Architect/Holders/SceneHolder.cpp.s
+
+lib/Architect/Objects/Animations/Animation.obj: lib/Architect/Objects/Animations/Animation.cpp.obj
+.PHONY : lib/Architect/Objects/Animations/Animation.obj
+
+# target to build an object file
+lib/Architect/Objects/Animations/Animation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/Animation.cpp.obj
+.PHONY : lib/Architect/Objects/Animations/Animation.cpp.obj
+
+lib/Architect/Objects/Animations/Animation.i: lib/Architect/Objects/Animations/Animation.cpp.i
+.PHONY : lib/Architect/Objects/Animations/Animation.i
+
+# target to preprocess a source file
+lib/Architect/Objects/Animations/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/Animation.cpp.i
+.PHONY : lib/Architect/Objects/Animations/Animation.cpp.i
+
+lib/Architect/Objects/Animations/Animation.s: lib/Architect/Objects/Animations/Animation.cpp.s
+.PHONY : lib/Architect/Objects/Animations/Animation.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/Animations/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/Animation.cpp.s
+.PHONY : lib/Architect/Objects/Animations/Animation.cpp.s
+
+lib/Architect/Objects/Animations/GroundAnimation.obj: lib/Architect/Objects/Animations/GroundAnimation.cpp.obj
+.PHONY : lib/Architect/Objects/Animations/GroundAnimation.obj
+
+# target to build an object file
+lib/Architect/Objects/Animations/GroundAnimation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/GroundAnimation.cpp.obj
+.PHONY : lib/Architect/Objects/Animations/GroundAnimation.cpp.obj
+
+lib/Architect/Objects/Animations/GroundAnimation.i: lib/Architect/Objects/Animations/GroundAnimation.cpp.i
+.PHONY : lib/Architect/Objects/Animations/GroundAnimation.i
+
+# target to preprocess a source file
+lib/Architect/Objects/Animations/GroundAnimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/GroundAnimation.cpp.i
+.PHONY : lib/Architect/Objects/Animations/GroundAnimation.cpp.i
+
+lib/Architect/Objects/Animations/GroundAnimation.s: lib/Architect/Objects/Animations/GroundAnimation.cpp.s
+.PHONY : lib/Architect/Objects/Animations/GroundAnimation.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/Animations/GroundAnimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/GroundAnimation.cpp.s
+.PHONY : lib/Architect/Objects/Animations/GroundAnimation.cpp.s
+
+lib/Architect/Objects/Animations/WaterAnimation.obj: lib/Architect/Objects/Animations/WaterAnimation.cpp.obj
+.PHONY : lib/Architect/Objects/Animations/WaterAnimation.obj
+
+# target to build an object file
+lib/Architect/Objects/Animations/WaterAnimation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/WaterAnimation.cpp.obj
+.PHONY : lib/Architect/Objects/Animations/WaterAnimation.cpp.obj
+
+lib/Architect/Objects/Animations/WaterAnimation.i: lib/Architect/Objects/Animations/WaterAnimation.cpp.i
+.PHONY : lib/Architect/Objects/Animations/WaterAnimation.i
+
+# target to preprocess a source file
+lib/Architect/Objects/Animations/WaterAnimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/WaterAnimation.cpp.i
+.PHONY : lib/Architect/Objects/Animations/WaterAnimation.cpp.i
+
+lib/Architect/Objects/Animations/WaterAnimation.s: lib/Architect/Objects/Animations/WaterAnimation.cpp.s
+.PHONY : lib/Architect/Objects/Animations/WaterAnimation.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/Animations/WaterAnimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Animations/WaterAnimation.cpp.s
+.PHONY : lib/Architect/Objects/Animations/WaterAnimation.cpp.s
+
+lib/Architect/Objects/Colliders/AbstractCollider.obj: lib/Architect/Objects/Colliders/AbstractCollider.cpp.obj
+.PHONY : lib/Architect/Objects/Colliders/AbstractCollider.obj
+
+# target to build an object file
+lib/Architect/Objects/Colliders/AbstractCollider.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/AbstractCollider.cpp.obj
+.PHONY : lib/Architect/Objects/Colliders/AbstractCollider.cpp.obj
+
+lib/Architect/Objects/Colliders/AbstractCollider.i: lib/Architect/Objects/Colliders/AbstractCollider.cpp.i
+.PHONY : lib/Architect/Objects/Colliders/AbstractCollider.i
+
+# target to preprocess a source file
+lib/Architect/Objects/Colliders/AbstractCollider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/AbstractCollider.cpp.i
+.PHONY : lib/Architect/Objects/Colliders/AbstractCollider.cpp.i
+
+lib/Architect/Objects/Colliders/AbstractCollider.s: lib/Architect/Objects/Colliders/AbstractCollider.cpp.s
+.PHONY : lib/Architect/Objects/Colliders/AbstractCollider.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/Colliders/AbstractCollider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/AbstractCollider.cpp.s
+.PHONY : lib/Architect/Objects/Colliders/AbstractCollider.cpp.s
+
+lib/Architect/Objects/Colliders/Collider.obj: lib/Architect/Objects/Colliders/Collider.cpp.obj
+.PHONY : lib/Architect/Objects/Colliders/Collider.obj
+
+# target to build an object file
+lib/Architect/Objects/Colliders/Collider.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/Collider.cpp.obj
+.PHONY : lib/Architect/Objects/Colliders/Collider.cpp.obj
+
+lib/Architect/Objects/Colliders/Collider.i: lib/Architect/Objects/Colliders/Collider.cpp.i
+.PHONY : lib/Architect/Objects/Colliders/Collider.i
+
+# target to preprocess a source file
+lib/Architect/Objects/Colliders/Collider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/Collider.cpp.i
+.PHONY : lib/Architect/Objects/Colliders/Collider.cpp.i
+
+lib/Architect/Objects/Colliders/Collider.s: lib/Architect/Objects/Colliders/Collider.cpp.s
+.PHONY : lib/Architect/Objects/Colliders/Collider.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/Colliders/Collider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/Collider.cpp.s
+.PHONY : lib/Architect/Objects/Colliders/Collider.cpp.s
+
+lib/Architect/Objects/Colliders/ICollider.obj: lib/Architect/Objects/Colliders/ICollider.cpp.obj
+.PHONY : lib/Architect/Objects/Colliders/ICollider.obj
+
+# target to build an object file
+lib/Architect/Objects/Colliders/ICollider.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/ICollider.cpp.obj
+.PHONY : lib/Architect/Objects/Colliders/ICollider.cpp.obj
+
+lib/Architect/Objects/Colliders/ICollider.i: lib/Architect/Objects/Colliders/ICollider.cpp.i
+.PHONY : lib/Architect/Objects/Colliders/ICollider.i
+
+# target to preprocess a source file
+lib/Architect/Objects/Colliders/ICollider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/ICollider.cpp.i
+.PHONY : lib/Architect/Objects/Colliders/ICollider.cpp.i
+
+lib/Architect/Objects/Colliders/ICollider.s: lib/Architect/Objects/Colliders/ICollider.cpp.s
+.PHONY : lib/Architect/Objects/Colliders/ICollider.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/Colliders/ICollider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/Colliders/ICollider.cpp.s
+.PHONY : lib/Architect/Objects/Colliders/ICollider.cpp.s
+
+lib/Architect/Objects/GameObjects/Ground.obj: lib/Architect/Objects/GameObjects/Ground.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/Ground.obj
+
+# target to build an object file
+lib/Architect/Objects/GameObjects/Ground.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/Ground.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/Ground.cpp.obj
+
+lib/Architect/Objects/GameObjects/Ground.i: lib/Architect/Objects/GameObjects/Ground.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/Ground.i
+
+# target to preprocess a source file
+lib/Architect/Objects/GameObjects/Ground.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/Ground.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/Ground.cpp.i
+
+lib/Architect/Objects/GameObjects/Ground.s: lib/Architect/Objects/GameObjects/Ground.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/Ground.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/GameObjects/Ground.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/Ground.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/Ground.cpp.s
+
+lib/Architect/Objects/GameObjects/Ship.obj: lib/Architect/Objects/GameObjects/Ship.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/Ship.obj
+
+# target to build an object file
+lib/Architect/Objects/GameObjects/Ship.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/Ship.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/Ship.cpp.obj
+
+lib/Architect/Objects/GameObjects/Ship.i: lib/Architect/Objects/GameObjects/Ship.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/Ship.i
+
+# target to preprocess a source file
+lib/Architect/Objects/GameObjects/Ship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/Ship.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/Ship.cpp.i
+
+lib/Architect/Objects/GameObjects/Ship.s: lib/Architect/Objects/GameObjects/Ship.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/Ship.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/GameObjects/Ship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/Ship.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/Ship.cpp.s
+
+lib/Architect/Objects/GameObjects/ShipDieAnimated.obj: lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/ShipDieAnimated.obj
+
+# target to build an object file
+lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.obj
+
+lib/Architect/Objects/GameObjects/ShipDieAnimated.i: lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/ShipDieAnimated.i
+
+# target to preprocess a source file
+lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.i
+
+lib/Architect/Objects/GameObjects/ShipDieAnimated.s: lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/ShipDieAnimated.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp.s
+
+lib/Architect/Objects/GameObjects/WaterPool.obj: lib/Architect/Objects/GameObjects/WaterPool.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/WaterPool.obj
+
+# target to build an object file
+lib/Architect/Objects/GameObjects/WaterPool.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/WaterPool.cpp.obj
+.PHONY : lib/Architect/Objects/GameObjects/WaterPool.cpp.obj
+
+lib/Architect/Objects/GameObjects/WaterPool.i: lib/Architect/Objects/GameObjects/WaterPool.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/WaterPool.i
+
+# target to preprocess a source file
+lib/Architect/Objects/GameObjects/WaterPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/WaterPool.cpp.i
+.PHONY : lib/Architect/Objects/GameObjects/WaterPool.cpp.i
+
+lib/Architect/Objects/GameObjects/WaterPool.s: lib/Architect/Objects/GameObjects/WaterPool.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/WaterPool.s
+
+# target to generate assembly for a file
+lib/Architect/Objects/GameObjects/WaterPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Objects/GameObjects/WaterPool.cpp.s
+.PHONY : lib/Architect/Objects/GameObjects/WaterPool.cpp.s
+
+lib/Architect/Scenes/GamePlayScene.obj: lib/Architect/Scenes/GamePlayScene.cpp.obj
+.PHONY : lib/Architect/Scenes/GamePlayScene.obj
+
+# target to build an object file
+lib/Architect/Scenes/GamePlayScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scenes/GamePlayScene.cpp.obj
+.PHONY : lib/Architect/Scenes/GamePlayScene.cpp.obj
+
+lib/Architect/Scenes/GamePlayScene.i: lib/Architect/Scenes/GamePlayScene.cpp.i
+.PHONY : lib/Architect/Scenes/GamePlayScene.i
+
+# target to preprocess a source file
+lib/Architect/Scenes/GamePlayScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scenes/GamePlayScene.cpp.i
+.PHONY : lib/Architect/Scenes/GamePlayScene.cpp.i
+
+lib/Architect/Scenes/GamePlayScene.s: lib/Architect/Scenes/GamePlayScene.cpp.s
+.PHONY : lib/Architect/Scenes/GamePlayScene.s
+
+# target to generate assembly for a file
+lib/Architect/Scenes/GamePlayScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scenes/GamePlayScene.cpp.s
+.PHONY : lib/Architect/Scenes/GamePlayScene.cpp.s
+
+lib/Architect/Scenes/Scene.obj: lib/Architect/Scenes/Scene.cpp.obj
+.PHONY : lib/Architect/Scenes/Scene.obj
+
+# target to build an object file
+lib/Architect/Scenes/Scene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scenes/Scene.cpp.obj
+.PHONY : lib/Architect/Scenes/Scene.cpp.obj
+
+lib/Architect/Scenes/Scene.i: lib/Architect/Scenes/Scene.cpp.i
+.PHONY : lib/Architect/Scenes/Scene.i
+
+# target to preprocess a source file
+lib/Architect/Scenes/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scenes/Scene.cpp.i
+.PHONY : lib/Architect/Scenes/Scene.cpp.i
+
+lib/Architect/Scenes/Scene.s: lib/Architect/Scenes/Scene.cpp.s
+.PHONY : lib/Architect/Scenes/Scene.s
+
+# target to generate assembly for a file
+lib/Architect/Scenes/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scenes/Scene.cpp.s
+.PHONY : lib/Architect/Scenes/Scene.cpp.s
+
+lib/Debugger/Debugger.obj: lib/Debugger/Debugger.cpp.obj
+.PHONY : lib/Debugger/Debugger.obj
+
+# target to build an object file
+lib/Debugger/Debugger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj
+.PHONY : lib/Debugger/Debugger.cpp.obj
+
+lib/Debugger/Debugger.i: lib/Debugger/Debugger.cpp.i
+.PHONY : lib/Debugger/Debugger.i
+
+# target to preprocess a source file
+lib/Debugger/Debugger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.i
+.PHONY : lib/Debugger/Debugger.cpp.i
+
+lib/Debugger/Debugger.s: lib/Debugger/Debugger.cpp.s
+.PHONY : lib/Debugger/Debugger.s
+
+# target to generate assembly for a file
+lib/Debugger/Debugger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.s
+.PHONY : lib/Debugger/Debugger.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +593,60 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AmericanDemocracySimulator
+	@echo ... lib/Architect/Base/Coroutine.obj
+	@echo ... lib/Architect/Base/Coroutine.i
+	@echo ... lib/Architect/Base/Coroutine.s
+	@echo ... lib/Architect/Base/GameObject.obj
+	@echo ... lib/Architect/Base/GameObject.i
+	@echo ... lib/Architect/Base/GameObject.s
+	@echo ... lib/Architect/Base/SceneManager.obj
+	@echo ... lib/Architect/Base/SceneManager.i
+	@echo ... lib/Architect/Base/SceneManager.s
+	@echo ... lib/Architect/Holders/DrawableHolder.obj
+	@echo ... lib/Architect/Holders/DrawableHolder.i
+	@echo ... lib/Architect/Holders/DrawableHolder.s
+	@echo ... lib/Architect/Holders/SceneHolder.obj
+	@echo ... lib/Architect/Holders/SceneHolder.i
+	@echo ... lib/Architect/Holders/SceneHolder.s
+	@echo ... lib/Architect/Objects/Animations/Animation.obj
+	@echo ... lib/Architect/Objects/Animations/Animation.i
+	@echo ... lib/Architect/Objects/Animations/Animation.s
+	@echo ... lib/Architect/Objects/Animations/GroundAnimation.obj
+	@echo ... lib/Architect/Objects/Animations/GroundAnimation.i
+	@echo ... lib/Architect/Objects/Animations/GroundAnimation.s
+	@echo ... lib/Architect/Objects/Animations/WaterAnimation.obj
+	@echo ... lib/Architect/Objects/Animations/WaterAnimation.i
+	@echo ... lib/Architect/Objects/Animations/WaterAnimation.s
+	@echo ... lib/Architect/Objects/Colliders/AbstractCollider.obj
+	@echo ... lib/Architect/Objects/Colliders/AbstractCollider.i
+	@echo ... lib/Architect/Objects/Colliders/AbstractCollider.s
+	@echo ... lib/Architect/Objects/Colliders/Collider.obj
+	@echo ... lib/Architect/Objects/Colliders/Collider.i
+	@echo ... lib/Architect/Objects/Colliders/Collider.s
+	@echo ... lib/Architect/Objects/Colliders/ICollider.obj
+	@echo ... lib/Architect/Objects/Colliders/ICollider.i
+	@echo ... lib/Architect/Objects/Colliders/ICollider.s
+	@echo ... lib/Architect/Objects/GameObjects/Ground.obj
+	@echo ... lib/Architect/Objects/GameObjects/Ground.i
+	@echo ... lib/Architect/Objects/GameObjects/Ground.s
+	@echo ... lib/Architect/Objects/GameObjects/Ship.obj
+	@echo ... lib/Architect/Objects/GameObjects/Ship.i
+	@echo ... lib/Architect/Objects/GameObjects/Ship.s
+	@echo ... lib/Architect/Objects/GameObjects/ShipDieAnimated.obj
+	@echo ... lib/Architect/Objects/GameObjects/ShipDieAnimated.i
+	@echo ... lib/Architect/Objects/GameObjects/ShipDieAnimated.s
+	@echo ... lib/Architect/Objects/GameObjects/WaterPool.obj
+	@echo ... lib/Architect/Objects/GameObjects/WaterPool.i
+	@echo ... lib/Architect/Objects/GameObjects/WaterPool.s
+	@echo ... lib/Architect/Scenes/GamePlayScene.obj
+	@echo ... lib/Architect/Scenes/GamePlayScene.i
+	@echo ... lib/Architect/Scenes/GamePlayScene.s
+	@echo ... lib/Architect/Scenes/Scene.obj
+	@echo ... lib/Architect/Scenes/Scene.i
+	@echo ... lib/Architect/Scenes/Scene.s
+	@echo ... lib/Debugger/Debugger.obj
+	@echo ... lib/Debugger/Debugger.i
+	@echo ... lib/Debugger/Debugger.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
