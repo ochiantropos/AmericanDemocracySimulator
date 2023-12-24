@@ -1,10 +1,11 @@
 //
 // Created by OchiAnthropos on 20.12.2023.
 //
-#include <windows.h>   // WinApi header
 #ifndef AMERICANDEMOCRACYSIMULATOR_DEBUGGER_H
 #define AMERICANDEMOCRACYSIMULATOR_DEBUGGER_H
+#pragma once
 
+#include <windows.h>   // WinApi header
 #include <iostream>
 
 namespace Game {

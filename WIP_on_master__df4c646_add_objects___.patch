@@ -1,0 +1,1702 @@
+Subject: [PATCH] WIP on master: df4c646 add objects
+---
+Index: lib/Architect/AbstractGameObject.h
+===================================================================
+diff --git a/lib/Architect/AbstractGameObject.h b/lib/Architect/Base/AbstractGameObject.h
+rename from lib/Architect/AbstractGameObject.h
+rename to lib/Architect/Base/AbstractGameObject.h
+--- a/lib/Architect/AbstractGameObject.h	(date 1703398984098)
++++ b/lib/Architect/Base/AbstractGameObject.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,14 +5,13 @@
+ #ifndef AMERICANDEMOCRACYSIMULATOR_ABSTRACTGAMEOBJECT_H
+ #define AMERICANDEMOCRACYSIMULATOR_ABSTRACTGAMEOBJECT_H
+ 
+-#include "HolderableObject.h"
++#include "../Base/Base.h"
+ 
+ namespace Game{
+ 
+     class  AbstractGameObject : public  HolderableObject{
+     public:
+-        virtual void update(float deltaTime) = 0;
+-        virtual void draw(sf::RenderWindow& window) = 0;
++
+     };
+ }
+ 
+Index: lib/Architect/Base/Base.h
+===================================================================
+diff --git a/lib/Architect/Base/Base.h b/lib/Architect/Base/Base.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Base/Base.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,15 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_BASE_H
++#define AMERICANDEMOCRACYSIMULATOR_BASE_H
++
++#include "HolderableObject.h"
++#include "AbstractGameObject.h"
++#include "Coroutine.h"
++#include "GameObject.h"
++#include "SceneManager.h"
++
++
++#endif //AMERICANDEMOCRACYSIMULATOR_BASE_H
+Index: lib/Architect/Base/Coroutine.cpp
+===================================================================
+diff --git a/lib/Architect/Base/Coroutine.cpp b/lib/Architect/Base/Coroutine.cpp
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Base/Coroutine.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,69 @@
++//
++// Created by OchiAnthropos on 23.12.2023.
++//
++
++#include "Coroutine.h"
++#include <utility>
++
++namespace Game {
++
++    void Coroutine::Delta(float deltaTime) {
++        processedTime += deltaTime;
++        if (processedTime > borderTime){
++            processedStatus = true;
++            processedTime -= borderTime;
++        } else {
++            processedStatus = false;
++        }
++    }
++
++    void Coroutine::Continue(float deltaTime) {
++        Delta(deltaTime);
++        if (processedStatus) {
++            process();
++            ChangeCurrentBorder();
++        }
++    }
++
++    void Coroutine::Continue()  {
++        if (processedStatus) {
++            process();
++            ChangeCurrentBorder();
++        }
++    }
++
++    void Coroutine::ChangeCurrentBorder()  {
++        if (borderChangeableStatus){
++            std::random_device rd;  // Створення об'єкта для отримання випадкових чисел
++            std::mt19937 gen(rd()); // Генератор випадкових чисел на основі rd()
++            std::uniform_int_distribution<int> distribution( (int)(borderTimeMin * 1000), (int)(borderTimeMax * 1000)); // Встановлення діапазону для випадкового числа від 0 до 100 (змініть за потребою)
++            int x = distribution(gen);
++            borderTime = (float)(x) / 1000;
++        }
++    }
++
++    Coroutine::Coroutine( std::function<void()> process) : process(std::move(process)) {}
++
++    Coroutine::Coroutine( std::function<void()> process, float processedTime, float borderTime,
++                         bool processedStatus) : process(std::move(process)), processedTime(processedTime), borderTime(borderTime),
++                                                 processedStatus(processedStatus) {}
++
++    Coroutine::Coroutine( std::function<void()> process, float borderTime) : process(std::move(process)),
++                                                                                   borderTime(borderTime) {}
++
++    Coroutine::Coroutine( std::function<void()> process,float min, float max) {
++        this->process = std::move(process);
++        borderChangeableStatus = true;
++        borderTime = min;
++        borderTimeMin = min;
++        borderTimeMax = max;
++    }
++
++    Coroutine::Coroutine( std::function<void()> process,float min, float max, float start) {
++        this->process = std::move(process);
++        borderChangeableStatus = true;
++        borderTime = start;
++        borderTimeMin = min;
++        borderTimeMax = max;
++    }
++} // Game
+\ No newline at end of file
+Index: lib/Architect/Base/Coroutine.h
+===================================================================
+diff --git a/lib/Architect/Base/Coroutine.h b/lib/Architect/Base/Coroutine.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Base/Coroutine.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,45 @@
++//
++// Created by OchiAnthropos on 23.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_COROUTINE_H
++#define AMERICANDEMOCRACYSIMULATOR_COROUTINE_H
++
++#include <iostream>
++#include <functional>
++#include <algorithm>
++#include <random>
++
++namespace Game {
++
++    class Coroutine {
++    protected:
++
++        std::function<void()> process;
++        float processedTime = 0.0f;
++        float borderTime = 0.2f;
++
++        float borderTimeMax = 0.2f;
++        float borderTimeMin = 0.1f;
++
++        bool borderChangeableStatus = false;
++        bool processedStatus = false;
++
++        void ChangeCurrentBorder();
++
++    public:
++        explicit Coroutine( std::function<void()> process);
++        explicit Coroutine( std::function<void()> process, float borderTime);
++        explicit Coroutine( std::function<void()> process, float min, float max);
++        explicit Coroutine( std::function<void()> process, float min, float max, float start);
++        explicit Coroutine( std::function<void()> process, float processedTime, float borderTime, bool processedStatus);
++
++        void Delta(float deltaTime);
++        void Continue();
++        void Continue(float deltaTime);
++
++    };
++
++} // Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_COROUTINE_H
+Index: lib/Architect/Base/GameObject.cpp
+===================================================================
+diff --git a/lib/Architect/Base/GameObject.cpp b/lib/Architect/Base/GameObject.cpp
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Base/GameObject.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,15 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#include "GameObject.h"
++
++namespace Game {
++    void GameObject::update(float deltaTime) {
++
++    }
++
++    void GameObject::draw(sf::RenderWindow &window) {
++
++    }
++} // Game
+\ No newline at end of file
+Index: lib/Architect/Base/GameObject.h
+===================================================================
+diff --git a/lib/Architect/Base/GameObject.h b/lib/Architect/Base/GameObject.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Base/GameObject.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,41 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
++#define AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
++
++#include "AbstractGameObject.h"
++
++namespace Game {
++
++    class GameObject{
++    public:
++        DrawableHolder holder = DrawableHolder();
++
++        sf::Texture texture;
++        sf::Sprite sprite;
++        float x_position = 0;
++        float y_position = 0;
++        float height = 18.0f;
++        float width = 134.0f;
++
++        void update(float deltaTime) ;
++
++        void draw(sf::RenderWindow &window) ;
++
++        std::map <std::string, sf::Sprite> &getObjects() { return holder.objects; }
++
++        std::string gameObjectName = "GameObject";
++
++        virtual void SetPosition(float x, float y) {}
++
++        virtual void MovePosition(float x, float y) {}
++
++        virtual void UpdateDrawObjects() {};
++        Scene *currentContext = nullptr;
++        Animation *baseAnimation{};
++    };
++}// Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
+Index: lib/Architect/SceneManager.cpp
+===================================================================
+diff --git a/lib/Architect/SceneManager.cpp b/lib/Architect/Base/SceneManager.cpp
+rename from lib/Architect/SceneManager.cpp
+rename to lib/Architect/Base/SceneManager.cpp
+--- a/lib/Architect/SceneManager.cpp	(date 1703398984100)
++++ b/lib/Architect/Base/SceneManager.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,34 +5,33 @@
+ #include <utility>
+ #include <vector>
+ #include "SceneManager.h"
+-#include "Scene.h"
+-#include "../Debugger/Debugger.h"
++#include "../../Debugger/Debugger.h"
+ 
+ namespace Game {
+     Scene *SceneManager::createScene() {
+         auto scene = new Scene();
+-        scenes["none"] = scene;
++        scenes["none"]->scene = scene;
+         return scene;
+     }
+ 
+     Scene *SceneManager::createScene(std::string name) {
+         auto scene = new Scene(std::move(name));
+-        scenes["none"] = scene;
++        scenes["none"]->scene = scene;
+         return scene;
+     }
+     Scene *SceneManager::createScene(std::string name, const std::string& contextName) {
+         auto scene = new Scene(std::move(name));
+-        scenes[contextName] = scene;
++        scenes[contextName]->scene = scene;
+         return scene;
+     }
+ 
+     void SceneManager::AddScene(){}
+ 
+-    void SceneManager::AddScene(Scene *scene){
+-        scenes[scene->ContextName] = scene;
++    void SceneManager::AddScene(SceneHolder *scene){
++        scenes[scene->scene->ContextName] = scene;
+     }
+ 
+-    void SceneManager::setActiveScene(Scene *scene) {
++    void SceneManager::setActiveScene(SceneHolder *scene) {
+         activeScene = scene;
+     }
+ 
+Index: lib/Architect/SceneManager.h
+===================================================================
+diff --git a/lib/Architect/SceneManager.h b/lib/Architect/Base/SceneManager.h
+rename from lib/Architect/SceneManager.h
+rename to lib/Architect/Base/SceneManager.h
+--- a/lib/Architect/SceneManager.h	(date 1703398984101)
++++ b/lib/Architect/Base/SceneManager.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,7 +5,7 @@
+ #ifndef AMERICANDEMOCRACYSIMULATOR_SCENEMANAGER_H
+ #define AMERICANDEMOCRACYSIMULATOR_SCENEMANAGER_H
+ #include <iostream>
+-#include "Scene.h"
++#include "../Holders/Holders.h"
+ 
+ namespace Game {
+ 
+@@ -16,17 +16,17 @@
+         static void SwitchScene(const std::string& sceneName);
+         static void PrintScenes();
+ 
+-         Scene *createScene();
+-         Scene *createScene(std::string name);
+-         Scene *createScene(std::string name, const std::string& contextName);
+-         void setActiveScene(Scene *scene);
+-         void AddScene(Scene *scene);
++        Scene *createScene();
++        Scene *createScene(std::string name);
++        Scene *createScene(std::string name, const std::string& contextName);
++         void setActiveScene(SceneHolder *scene);
++         void AddScene(SceneHolder *scene);
+          void AddScene();
+ 
+-        Scene *activeScene = nullptr;
++        SceneHolder *activeScene = nullptr;
+ 
+          std::map<std::string, sf::RenderWindow*>  constexts;
+-         std::map<std::string, Scene*> scenes;
++         std::map<std::string, SceneHolder*> scenes;
+ 
+         SceneManager(SceneManager &other) = delete;
+         static SceneManager *GetInstance();
+Index: lib/Architect/Holders/Holders.h
+===================================================================
+diff --git a/lib/Architect/Holders/Holders.h b/lib/Architect/Holders/Holders.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Holders/Holders.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,12 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_HOLDERS_H
++#define AMERICANDEMOCRACYSIMULATOR_HOLDERS_H
++
++#pragma once
++#include "DrawableHolder.h"
++#include "SceneHolder.h"
++
++#endif //AMERICANDEMOCRACYSIMULATOR_HOLDERS_H
+Index: lib/Architect/Holders/SceneHolder.cpp
+===================================================================
+diff --git a/lib/Architect/Holders/SceneHolder.cpp b/lib/Architect/Holders/SceneHolder.cpp
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Holders/SceneHolder.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,27 @@
++//
++// Created by OchiAnthropos on 23.12.2023.
++//
++
++#include "SceneHolder.h"
++
++namespace Game {
++    void SceneHolder::AsyncRunState() {
++        if (fixedUpdateRunStatus) FixedUpdate();
++        if (updateRunStatus) Update();
++    }
++    void SceneHolder::deleteCoroutineFunk(const std::string &name) {
++        auto it = void_stack.find(name);
++        if (it != void_stack.end()) {
++            delete it->second;
++            void_stack.erase(it);
++        }
++    }
++
++    void SceneHolder::addCCoroutineFunk(Coroutine *coroutine, const std::string &name) {
++        void_stack[name] = coroutine;
++    }
++    void SceneHolder::addCCoroutineFunk(const std::string &name, Coroutine *coroutine) { addCCoroutineFunk(coroutine, name); }
++
++    void SceneHolder::addCCoroutineFunk(const std::function<void()> &runtime, const std::string &name, float time) {
++    }
++} // Game
+\ No newline at end of file
+Index: lib/Architect/Holders/SceneHolder.h
+===================================================================
+diff --git a/lib/Architect/Holders/SceneHolder.h b/lib/Architect/Holders/SceneHolder.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Holders/SceneHolder.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,73 @@
++//
++// Created by OchiAnthropos on 23.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_SCENEHOLDER_H
++#define AMERICANDEMOCRACYSIMULATOR_SCENEHOLDER_H
++
++#include <SFML/System/Clock.hpp>
++#include <map>
++#include <iostream>
++#include <functional>
++#include <algorithm>
++#include "../Base/Base.h"
++#include "../Scenes/Scenes.h"
++
++namespace Game {
++
++    class SceneHolder {
++
++    private:
++        float frameFixedDeltaTime = 0.00f;
++        void AsyncRunState();
++        void Main(){
++            deltaTime = clock.restart().asSeconds();
++            liveTime += deltaTime;
++            updateRunStatus = true;
++
++            if ( frameFixedDeltaTime <= fixedDeltaTime ){
++                fixedUpdateRunStatus = true;
++                frameFixedDeltaTime -= fixedDeltaTime;
++            } else {
++                frameFixedDeltaTime += deltaTime;
++                fixedUpdateRunStatus = false;
++            }
++            AsyncRunState();
++            for (auto Coroutine : void_stack) Coroutine.second->Continue(deltaTime);
++        }
++
++    protected:
++        // fun, current time, border
++        std::map<std::string, Game::Coroutine*> void_stack{};
++
++        bool updateRunStatus = true;
++        bool fixedUpdateRunStatus = false;
++
++        sf::Clock clock;
++        float liveTime = 0;
++        float fixedDeltaTime = 0.02f;
++
++        float deltaTime = 0;
++
++    public:
++        virtual void Update() {};
++        virtual void FixedUpdate() {};
++        virtual void Start() {};
++
++        Scene *scene;
++        void deleteCoroutineFunk(const std::string& name);
++
++        virtual void Next() {
++            Main();
++        };
++
++        void addCCoroutineFunk(const std::function<void()> &runtime, const std::string &name, float time);
++
++        void addCCoroutineFunk(Coroutine *coroutine, const std::string &name);
++
++        void addCCoroutineFunk(const std::string &name, Coroutine *coroutine);
++    };
++
++} // Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_SCENEHOLDER_H
+Index: lib/Animations/Animation.cpp
+===================================================================
+diff --git a/lib/Animations/Animation.cpp b/lib/Architect/Objects/Animations/Animation.cpp
+rename from lib/Animations/Animation.cpp
+rename to lib/Architect/Objects/Animations/Animation.cpp
+--- a/lib/Animations/Animation.cpp	(date 1703398984096)
++++ b/lib/Architect/Objects/Animations/Animation.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -2,8 +2,8 @@
+ // Created by OchiAnthropos on 21.12.2023.
+ //
+ 
+-#include "Animation.h"
+-#include "../Debugger/Debugger.h"
++#include "Animations.h"
++#include "../../../Debugger/Debugger.h"
+ 
+ #include <utility>
+ #include <iostream>
+Index: lib/Animations/Animation.h
+===================================================================
+diff --git a/lib/Animations/Animation.h b/lib/Architect/Objects/Animations/Animation.h
+rename from lib/Animations/Animation.h
+rename to lib/Architect/Objects/Animations/Animation.h
+--- a/lib/Animations/Animation.h	(date 1703398984096)
++++ b/lib/Architect/Objects/Animations/Animation.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -8,7 +8,8 @@
+ #include <SFML/Graphics/Sprite.hpp>
+ #include <SFML/Graphics/Texture.hpp>
+ #include <SFML/Graphics/RenderWindow.hpp>
+-#include "../Architect/HolderableObject.h"
++#include "../../Base/Base.h"
++#include "../../../../Settings/AnimationSettings.h"
+ 
+ namespace Game {
+ 
+@@ -16,6 +17,9 @@
+ 
+ // frame data
+     protected:
++
++        AnimationSettings settings = AnimationSettings();
++
+         int currentFrame = 0;
+         int frameWidth = 16;
+         int frameHeight = 16;
+@@ -24,6 +28,7 @@
+         int frameCount = 0;
+         sf::Clock animationTimer;
+ 
++
+     public:
+         int x = 0;
+         int y = 0;
+Index: lib/Animations/Animations.h
+===================================================================
+diff --git a/lib/Animations/Animations.h b/lib/Architect/Objects/Animations/Animations.h
+rename from lib/Animations/Animations.h
+rename to lib/Architect/Objects/Animations/Animations.h
+--- a/lib/Animations/Animations.h	(date 1703398984097)
++++ b/lib/Architect/Objects/Animations/Animations.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -4,6 +4,7 @@
+ 
+ #ifndef AMERICANDEMOCRACYSIMULATOR_ANIMATIONS_H
+ #define AMERICANDEMOCRACYSIMULATOR_ANIMATIONS_H
++#pragma once
+ #include "Animation.h"
+ #include "WaterAnimation.h"
+ #endif //AMERICANDEMOCRACYSIMULATOR_ANIMATIONS_H
+Index: lib/Animations/GroundAnimation.cpp
+===================================================================
+diff --git a/lib/Animations/GroundAnimation.cpp b/lib/Architect/Objects/Animations/GroundAnimation.cpp
+rename from lib/Animations/GroundAnimation.cpp
+rename to lib/Architect/Objects/Animations/GroundAnimation.cpp
+--- a/lib/Animations/GroundAnimation.cpp	(date 1703398984097)
++++ b/lib/Architect/Objects/Animations/GroundAnimation.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -10,10 +10,10 @@
+     }
+ 
+     GroundAnimation::GroundAnimation() {
+-        this->frameTime = 0.3f;
++        this->frameTime = settings.GroundAnimationFrameTime;
+         this->animationName = "ground";
+-        SetFrame(320, 120, 14);
+-        DataParse(R"(C:\AmericanDemocracySimulator\textures\ground_sheet.png)");
++        SetFrame(settings.GroundAnimationHeight, settings.GroundAnimationWidth, settings.GroundAnimationFrame);
++        DataParse(settings.ground_path);
+         size = texture.getSize();
+     }
+ } // Game
+\ No newline at end of file
+Index: lib/Animations/GroundAnimation.h
+===================================================================
+diff --git a/lib/Animations/GroundAnimation.h b/lib/Architect/Objects/Animations/GroundAnimation.h
+rename from lib/Animations/GroundAnimation.h
+rename to lib/Architect/Objects/Animations/GroundAnimation.h
+--- a/lib/Animations/GroundAnimation.h	(date 1703398984097)
++++ b/lib/Architect/Objects/Animations/GroundAnimation.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,7 +5,8 @@
+ #ifndef AMERICANDEMOCRACYSIMULATOR_GROUNDANIMATION_H
+ #define AMERICANDEMOCRACYSIMULATOR_GROUNDANIMATION_H
+ 
+-#include "Animation.h"
++#pragma once
++#include "Animations.h"
+ 
+ namespace Game {
+ 
+Index: lib/Animations/WaterAnimation.cpp
+===================================================================
+diff --git a/lib/Animations/WaterAnimation.cpp b/lib/Architect/Objects/Animations/WaterAnimation.cpp
+rename from lib/Animations/WaterAnimation.cpp
+rename to lib/Architect/Objects/Animations/WaterAnimation.cpp
+--- a/lib/Animations/WaterAnimation.cpp	(date 1703398984097)
++++ b/lib/Architect/Objects/Animations/WaterAnimation.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -6,10 +6,10 @@
+ 
+ namespace Game {
+     WaterAnimation::WaterAnimation() {
+-        this->frameTime = 0.11f;
++        this->frameTime = settings.WaterPoolAnimationFrameTime;
+         this->animationName = "water";
+-        SetFrame(80, 80, 21);
+-        DataParse(R"(C:\AmericanDemocracySimulator\textures\sea_game_pool_sheet.png)");
++        SetFrame(settings.WaterPoolHeight, settings.WaterPoolWidth, settings.WaterPoolAnimationFrame);
++        DataParse(settings.WaterPoolPath);
+         size = texture.getSize();
+ 
+     }
+Index: lib/Animations/WaterAnimation.h
+===================================================================
+diff --git a/lib/Animations/WaterAnimation.h b/lib/Architect/Objects/Animations/WaterAnimation.h
+rename from lib/Animations/WaterAnimation.h
+rename to lib/Architect/Objects/Animations/WaterAnimation.h
+--- a/lib/Animations/WaterAnimation.h	(date 1703398984098)
++++ b/lib/Architect/Objects/Animations/WaterAnimation.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,7 +5,8 @@
+ #ifndef AMERICANDEMOCRACYSIMULATOR_WATERANIMATION_H
+ #define AMERICANDEMOCRACYSIMULATOR_WATERANIMATION_H
+ 
+-#include "Animation.h"
++#pragma once
++#include "Animations.h"
+ 
+ namespace Game {
+ 
+Index: lib/Architect/Objects/Colliders/AbstractCollider.cpp
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/AbstractCollider.cpp b/lib/Architect/Objects/Colliders/AbstractCollider.cpp
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/AbstractCollider.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,9 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#include "AbstractCollider.h"
++
++namespace Game {
++    AbstractCollider::AbstractCollider() = default;
++} // Game
+\ No newline at end of file
+Index: lib/Architect/Objects/Colliders/AbstractCollider.h
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/AbstractCollider.h b/lib/Architect/Objects/Colliders/AbstractCollider.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/AbstractCollider.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,22 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_ABSTRACTCOLLIDER_H
++#define AMERICANDEMOCRACYSIMULATOR_ABSTRACTCOLLIDER_H
++
++#include <SFML/System/Vector2.hpp>
++#include "Colliders.h"
++
++namespace Game {
++
++    class AbstractCollider : public ICollider {
++    public:
++        AbstractCollider();
++
++        sf::Vector2f center = {0, 0};
++    };
++
++} // Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_ABSTRACTCOLLIDER_H
+Index: lib/Architect/Objects/Colliders/CircleCollider.h
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/CircleCollider.h b/lib/Architect/Objects/Colliders/CircleCollider.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/CircleCollider.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,14 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_CIRCLECOLLIDER_H
++#define AMERICANDEMOCRACYSIMULATOR_CIRCLECOLLIDER_H
++#pragma once
++
++namespace Game {
++    class CircleCollider{
++    };
++} // Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_CIRCLECOLLIDER_H
+Index: lib/Architect/Objects/Colliders/Collider.cpp
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/Collider.cpp b/lib/Architect/Objects/Colliders/Collider.cpp
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/Collider.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,8 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#include "Collider.h"
++
++namespace Game {
++} // Game
+\ No newline at end of file
+Index: lib/Architect/Objects/Colliders/Collider.h
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/Collider.h b/lib/Architect/Objects/Colliders/Collider.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/Collider.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,25 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_COLLIDER_H
++#define AMERICANDEMOCRACYSIMULATOR_COLLIDER_H
++
++#include "AbstractCollider.h"
++
++namespace Game {
++
++    template<typename TColliderType>
++
++    class Collider {
++    private:
++        AbstractCollider collider{};
++    public:
++        TColliderType colliderType{};
++
++        bool CompareCollider(Collider collider2) {
++        }
++    };
++} // Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_COLLIDER_H
+Index: lib/Architect/Objects/Colliders/Colliders.h
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/Colliders.h b/lib/Architect/Objects/Colliders/Colliders.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/Colliders.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,15 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_COLLIDERS_H
++#define AMERICANDEMOCRACYSIMULATOR_COLLIDERS_H
++#pragma once
++#include "RectangleCollider.h"
++#include "CircleCollider.h"
++#include "AbstractCollider.h"
++
++#include "ICollider.h"
++
++#include "Collider.h"
++#endif //AMERICANDEMOCRACYSIMULATOR_COLLIDERS_H
+Index: lib/Architect/Objects/Colliders/ICollider.cpp
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/ICollider.cpp b/lib/Architect/Objects/Colliders/ICollider.cpp
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/ICollider.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,23 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#include "ICollider.h"
++
++namespace Game {
++    bool ICollider::CheckCollision(RectangleCollider collider1, CircleCollider collider2) {
++        return false;
++    }
++
++    bool ICollider::CheckCollision(CircleCollider collider1, RectangleCollider collider2) {
++        return false;
++    }
++
++    bool ICollider::CheckCollision(CircleCollider collider1, CircleCollider collider2) {
++        return false;
++    }
++
++    bool ICollider::CheckCollision(RectangleCollider collider1, RectangleCollider collider2) {
++        return false;
++    }
++} // Game
+\ No newline at end of file
+Index: lib/Architect/Objects/Colliders/ICollider.h
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/ICollider.h b/lib/Architect/Objects/Colliders/ICollider.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/ICollider.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,24 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_ICOLLIDER_H
++#define AMERICANDEMOCRACYSIMULATOR_ICOLLIDER_H
++
++#include "Colliders.h"
++namespace Game {
++
++    class ICollider {
++    public:
++        bool CheckCollision(CircleCollider collider1, CircleCollider collider2);
++
++        bool CheckCollision(CircleCollider collider1, RectangleCollider collider2);
++
++        bool CheckCollision(RectangleCollider collider1, CircleCollider collider2);
++
++        bool CheckCollision(RectangleCollider collider1, RectangleCollider collider2);
++    };
++
++} // Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_ICOLLIDER_H
+Index: lib/Architect/Objects/Colliders/RectangleCollider.h
+===================================================================
+diff --git a/lib/Architect/Objects/Colliders/RectangleCollider.h b/lib/Architect/Objects/Colliders/RectangleCollider.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/Colliders/RectangleCollider.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,13 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_RECTANGLECOLLIDER_H
++#define AMERICANDEMOCRACYSIMULATOR_RECTANGLECOLLIDER_H
++#pragma once
++namespace Game {
++    class RectangleCollider{
++    };
++}
++
++#endif //AMERICANDEMOCRACYSIMULATOR_RECTANGLECOLLIDER_H
+Index: lib/GameObjects.h
+===================================================================
+diff --git a/lib/GameObjects.h b/lib/Architect/Objects/GameObjects/GameObjects.h
+rename from lib/GameObjects.h
+rename to lib/Architect/Objects/GameObjects/GameObjects.h
+--- a/lib/GameObjects.h	(date 1703398984102)
++++ b/lib/Architect/Objects/GameObjects/GameObjects.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -1,8 +1,14 @@
+ //
+-// Created by OchiAnthropos on 22.12.2023.
++// Created by OchiAnthropos on 24.12.2023.
+ //
+ 
+ #ifndef AMERICANDEMOCRACYSIMULATOR_GAMEOBJECTS_H
+ #define AMERICANDEMOCRACYSIMULATOR_GAMEOBJECTS_H
+-#include "Objects/Objects.h."
++#pragma once
++#include "Ground.h"
++#include "Ship.h"
++#include "ShipDieAnimated.h"
++#include "WaterPool.h"
++
++
+ #endif //AMERICANDEMOCRACYSIMULATOR_GAMEOBJECTS_H
+Index: lib/Objects/Ground.cpp
+===================================================================
+diff --git a/lib/Objects/Ground.cpp b/lib/Architect/Objects/GameObjects/Ground.cpp
+rename from lib/Objects/Ground.cpp
+rename to lib/Architect/Objects/GameObjects/Ground.cpp
+--- a/lib/Objects/Ground.cpp	(date 1703398984103)
++++ b/lib/Architect/Objects/GameObjects/Ground.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,8 +5,12 @@
+ #include "Ground.h"
+ #include "../Animations/GroundAnimation.h"
+ 
+-
+ namespace Game::Objects {
++
++    void Ground::AddToHolder() {holder.addObject("ground_animation", baseAnimation->GetEndFrameSprite());}
++
++    void Ground::UpdateDrawObjects() { baseAnimation->DrawAnimation(); AddToHolder(); }
++
+     Ground::Ground(sf::RenderWindow *windowContext, int x, int y) {
+         if (currentContext != nullptr) currentContext->windowContext = windowContext;
+         gameObjectName = std::string ("GroundAnimation [x:" + std::to_string(x) + std::string(" y:") +  std::to_string(y) + std::string ("]"));
+@@ -20,11 +24,6 @@
+         gameObjectName = "GroundAnimation";
+         baseAnimation = new GroundAnimation();
+     }
+-
+-    void Ground::AddToHolder() {holder.addObject("ground_animation", baseAnimation->GetEndFrameSprite());}
+-
+-    void Ground::UpdateDrawObjects() { baseAnimation->DrawAnimation(); AddToHolder(); }
+-
+     Ground::Ground(sf::RenderWindow *windowContext, const sf::Sprite &sprite1, int _x, int _y) {
+         if (currentContext != nullptr) currentContext->windowContext = windowContext;
+         gameObjectName = "GroundAnimation" + std::to_string(_x) + "_" +  std::to_string(_y);
+Index: lib/Architect/Objects/GameObjects/Ground.h
+===================================================================
+diff --git a/lib/Architect/Objects/GameObjects/Ground.h b/lib/Architect/Objects/GameObjects/Ground.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Objects/GameObjects/Ground.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,35 @@
++//
++// Created by OchiAnthropos on 23.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_GROUND_H
++#define AMERICANDEMOCRACYSIMULATOR_GROUND_H
++#include <SFML/Graphics/Sprite.hpp>
++#include <SFML/Graphics/RenderWindow.hpp>
++#include "../../Base/Base.h"
++
++namespace Game::Objects {
++
++class Ground : public GameObject
++    {
++    public:
++        sf::Texture texture;
++        sf::Sprite sprite;
++        int x_position = 0;
++        int y_position = 0;
++
++        void UpdateDrawObjects() override;
++
++        explicit Ground(sf::RenderWindow *windowContext, const sf::Sprite &sprite1, int _x, int _y);
++
++        explicit Ground(sf::RenderWindow *windowContext, int x = 0, int y = 0);
++
++        explicit Ground(sf::RenderWindow *windowContext);
++
++        void AddToHolder();
++    };
++
++} // Objects
++// Game
++
++#endif //AMERICANDEMOCRACYSIMULATOR_GROUND_H
+Index: lib/Objects/Ship.cpp
+===================================================================
+diff --git a/lib/Objects/Ship.cpp b/lib/Architect/Objects/GameObjects/Ship.cpp
+rename from lib/Objects/Ship.cpp
+rename to lib/Architect/Objects/GameObjects/Ship.cpp
+--- a/lib/Objects/Ship.cpp	(date 1703398984104)
++++ b/lib/Architect/Objects/GameObjects/Ship.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -13,36 +13,43 @@
+ 
+     void Ship::AddToHolder() {}
+ 
+-    Ship::Ship(sf::RenderWindow *windowContext) {
++    Ship::Ship( sf::RenderWindow *windowContext) {
+         if (currentContext != nullptr) currentContext->windowContext = windowContext;
++        x_position = 0;
++        y_position = 0;
++        gameObjectName = std::string(
++                "Ship [x:" + std::to_string(x_position) + std::string(" y:") + std::to_string(y_position) + std::string("]"));
+     }
+ 
+-    Ship::Ship(sf::RenderWindow *windowContext, int x, int y) {
++    Ship::Ship(sf::RenderWindow *windowContext, int x, int y)  {
+         if (currentContext != nullptr) currentContext->windowContext = windowContext;
+-
+         gameObjectName = std::string(
+                 "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
+-
+         x_position = (float) x;
+         y_position = (float) y;
+     }
+ 
+-    Ship::Ship(sf::RenderWindow *windowContext, const sf::Sprite &sprite1, int _x, int _y) {
+-        sprite = sprite1;
++    Ship::Ship(sf::RenderWindow *windowContext, const sf::Sprite &sprite, int x, int y){
++        this->sprite = sprite;
+         if (currentContext != nullptr) currentContext->windowContext = windowContext;
+-
+         gameObjectName = std::string(
+-                "Ship [x:" + std::to_string(_x) + std::string(" y:") + std::to_string(_y) + std::string("]"));
+-
+-        x_position = (float) _x;
+-        y_position = (float) _y;
++                "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
++        x_position = (float) x;
++        y_position = (float) y;
+     }
+ 
+     void Ship::SetPosition(float x, float y) {
++        x_position = x;
++        y_position = y;
+         gameObjectName = std::string(
+                 "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
+-        x_position = x;
+-        y_position = y;
+     }
++    void Ship::MovePosition(float x, float y) {
++        x_position += x;
++        y_position += y;
++        gameObjectName = std::string(
++                "Ship [x:" + std::to_string(x_position) + std::string(" y:") + std::to_string(y_position) + std::string("]"));
++    }
++
+ } // Objects
+ // Game
+\ No newline at end of file
+Index: lib/Objects/Ship.h
+===================================================================
+diff --git a/lib/Objects/Ship.h b/lib/Architect/Objects/GameObjects/Ship.h
+rename from lib/Objects/Ship.h
+rename to lib/Architect/Objects/GameObjects/Ship.h
+--- a/lib/Objects/Ship.h	(date 1703398984104)
++++ b/lib/Architect/Objects/GameObjects/Ship.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,29 +5,29 @@
+ #ifndef AMERICANDEMOCRACYSIMULATOR_SHIP_H
+ #define AMERICANDEMOCRACYSIMULATOR_SHIP_H
+ 
++#pragma once
+ 
+-#include "../Architect/GameObject.h"
++#include "../../Base/GameObject.h"
+ 
+ namespace Game::Objects {
+ 
+     class Ship : public GameObject{
+ 
+-    protected:
+-        sf::Texture texture;
+-        sf::Sprite sprite;
+     public:
+-        float x_position = 0;
+-        float y_position = 0;
++
++
++
+ 
+         void UpdateDrawObjects() override;
+ 
+-        explicit Ship(sf::RenderWindow *windowContext, const sf::Sprite& sprite1, int _x, int _y);
+-        explicit Ship(sf::RenderWindow *windowContext, int x = 0, int y = 0);
+-        explicit Ship(sf::RenderWindow* windowContext);
++        explicit Ship(sf::RenderWindow *windowContext, const sf::Sprite &sprite, int x, int y);
++        explicit Ship(sf::RenderWindow *windowContext, int x, int y);
++        explicit Ship(sf::RenderWindow *windowContext);
+ 
+         void AddToHolder();
+ 
+-        void SetPosition(float x, float y);
++        void SetPosition(float x, float y ) override;
++        void MovePosition(float x, float y) override;
+     };
+ 
+ } // Objects
+Index: lib/Objects/WaterPool.cpp
+===================================================================
+diff --git a/lib/Objects/WaterPool.cpp b/lib/Architect/Objects/GameObjects/WaterPool.cpp
+rename from lib/Objects/WaterPool.cpp
+rename to lib/Architect/Objects/GameObjects/WaterPool.cpp
+--- a/lib/Objects/WaterPool.cpp	(date 1703398984105)
++++ b/lib/Architect/Objects/GameObjects/WaterPool.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -2,7 +2,6 @@
+ // Created by OchiAnthropos on 22.12.2023.
+ //
+ #include "WaterPool.h"
+-#include "../Animations/WaterAnimation.h"
+ #include <string>
+ 
+ namespace Game::Objects
+Index: lib/Objects/WaterPool.h
+===================================================================
+diff --git a/lib/Objects/WaterPool.h b/lib/Architect/Objects/GameObjects/WaterPool.h
+rename from lib/Objects/WaterPool.h
+rename to lib/Architect/Objects/GameObjects/WaterPool.h
+--- a/lib/Objects/WaterPool.h	(date 1703398984105)
++++ b/lib/Architect/Objects/GameObjects/WaterPool.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -4,13 +4,13 @@
+ 
+ #ifndef AMERICANDEMOCRACYSIMULATOR_WATERPOOL_H
+ #define AMERICANDEMOCRACYSIMULATOR_WATERPOOL_H
++#pragma once
+ 
+-#include <SFML/Graphics/Texture.hpp>
+-#include "../Architect/GameObject.h"
++#include "../../Base/GameObject.h"
+ 
+ namespace Game::Objects {
+ 
+-    class WaterPool : public Game::GameObject {
++    class WaterPool : public GameObject {
+ 
+     protected:
+         sf::Texture texture;
+Index: lib/Objects/Objects.h
+===================================================================
+diff --git a/lib/Objects/Objects.h b/lib/Architect/Objects/Objects.h
+rename from lib/Objects/Objects.h
+rename to lib/Architect/Objects/Objects.h
+--- a/lib/Objects/Objects.h	(date 1703398984104)
++++ b/lib/Architect/Objects/Objects.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -4,8 +4,9 @@
+ 
+ #ifndef AMERICANDEMOCRACYSIMULATOR_OBJECTS_H
+ #define AMERICANDEMOCRACYSIMULATOR_OBJECTS_H
+-
+-
+-#include "WaterPool.h"
++#pragma once
++#include "GameObjects/GameObjects.h"
++#include "Colliders/Colliders.h"
++#include "Animations/Animations.h"
+ 
+ #endif //AMERICANDEMOCRACYSIMULATOR_OBJECTS_H
+Index: lib/Architect/Scenes/GamePlayScene.cpp
+===================================================================
+diff --git a/lib/Architect/Scenes/GamePlayScene.cpp b/lib/Architect/Scenes/GamePlayScene.cpp
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Scenes/GamePlayScene.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,123 @@
++//
++// Created by OchiAnthropos on 23.12.2023.
++//
++#include "GamePlayScene.h"
++#include "Scene.h"
++#include "../../Debugger/Debugger.h"
++#include <random>
++
++namespace Game {
++
++    GamePlayScene::GamePlayScene(Scene *_scene, int _y_size, int _x_size): y_size(_y_size), x_size(_x_size)  {
++        this->scene = _scene;
++    }
++
++    void GamePlayScene::CreatePool() const {
++        for (int x = 0; x <= x_size/setting.animationSettings.WaterPoolWidth; x++) {
++            for (int y = 0; y <= y_size/setting.animationSettings.WaterPoolHeight; y++)
++            {
++                auto* obj = new Objects::WaterPool(scene->windowContext, setting.animationSettings.WaterPoolHeight * x, setting.animationSettings.WaterPoolHeight * y);
++                scene->AddObject(obj, 1);
++            }
++        }
++    }
++
++    void GamePlayScene::CreateGround() const {
++        auto* obj1 = new Objects::Ground(scene->windowContext, x_size  - 55,  setting.animationSettings.WaterPoolHeight*0 );
++        auto* obj2 = new Objects::Ground(scene->windowContext, x_size  - 55,  setting.animationSettings.WaterPoolHeight*1 );
++        scene->AddObject(obj1, 2);
++        scene->AddObject(obj2, 2);
++    }
++
++    void GamePlayScene::LoadShipTexture() {
++        if (!shipTexture.loadFromFile(setting.ship_type_one_path))
++            std::cout << "Error loading texture!" << std::endl;
++        shipSprite.setTexture(shipTexture);
++        shipSprite.setTextureRect(sf::IntRect(0, 0, setting.ship_type_one_width, setting.ship_type_one_height));
++
++        if (!shipType2Texture.loadFromFile(setting.ship_type_two_path))
++            std::cout << "Error loading texture!" << std::endl;
++        shipType2Sprite.setTexture(shipTexture);
++        shipType2Sprite.setTextureRect(sf::IntRect(0, 0, setting.ship_type_two_width, setting.ship_type_two_height));
++    }
++
++    void GamePlayScene::CreateShip(float x = 0 , float y = 0) const
++    {
++        auto *ship = new Objects::Ship(scene->windowContext, shipSprite,x,y);
++        ship->SetPosition(x,y);
++        active_ships->push_back(ship);
++        scene->AddObject(ship, 3);
++    }
++
++    void GamePlayScene::Update() {
++        SceneHolder::Update();
++    }
++
++    void GamePlayScene::Start() {
++        SceneHolder::Start();
++        CreatePool();
++        CreateGround();
++        LoadShipTexture();
++        CreateShip(-160,200);
++
++        addCCoroutineFunk("generator",  new Coroutine([this]() { GenerateRandomPosition(); }, 1.0f, 2.0f, 0.5f)  );
++
++        addCCoroutineFunk("ship movement",  new Coroutine([this]() { MoveShips(); }, 0.02f)  );
++
++        addCCoroutineFunk("ship logger",  new Coroutine([this]() { MoveShipLogger(); }, 115.0f)  );
++
++    }
++
++    void GamePlayScene::MoveShipLogger() const {
++
++        for (auto ship : *active_ships){
++            Debugger::Log(
++                    std::string ("[ ship ] x=") +
++                    std::string (std::to_string (ship->x_position)) +
++                    " y=" +
++                    std::string (std::to_string (ship->y_position)), Debugger::Color::BLUE );
++        }
++    }
++
++    void GamePlayScene::MoveShips() const {
++        for (auto ship : *active_ships) ship->MovePosition(setting.ship_type_one_speed,0);
++    }
++
++    void GamePlayScene::GenerateRandomPosition() const {
++        std::random_device rd;
++        std::mt19937 gen(rd());
++        std::uniform_int_distribution<int> distribution_y(20, x_size - 60);
++        std::uniform_int_distribution<int> distribution_x(0, 25);
++
++        sf::Vector2f newPosition;
++        int x = distribution_x(gen);
++        int y = distribution_y(gen);
++
++        newPosition = sf::Vector2f((float)x, (float)y);
++        if (!checkCollision(newPosition)){
++            CreateShip(newPosition.x, newPosition.y);
++            Debugger::Log("New Position: (" + std::to_string(newPosition.x) + ", " + std::to_string(newPosition.y) + ")", Debugger::Color::GREEN);
++        } else {
++            Debugger::Log("New Position: (" + std::to_string(newPosition.x) + ", " + std::to_string(newPosition.y) + ")", Debugger::Color::RED);
++
++        }
++    }
++
++    bool GamePlayScene::checkCollision(const sf::Vector2f& newPos) const
++    {
++        return std::any_of(active_ships->begin(), active_ships->end(), [&newPos](Objects::Ship* ship) {
++            float ship_left = ship->x_position;
++            float ship_right = ship->x_position + ship->width;
++            float ship_top = ship->y_position;
++            float ship_bottom = ship->y_position + ship->height;
++
++            float new_left = newPos.x;
++            float new_right = newPos.x + ship->width;
++            float new_top = newPos.y;
++            float new_bottom = newPos.y + ship->height;
++
++            return !(new_right < ship_left || new_left > ship_right || new_bottom < ship_top || new_top > ship_bottom);
++        });
++    }
++
++}
+Index: lib/Scenes/GamePlayScene.h
+===================================================================
+diff --git a/lib/Scenes/GamePlayScene.h b/lib/Architect/Scenes/GamePlayScene.h
+rename from lib/Scenes/GamePlayScene.h
+rename to lib/Architect/Scenes/GamePlayScene.h
+--- a/lib/Scenes/GamePlayScene.h	(date 1703398984106)
++++ b/lib/Architect/Scenes/GamePlayScene.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,34 +5,46 @@
+ #ifndef AMERICANDEMOCRACYSIMULATOR_GAMEPLAYSCENE_H
+ #define AMERICANDEMOCRACYSIMULATOR_GAMEPLAYSCENE_H
+ 
++#pragma once
+ 
+ #include "../Objects/Objects.h"
+-#include "../Objects/Ship.h"
++#include "../Objects/GameObjects/Ship.h"
++#include "../Holders/SceneHolder.h"
++#include "../../../Settings/GamePlaySceneSettings.h"
+ 
+ namespace Game {
+ 
+-    class GamePlayScene {
+-
++    class GamePlayScene : public Game::SceneHolder{
++        // base overrides
++        GamePlayScenesSetting setting = GamePlayScenesSetting();
+     public:
+-        GamePlayScene();
+         GamePlayScene(Scene *_scene, int _y_size, int _x_size);
++        void Update() override;
++        void Start() override;
+ 
+         std::vector<Objects::WaterPool> pool;
+         int x_size = 0;
+         int y_size = 0;
+-        Scene *scene{};
+ 
+         std::vector<Objects::Ship*> *active_ships = new std::vector<Objects::Ship*>();
+ 
+         sf::Sprite shipSprite;
+         sf::Texture shipTexture;
++        sf::Sprite shipType2Sprite;
++        sf::Texture shipType2Texture;
+ 
+         void CreatePool() const;
+         void CreateGround() const;
++        void GenerateRandomPosition() const;
+ 
+         void LoadShipTexture();
+-
+         void CreateShip(float x, float y) const;
++
++        bool checkCollision(const sf::Vector2f &newPos) const;
++
++        void MoveShips() const;
++
++        void MoveShipLogger() const;
+     };
+ 
+ } // Game
+Index: lib/Architect/Scene.cpp
+===================================================================
+diff --git a/lib/Architect/Scene.cpp b/lib/Architect/Scenes/Scene.cpp
+rename from lib/Architect/Scene.cpp
+rename to lib/Architect/Scenes/Scene.cpp
+--- a/lib/Architect/Scene.cpp	(date 1703398984100)
++++ b/lib/Architect/Scenes/Scene.cpp	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -1,9 +1,9 @@
+ //
+ // Created by OchiAnthropos on 21.12.2023.
+ //
+-#include "Scene.h"
+ #include <utility>
+ #include <SFML/Window/Event.hpp>
++#include "Scene.h"
+ 
+ namespace Game {
+ // constructors
+@@ -15,7 +15,8 @@
+     void Scene::runContextCreation() {
+ 
+     }
+-    void Scene::addObject(GameObject *object, int layer) {
++
++    void Scene::AddObject(GameObject *object, int layer) {
+         // Якщо лейер не вказаний або вказано неправильно
+         if (layers.find(layer) == layers.end() || layer <= 0) {
+             // Знайдемо перший вільний лейер або створимо новий
+@@ -28,5 +29,11 @@
+         layers[layer].push_back(object);
+     }
+ 
++//    void Scene::AddObject(GameObject *object, int layer) {
++//
++//    }
++
++
++
+ 
+ } // Game
+\ No newline at end of file
+Index: lib/Architect/Scene.h
+===================================================================
+diff --git a/lib/Architect/Scene.h b/lib/Architect/Scenes/Scene.h
+rename from lib/Architect/Scene.h
+rename to lib/Architect/Scenes/Scene.h
+--- a/lib/Architect/Scene.h	(date 1703398984100)
++++ b/lib/Architect/Scenes/Scene.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -5,31 +5,27 @@
+ #ifndef AMERICANDEMOCRACYSIMULATOR_SCENE_H
+ #define AMERICANDEMOCRACYSIMULATOR_SCENE_H
+ #pragma once
+-
+-#include <iostream>
+ #include <map>
+-#include <vector>
+ #include <filesystem>
+-#include "GameObject.h"
++#include "../Base/Base.h"
+ 
+ namespace Game {
+ 
+-    class GameObject;
+ 
+     class Scene {
+     private:
+-        std::map<int, std::vector<GameObject*>> layers;
+         sf::Clock clock;
+ 
+     public:
+         sf::RenderWindow window;
++        std::map<int, std::vector<GameObject*>> layers;
+ 
+-        Scene() = default;
+         explicit Scene(std::string name, const std::map<int, std::vector<GameObject *>> &layers);
+         explicit Scene(const std::map<int, std::vector<GameObject *>> &layers);
+         explicit Scene(std::string name);
+         explicit Scene(std::string name, std::string contextName);
+-        void addObject(GameObject *object, int layer);
++//        void AddObject(GameObject * object, int layer);
++        void AddObject(GameObject *object, int layer);
+ 
+         std::map<int, std::vector<GameObject*>>& getObjects() {return layers;}
+ 
+@@ -42,6 +38,7 @@
+         void runContextCreation();
+ 
+         sf::RenderWindow *windowContext{};
++
+     };
+ 
+ } // Game
+Index: lib/Architect/Scenes/Scenes.h
+===================================================================
+diff --git a/lib/Architect/Scenes/Scenes.h b/lib/Architect/Scenes/Scenes.h
+new file mode 100644
+--- /dev/null	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
++++ b/lib/Architect/Scenes/Scenes.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -0,0 +1,11 @@
++//
++// Created by OchiAnthropos on 24.12.2023.
++//
++
++#ifndef AMERICANDEMOCRACYSIMULATOR_SCENES_H
++#define AMERICANDEMOCRACYSIMULATOR_SCENES_H
++#pragma once
++
++#include "GamePlayScene.h"
++#include "Scene.h"
++#endif //AMERICANDEMOCRACYSIMULATOR_SCENES_H
+Index: lib/Architect/Architect.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Architect/Architect.h b/lib/Architect/Architect.h
+--- a/lib/Architect/Architect.h	(date 1703398984098)
++++ b/lib/Architect/Architect.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -4,9 +4,8 @@
+ 
+ #ifndef AMERICANDEMOCRACYSIMULATOR_ARCHITECT_H
+ #define AMERICANDEMOCRACYSIMULATOR_ARCHITECT_H
+-
+-#include "Architect.h"
+-#include "GameObject.h"
+-#include "SceneManager.h"
+-
++#include "Base/Base.h"
++#include "Scenes/Scenes.h"
++#include "Objects/Objects.h"
++#include "Holders/Holders.h"
+ #endif //AMERICANDEMOCRACYSIMULATOR_ARCHITECT_H
+Index: lib/Architect/GameObject.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Architect/GameObject.cpp b/lib/Architect/GameObject.cpp
+deleted file mode 100644
+--- a/lib/Architect/GameObject.cpp	(date 1703398984099)
++++ /dev/null	(date 1703398984099)
+@@ -1,24 +0,0 @@
+-//
+-// Created by OchiAnthropos on 21.12.2023.
+-//
+-
+-#include "GameObject.h"
+-#include "../Debugger/Debugger.h"
+-namespace Game
+-{
+-    void  GameObject:: update(float deltaTime)
+-    {
+-        Debugger::Log("Update object");
+-    }
+-    void GameObject::draw(sf::RenderWindow& window)
+-    {
+-        Debugger::Log("Draw object");
+-
+-    }
+-
+-    GameObject::GameObject(Scene *context) {
+-        currentContext = (Scene *) context;
+-    }
+-
+-    GameObject::GameObject() = default;
+-} // Game
+\ No newline at end of file
+Index: lib/Architect/GameObject.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Architect/GameObject.h b/lib/Architect/GameObject.h
+deleted file mode 100644
+--- a/lib/Architect/GameObject.h	(date 1703398984099)
++++ /dev/null	(date 1703398984099)
+@@ -1,38 +0,0 @@
+-//
+-// Created by OchiAnthropos on 21.12.2023.
+-//
+-
+-#ifndef AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
+-#define AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
+-#pragma once
+-
+-#include <SFML/Graphics/RenderWindow.hpp>
+-#include "AbstractGameObject.h"
+-#include "Scene.h"
+-#include "../Animations/Animation.h"
+-
+-namespace Game {
+-
+-    class Scene;
+-
+-    class GameObject : public AbstractGameObject{
+-
+-    public:
+-
+-        GameObject();
+-        explicit GameObject(Scene *context);
+-        void update(float deltaTime) override;
+-        void draw(sf::RenderWindow& window) override;
+-        std::map<std::string, sf::Sprite>& getObjects() {return holder.objects;}
+-        std::string gameObjectName = "GameObject";
+-
+-        virtual void  UpdateDrawObjects() = 0;
+-
+-    public:
+-        Scene *currentContext = nullptr;
+-        Animation *baseAnimation;
+-    };
+-
+-    } // Game
+-
+-#endif //AMERICANDEMOCRACYSIMULATOR_GAMEOBJECT_H
+Index: lib/Architect/HolderableObject.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Architect/HolderableObject.h b/lib/Architect/HolderableObject.h
+deleted file mode 100644
+--- a/lib/Architect/HolderableObject.h	(date 1703398984099)
++++ /dev/null	(date 1703398984099)
+@@ -1,18 +0,0 @@
+-//
+-// Created by OchiAnthropos on 22.12.2023.
+-//
+-
+-#ifndef AMERICANDEMOCRACYSIMULATOR_HOLDERABLEOBJECT_H
+-#define AMERICANDEMOCRACYSIMULATOR_HOLDERABLEOBJECT_H
+-
+-#include "../Holders/DrawableHolder.h"
+-
+-namespace Game
+-{
+-    class HolderableObject{
+-    public:
+-        DrawableHolder holder = DrawableHolder();
+-    };
+-}
+-
+-#endif //AMERICANDEMOCRACYSIMULATOR_HOLDERABLEOBJECT_H
+Index: lib/Debugger/Debugger.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Debugger/Debugger.h b/lib/Debugger/Debugger.h
+--- a/lib/Debugger/Debugger.h	(date 1703398984101)
++++ b/lib/Debugger/Debugger.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -1,10 +1,11 @@
+ //
+ // Created by OchiAnthropos on 20.12.2023.
+ //
+-#include <windows.h>   // WinApi header
+ #ifndef AMERICANDEMOCRACYSIMULATOR_DEBUGGER_H
+ #define AMERICANDEMOCRACYSIMULATOR_DEBUGGER_H
++#pragma once
+ 
++#include <windows.h>   // WinApi header
+ #include <iostream>
+ 
+ namespace Game {
+Index: lib/Objects/Ground.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Objects/Ground.h b/lib/Objects/Ground.h
+deleted file mode 100644
+--- a/lib/Objects/Ground.h	(date 1703398984103)
++++ /dev/null	(date 1703398984103)
+@@ -1,34 +0,0 @@
+-//
+-// Created by OchiAnthropos on 23.12.2023.
+-//
+-
+-#ifndef AMERICANDEMOCRACYSIMULATOR_GROUND_H
+-#define AMERICANDEMOCRACYSIMULATOR_GROUND_H
+-
+-#include <SFML/Graphics/Sprite.hpp>
+-#include "../Architect/GameObject.h"
+-
+-namespace Game::Objects {
+-
+-        class Ground : public Game::GameObject {
+-
+-        protected:
+-            sf::Texture texture;
+-            sf::Sprite sprite;
+-        public:
+-            int x_position = 0;
+-            int y_position = 0;
+-
+-            void UpdateDrawObjects() override;
+-
+-            explicit Ground(sf::RenderWindow *windowContext, const sf::Sprite& sprite1, int _x, int _y);
+-            explicit Ground(sf::RenderWindow *windowContext, int x = 0, int y = 0);
+-            explicit Ground(sf::RenderWindow* windowContext);
+-
+-            void AddToHolder();
+-        };
+-
+-    } // Objects
+-// Game
+-
+-#endif //AMERICANDEMOCRACYSIMULATOR_GROUND_H
+Index: lib/Scenes/GamePlayScene.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Scenes/GamePlayScene.cpp b/lib/Scenes/GamePlayScene.cpp
+deleted file mode 100644
+--- a/lib/Scenes/GamePlayScene.cpp	(date 1703398984106)
++++ /dev/null	(date 1703398984106)
+@@ -1,54 +0,0 @@
+-//
+-// Created by OchiAnthropos on 23.12.2023.
+-//
+-#include "GamePlayScene.h"
+-#include "../Debugger/Debugger.h"
+-#include "../Objects/Ground.h"
+-#include "../Objects/Ship.h"
+-
+-namespace Game {
+-    GamePlayScene::GamePlayScene(Scene *_scene, int _y_size, int _x_size): scene(_scene), y_size(_y_size), x_size(_x_size)  {
+-        CreatePool();
+-        CreateGround();
+-
+-
+-        LoadShipTexture();
+-        CreateShip(0,0);
+-
+-    }
+-
+-    void GamePlayScene::CreatePool() const {
+-        for (int x = 0; x <= x_size/80; x++) {
+-            for (int y = 0; y <= y_size/80; y++)
+-            {
+-                scene->addObject(new Objects::WaterPool(scene->windowContext, 80 * x, 80 * y), 1);
+-            }
+-        }
+-    }
+-
+-    void GamePlayScene::CreateGround() const {
+-        scene->addObject(new Objects::Ground(scene->windowContext, x_size  -55,  320*0 ), 2);
+-        scene->addObject(new Objects::Ground(scene->windowContext, x_size  -55,  320*1 ), 2);
+-    }
+-
+-    void GamePlayScene::LoadShipTexture() {
+-        if (!shipTexture.loadFromFile(R"(C:\AmericanDemocracySimulator\textures\ship.png)"))
+-            std::cout << "Error loading texture!" << std::endl;
+-        shipSprite.setTexture(shipTexture);
+-        shipSprite.setTextureRect(sf::IntRect(0, 0, 269, 36));
+-    }
+-
+-    void GamePlayScene::CreateShip(float x = 0 , float y = 0) const
+-    {
+-        auto* ship = new Objects::Ship(scene->windowContext,shipSprite,0 ,0);
+-        ship->SetPosition(x,y);
+-
+-        active_ships->push_back(ship);
+-
+-        scene->addObject(ship,3);
+-
+-    }
+-
+-
+-    GamePlayScene::GamePlayScene() = default;
+-}
+Index: lib/Game.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Game.h b/lib/Game.h
+--- a/lib/Game.h	(date 1703398984102)
++++ b/lib/Game.h	(revision ed47e5812971b98b62ff8ecd280cc1a5869b846b)
+@@ -4,8 +4,9 @@
+ 
+ #ifndef AMERICANDEMOCRACYSIMULATOR_GAME_H
+ #define AMERICANDEMOCRACYSIMULATOR_GAME_H
+-#include "./Architect/Architect.h"
+-#include "./Debugger/Debugger.h"
+-#include "./Animations/Animations.h"
+-#include "./Objects/Objects.h"
++#pragma once
++
++#include "Debugger/Debugger.h"
++#include "Architect/Architect.h"
++
+ #endif //AMERICANDEMOCRACYSIMULATOR_GAME_H
+diff --git a/lib/Holders/DrawableHolder.cpp b/lib/Architect/Holders/DrawableHolder.cpp
+rename from lib/Holders/DrawableHolder.cpp
+rename to lib/Architect/Holders/DrawableHolder.cpp
+diff --git a/lib/Holders/DrawableHolder.h b/lib/Architect/Holders/DrawableHolder.h
+rename from lib/Holders/DrawableHolder.h
+rename to lib/Architect/Holders/DrawableHolder.h
+diff --git a/lib/Objects/ShipDieAnimated.cpp b/lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp
+rename from lib/Objects/ShipDieAnimated.cpp
+rename to lib/Architect/Objects/GameObjects/ShipDieAnimated.cpp
+diff --git a/lib/Objects/ShipDieAnimated.h b/lib/Architect/Objects/GameObjects/ShipDieAnimated.h
+rename from lib/Objects/ShipDieAnimated.h
+rename to lib/Architect/Objects/GameObjects/ShipDieAnimated.h

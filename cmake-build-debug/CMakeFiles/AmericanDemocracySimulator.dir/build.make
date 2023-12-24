@@ -69,7 +69,6 @@ include CMakeFiles/AmericanDemocracySimulator.dir/progress.make
 include CMakeFiles/AmericanDemocracySimulator.dir/flags.make
 
 CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
 CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: C:/AmericanDemocracySimulator/main.cpp
 CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj"
@@ -83,244 +82,19 @@ CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\main.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\main.cpp.s
 
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj: C:/AmericanDemocracySimulator/lib/Debugger/Debugger.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Debugger\Debugger.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Debugger\Debugger.cpp.obj -c C:\AmericanDemocracySimulator\lib\Debugger\Debugger.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Debugger\Debugger.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Debugger\Debugger.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Debugger\Debugger.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Debugger\Debugger.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj: C:/AmericanDemocracySimulator/lib/Animations/Animation.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\Animation.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\Animation.cpp.obj -c C:\AmericanDemocracySimulator\lib\Animations\Animation.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Animations\Animation.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\Animation.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Animations\Animation.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\Animation.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj: C:/AmericanDemocracySimulator/lib/Architect/Scene.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\Scene.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\Scene.cpp.obj -c C:\AmericanDemocracySimulator\lib\Architect\Scene.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Architect\Scene.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\Scene.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Architect\Scene.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\Scene.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj: C:/AmericanDemocracySimulator/lib/Architect/GameObject.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\GameObject.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\GameObject.cpp.obj -c C:\AmericanDemocracySimulator\lib\Architect\GameObject.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Architect\GameObject.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\GameObject.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Architect\GameObject.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\GameObject.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj: C:/AmericanDemocracySimulator/lib/Architect/SceneManager.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\SceneManager.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\SceneManager.cpp.obj -c C:\AmericanDemocracySimulator\lib\Architect\SceneManager.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Architect\SceneManager.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\SceneManager.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Architect\SceneManager.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Architect\SceneManager.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: C:/AmericanDemocracySimulator/lib/Objects/WaterPool.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\WaterPool.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\WaterPool.cpp.obj -c C:\AmericanDemocracySimulator\lib\Objects\WaterPool.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Objects\WaterPool.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\WaterPool.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Objects\WaterPool.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\WaterPool.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj: C:/AmericanDemocracySimulator/lib/Holders/DrawableHolder.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Holders\DrawableHolder.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Holders\DrawableHolder.cpp.obj -c C:\AmericanDemocracySimulator\lib\Holders\DrawableHolder.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Holders\DrawableHolder.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Holders\DrawableHolder.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Holders\DrawableHolder.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Holders\DrawableHolder.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj: C:/AmericanDemocracySimulator/lib/Animations/WaterAnimation.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\WaterAnimation.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\WaterAnimation.cpp.obj -c C:\AmericanDemocracySimulator\lib\Animations\WaterAnimation.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Animations\WaterAnimation.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\WaterAnimation.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Animations\WaterAnimation.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\WaterAnimation.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj: C:/AmericanDemocracySimulator/lib/Scenes/GamePlayScene.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Scenes\GamePlayScene.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Scenes\GamePlayScene.cpp.obj -c C:\AmericanDemocracySimulator\lib\Scenes\GamePlayScene.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Scenes\GamePlayScene.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Scenes\GamePlayScene.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Scenes\GamePlayScene.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Scenes\GamePlayScene.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj: C:/AmericanDemocracySimulator/lib/Objects/Ground.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ground.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ground.cpp.obj -c C:\AmericanDemocracySimulator\lib\Objects\Ground.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Objects\Ground.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ground.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Objects\Ground.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ground.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj: C:/AmericanDemocracySimulator/lib/Animations/GroundAnimation.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\GroundAnimation.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\GroundAnimation.cpp.obj -c C:\AmericanDemocracySimulator\lib\Animations\GroundAnimation.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Animations\GroundAnimation.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\GroundAnimation.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Animations\GroundAnimation.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Animations\GroundAnimation.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: C:/AmericanDemocracySimulator/lib/Objects/Ship.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ship.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ship.cpp.obj -c C:\AmericanDemocracySimulator\lib\Objects\Ship.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Objects\Ship.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ship.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Objects\Ship.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\Ship.cpp.s
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/flags.make
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/includes_CXX.rsp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj: C:/AmericanDemocracySimulator/lib/Objects/ShipDieAnimated.cpp
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj: CMakeFiles/AmericanDemocracySimulator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj -MF CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\ShipDieAnimated.cpp.obj.d -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\ShipDieAnimated.cpp.obj -c C:\AmericanDemocracySimulator\lib\Objects\ShipDieAnimated.cpp
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\AmericanDemocracySimulator\lib\Objects\ShipDieAnimated.cpp > CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\ShipDieAnimated.cpp.i
-
-CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\AmericanDemocracySimulator\lib\Objects\ShipDieAnimated.cpp -o CMakeFiles\AmericanDemocracySimulator.dir\lib\Objects\ShipDieAnimated.cpp.s
-
 # Object files for target AmericanDemocracySimulator
 AmericanDemocracySimulator_OBJECTS = \
-"CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj" \
-"CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj"
+"CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj"
 
 # External object files for target AmericanDemocracySimulator
 AmericanDemocracySimulator_EXTERNAL_OBJECTS =
 
 AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/main.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Debugger/Debugger.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/Animation.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/Scene.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/GameObject.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Architect/SceneManager.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Holders/DrawableHolder.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Scenes/GamePlayScene.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ground.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/GroundAnimation.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Ship.cpp.obj
-AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/ShipDieAnimated.cpp.obj
 AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/build.make
-AmericanDemocracySimulator.exe: C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/libsfml-graphics-s-d.a
-AmericanDemocracySimulator.exe: C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/libsfml-window-s-d.a
-AmericanDemocracySimulator.exe: C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/libsfml-system-s-d.a
-AmericanDemocracySimulator.exe: C:/AmericanDemocracySimulator/lib/SFML/SFML-2.6.1/lib/libfreetype.a
 AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/linkLibs.rsp
 AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/objects1.rsp
 AmericanDemocracySimulator.exe: CMakeFiles/AmericanDemocracySimulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable AmericanDemocracySimulator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\AmericanDemocracySimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AmericanDemocracySimulator.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\AmericanDemocracySimulator.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

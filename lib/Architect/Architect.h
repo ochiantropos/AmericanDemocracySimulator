@@ -4,9 +4,8 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_ARCHITECT_H
 #define AMERICANDEMOCRACYSIMULATOR_ARCHITECT_H
-
-#include "Architect.h"
-#include "GameObject.h"
-#include "SceneManager.h"
-
+#include "Base/Base.h"
+#include "Scenes/Scenes.h"
+#include "Objects/Objects.h"
+#include "Holders/Holders.h"
 #endif //AMERICANDEMOCRACYSIMULATOR_ARCHITECT_H
