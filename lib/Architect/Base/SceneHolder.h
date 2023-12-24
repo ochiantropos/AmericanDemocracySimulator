@@ -53,6 +53,11 @@ namespace Game {
         virtual void FixedUpdate() {};
         virtual void Start() {};
 
+
+        virtual void OnClicked() {};
+        virtual void OnClickedStart() {};
+        virtual void OnClickedEnd() {};
+
         void deleteCoroutineFunk(const std::string& name);
 
         virtual void Next() {
@@ -66,6 +71,7 @@ namespace Game {
         void addCCoroutineFunk(const std::string &name, Coroutine *coroutine);
 
         Scene *scene{};
+
     };
 
 } // Game

@@ -38,26 +38,27 @@ namespace Game {
     void GamePlayScene::CreateShip(float x = 0 , float y = 0) const
     {
         auto* ship = new Objects::Ship(scene->windowContext,shipSprite,0 ,0);
-        ship->SetPosition(x,y);
+        ship->SetPosition(x, y);
 
         active_ships->push_back(ship);
 
         scene->addObject(ship,3);
-
     }
 
     void GamePlayScene::Start() {
         SceneHolder::Start();
+
         CreatePool();
         CreateGround();
         LoadShipTexture();
-        CreateShip(-160,200);
 
-        addCCoroutineFunk("generator",  new Coroutine([this]() { GenerateRandomPosition(); }, 1.0f, 2.0f, 0.5f)  );
+        addCCoroutineFunk("generator",  new Coroutine([this]() { GenerateRandomPosition(); }, 2.0f, 5.0f, 0.5f)  );
 
-        addCCoroutineFunk("ship movement",  new Coroutine([this]() { MoveShips(); }, 0.02f)  );
+        addCCoroutineFunk("ship movement",  new Coroutine([this]() { MoveShips(); }, 0.02f) );
 
-        addCCoroutineFunk("ship logger",  new Coroutine([this]() { MoveShipLogger(); }, 115.0f)  );
+        addCCoroutineFunk("ship logger",  new Coroutine([this]() { MoveShipLogger(); }, 15.0f) );
+
+
 
     }
 
@@ -113,6 +114,23 @@ namespace Game {
                     " y=" +
                     std::string (std::to_string (ship->y_position)), Debugger::Color::BLUE );
         }
+    }
+
+
+    void GamePlayScene::OnClicked() {
+        SceneHolder::OnClicked();
+
+
+
+
+    }
+
+    void GamePlayScene::OnClickedEnd() {
+        SceneHolder::OnClickedEnd();
+    }
+
+    void GamePlayScene::OnClickedStart() {
+        SceneHolder::OnClickedStart();
     }
 
 

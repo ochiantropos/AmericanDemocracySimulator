@@ -38,6 +38,10 @@ namespace Game {
             void GenerateRandomPosition() const;
             bool checkCollision(const sf::Vector2f& newPos) const;
 
+            void OnClicked() override;
+            void OnClickedStart() override;
+            void OnClickedEnd() override;
+
             // overriding
             void Update() override;
             void Start() override;
