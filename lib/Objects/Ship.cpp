@@ -2,9 +2,7 @@
 // Created by OchiAnthropos on 23.12.2023.
 //
 
-#include "Ship.h"
-#include <SFML/Graphics.hpp>
-
+#include "Objects.h"
 
 namespace Game::Objects {
     void Ship::UpdateDrawObjects() {
@@ -12,12 +10,10 @@ namespace Game::Objects {
         holder.addObject("ShipObject", sprite);
     }
 
-    Ship::Ship(sf::RenderWindow *windowContext) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
+    Ship::Ship(Scene *sceneContext) : GameObject(sceneContext) {
     }
 
-    Ship::Ship(sf::RenderWindow *windowContext, int x, int y) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
+    Ship::Ship(Scene *sceneContext, int x, int y) : GameObject(sceneContext) {
 
         gameObjectName = std::string(
                 "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
@@ -26,9 +22,8 @@ namespace Game::Objects {
         y_position = (float) y;
     }
 
-    Ship::Ship(sf::RenderWindow *windowContext, const sf::Sprite &sprite1, int _x, int _y) {
+    Ship::Ship(Scene *sceneContext, const sf::Sprite &sprite1, int _x, int _y) : GameObject(sceneContext) {
         sprite = sprite1;
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
 
         gameObjectName = std::string(
                 "Ship [x:" + std::to_string(_x) + std::string(" y:") + std::to_string(_y) + std::string("]"));

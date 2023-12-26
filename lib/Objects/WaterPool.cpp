@@ -1,37 +1,35 @@
 //
 // Created by OchiAnthropos on 22.12.2023.
 //
-#include "WaterPool.h"
-#include "../Animations/WaterAnimation.h"
-#include <string>
+#include "Objects.h"
 
 namespace Game::Objects
 {
-
-    WaterPool::WaterPool(sf::RenderWindow *windowContext)
-    {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
-        gameObjectName = "WaterPool";
-        baseAnimation = new WaterAnimation();
-    }
-
     void WaterPool::UpdateDrawObjects() {
         baseAnimation->DrawAnimation();
 
         AddToHolder();
     }
 
-    void WaterPool::AddToHolder() {
-        holder.addObject("water_animation",baseAnimation->GetEndFrameSprite());
-
+    WaterPool::WaterPool(Scene *sceneContext) : GameObject(sceneContext)
+    {
+        gameObjectName = "WaterPool";
+        baseAnimation = new WaterAnimation();
     }
 
-    WaterPool::WaterPool(sf::RenderWindow *windowContext, int x, int y) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
+
+    WaterPool::WaterPool(Scene *sceneContext, int x, int y) : GameObject(sceneContext) {
         gameObjectName = std::string("WaterPool [x:") + std::to_string (x) + std::string(" y:") + std::to_string(y) + std::string("]");
+        x_position = x;
+        y_position = y;
         baseAnimation = new WaterAnimation();
         baseAnimation->x = x;
         baseAnimation->y = y;
+    }
+
+    void WaterPool::AddToHolder() {
+        holder.addObject("water_animation",baseAnimation->GetEndFrameSprite());
+
     }
 
     void WaterPool::SetPosition(float x, float y) {

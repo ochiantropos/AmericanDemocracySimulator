@@ -1,8 +1,8 @@
 //
 // Created by OchiAnthropos on 24.12.2023.
 //
+#include "Animation.h"
 
-#include "PointAnimation.h"
 
 namespace Game {
 

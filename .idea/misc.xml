@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/SFML" />
+      <file path="$PROJECT_DIR$/lib/Animations" />
+      <file path="$PROJECT_DIR$/lib/Architect" />
+      <file path="$PROJECT_DIR$/lib/Debugger" />
+      <file path="$PROJECT_DIR$/lib/Objects" />
+      <file path="$PROJECT_DIR$/lib/Scenes" />
+    </sourceRoots>
+    <libraryRoots>
+      <file path="$PROJECT_DIR$/lib/SFML" />
+    </libraryRoots>
+  </component>
 </project>

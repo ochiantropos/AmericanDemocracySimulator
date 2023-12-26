@@ -2,7 +2,10 @@
 // Created by OchiAnthropos on 24.12.2023.
 //
 
-#include "AbstractColliderType.h"
+
+
+
+#include "Base.h"
 
 namespace Game {
     AbstractColliderType::AbstractColliderType() {

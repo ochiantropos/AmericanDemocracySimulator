@@ -1,7 +1,7 @@
 //
 // Created by OchiAnthropos on 24.12.2023.
 //
-#include "Boom.h"
+#include "Objects.h"
 
 namespace Game::Objects{
     void Boom::UpdateDrawObjects() {
@@ -9,13 +9,10 @@ namespace Game::Objects{
         holder.addObject("ShipObject", sprite);
     }
 
-    Boom::Boom(sf::RenderWindow *windowContext) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
+    Boom::Boom(Scene *sceneContext) : GameObject(sceneContext) {
     }
 
-    Boom::Boom(sf::RenderWindow *windowContext, int x, int y) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
-
+    Boom::Boom(Scene *sceneContext, int x, int y) : GameObject(sceneContext) {
         gameObjectName = std::string(
                 "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
 
@@ -23,10 +20,8 @@ namespace Game::Objects{
         y_position = (float) y;
     }
 
-    Boom::Boom(sf::RenderWindow *windowContext, const sf::Sprite &sprite1, int _x, int _y) {
+    Boom::Boom(Scene *sceneContext, const sf::Sprite &sprite1, int _x, int _y) : GameObject(sceneContext) {
         sprite = sprite1;
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
-
         gameObjectName = std::string(
                 "Ship [x:" + std::to_string(_x) + std::string(" y:") + std::to_string(_y) + std::string("]"));
 
@@ -49,5 +44,3 @@ namespace Game::Objects{
     }
 
 }
-
-#include "Boom.h"

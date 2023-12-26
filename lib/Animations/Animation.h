@@ -4,11 +4,10 @@
 
 #ifndef AMERICANDEMOCRACYSIMULATOR_ANIMATION_H
 #define AMERICANDEMOCRACYSIMULATOR_ANIMATION_H
-#include <SFML/Graphics.hpp>
-
 #pragma once
-#include "../Architect/HolderableObject.h"
+#include "../Architect/Base/Base.h"
 #include "../../Settings/AnimationSettings.h"
+
 namespace Game {
 
     class Animation  {
@@ -25,8 +24,8 @@ namespace Game {
         AnimationSettings settings = AnimationSettings();
 
     public:
-        int x = 0;
-        int y = 0;
+        float x = 0;
+        float y = 0;
         float frameTime = 0.2f;
         std::string animationName = "base_animation";
         sf::Vector2<unsigned int> size;
@@ -46,6 +45,7 @@ namespace Game {
 
         virtual sf::Sprite GetEndFrameSprite()
         {
+            sprite.setPosition(x,y);
             return sprite;
         }
 
@@ -69,6 +69,38 @@ namespace Game {
 
     };
 
+    class BoomAnimation: public Animation {
+    public:
+        BoomAnimation();
+        sf::Sprite GetEndFrameSprite() override;
+    };
+
+    class DeadAnimation : public Animation {
+    public:
+        DeadAnimation();
+        sf::Sprite GetEndFrameSprite() override;
+    };
+
+    class GroundAnimation : public Animation {
+
+    public:
+        GroundAnimation();
+        sf::Sprite GetEndFrameSprite() override;
+    };
+
+    class PointAnimation : public Animation {
+    public:
+        PointAnimation();
+
+        sf::Sprite GetEndFrameSprite() override;
+    };
+
+    class WaterAnimation : public Animation {
+
+    public:
+        WaterAnimation();
+        sf::Sprite GetEndFrameSprite() override;
+    };
 } // Game
 
 #endif //AMERICANDEMOCRACYSIMULATOR_ANIMATION_H

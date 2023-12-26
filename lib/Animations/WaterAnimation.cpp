@@ -1,8 +1,8 @@
 //
 // Created by OchiAnthropos on 22.12.2023.
 //
+#include "Animation.h"
 
-#include "WaterAnimation.h"
 
 namespace Game {
     WaterAnimation::WaterAnimation() {

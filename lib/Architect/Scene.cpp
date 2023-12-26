@@ -1,9 +1,8 @@
 //
 // Created by OchiAnthropos on 21.12.2023.
 //
-#include "Scene.h"
-#include <utility>
-#include <SFML/Window/Event.hpp>
+#include "Architect.h"
+
 
 namespace Game {
 // constructors
@@ -17,16 +16,14 @@ namespace Game {
     }
     void Scene::addObject(GameObject *object, int layer) {
         // Якщо лейер не вказаний або вказано неправильно
+        int freeLayer = 1;
         if (layers.find(layer) == layers.end() || layer <= 0) {
             // Знайдемо перший вільний лейер або створимо новий
-            int freeLayer = 1;
-            while (layers.find(freeLayer) != layers.end()) {
+            while (layers.find(freeLayer) != layers.end() && freeLayer != layer) {
                 ++freeLayer;
             }
-            layer = freeLayer;
         }
         layers[layer].push_back(object);
     }
-
-
+    void Scene::DrawError(std::string obj) {Game::Debugger::Log("[Error][CAN\'T DRAW GAME OBJECT] in \'" + obj + "\' object has null scene Context]",Game::Debugger::Color::RED);}
 } // Game

@@ -1,24 +1,18 @@
 //
 // Created by OchiAnthropos on 21.12.2023.
 //
-#include <SFML/Graphics.hpp>
-#include <utility>
-#include <vector>
-#include "SceneManager.h"
-#include "Scene.h"
-#include "../Debugger/Debugger.h"
+#include "Architect.h"
 
-namespace Game {
+namespace Game
+{
     Scene *SceneManager::createScene() { return new Scene(); }
     Scene *SceneManager::createScene(std::string name) { return new Scene(std::move(name)); }
     Scene *SceneManager::createScene(std::string name, const std::string& contextName) { return new Scene(std::move(name)); }
 
     void SceneManager::AddScene(){}
-
     void SceneManager::AddScene(SceneHolder *sceneHolder){ scenes[sceneHolder->scene->ContextName] = sceneHolder; }
     void SceneManager::AddScene(SceneHolder sceneHolder){ AddScene(&sceneHolder); }
     void SceneManager::setActiveScene(SceneHolder *sceneHolder) { activeScene = sceneHolder; }
-    void SceneManager::setActiveScene(SceneHolder sceneHolder) { activeScene = &sceneHolder; }
 
     void SceneManager::SwitchScene(const std::string& sceneName)
     {

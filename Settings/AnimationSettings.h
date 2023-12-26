@@ -12,6 +12,8 @@ namespace Game {
         friend class GamePlayScenesSetting;
 
     public:
+
+
         AnimationSettings() = default;
 
         const float GroundAnimationHeight = 320;
@@ -28,8 +30,8 @@ namespace Game {
 
         const std::string WaterPoolPath = R"(C:\AmericanDemocracySimulator\textures\sea_game_pool_sheet.png)";
 
-        const float PointWidth = 20.0f;
-        const float PointHeight = 20.0f;
+        const float PointWidth = 60.0f;
+        const float PointHeight = 60.0f;
         const float PointAnimationFrameTime = 0.15f;
         const int PointAnimationFrame = 19;
         const std::string PointPath = R"(C:\AmericanDemocracySimulator\textures\point.png)";
@@ -45,8 +47,6 @@ namespace Game {
         const float  BoomAnimationFrameTime = 0.1f;
         const int BoomAnimationFrame = 23;
         const std::string  BoomPath = R"(C:\AmericanDemocracySimulator\textures\boom.png)";
-
-
     };
 }
 

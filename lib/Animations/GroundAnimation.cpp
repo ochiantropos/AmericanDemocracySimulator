@@ -1,8 +1,8 @@
 //
 // Created by OchiAnthropos on 23.12.2023.
 //
+#include "Animation.h"
 
-#include "GroundAnimation.h"
 
 namespace Game {
     sf::Sprite GroundAnimation::GetEndFrameSprite() {

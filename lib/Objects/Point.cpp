@@ -1,53 +1,47 @@
 //
 // Created by OchiAnthropos on 24.12.2023.
 //
-#include "Point.h"
+#include "Objects.h"
 
 
 namespace Game::Objects {
     void Point::UpdateDrawObjects() {
-        sprite.setPosition((float) x_position, (float) y_position);
-        holder.addObject("ShipObject", sprite);
+        baseAnimation->DrawAnimation();
+        holder.addObject("Point", baseAnimation->GetEndFrameSprite());
+    }
+    Point::Point(Scene *sceneContext) : GameObject(sceneContext) {
     }
 
-    Point::Point(sf::RenderWindow *windowContext) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
-    }
-
-    Point::Point(sf::RenderWindow *windowContext, int x, int y) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
-
+    Point::Point(Scene *sceneContext, int x, int y)  : GameObject(sceneContext){
         gameObjectName = std::string(
-                "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
-
-        x_position = (float) x;
-        y_position = (float) y;
+                "Point [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
+        baseAnimation = new PointAnimation();
+        baseAnimation->x = x;
+        baseAnimation->y = y;
     }
 
-    Point::Point(sf::RenderWindow *windowContext, const sf::Sprite &sprite1, int _x, int _y) {
+    Point::Point(Scene *sceneContext, const sf::Sprite &sprite1, int _x, int _y) : GameObject(sceneContext) {
         sprite = sprite1;
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
-
         gameObjectName = std::string(
-                "Ship [x:" + std::to_string(_x) + std::string(" y:") + std::to_string(_y) + std::string("]"));
-
-        x_position = (float) _x;
-        y_position = (float) _y;
+                "Point [x:" + std::to_string(_x) + std::string(" y:") + std::to_string(_y) + std::string("]"));
+        baseAnimation = new PointAnimation();
+        baseAnimation->x = _x;
+        baseAnimation->y = _y;
     }
 
     void Point::SetPosition(float x, float y) {
-        x_position = x;
-        y_position = y;
         gameObjectName = std::string(
-                "Ship [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
+                "Point [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
+        baseAnimation->x = x;
+        baseAnimation->y = y;
     }
 
     void Point::MovePosition(float x, float y) {
-        x_position += x;
-        y_position += y;
         gameObjectName = std::string(
                 "Point [x:" + std::to_string(x_position) + std::string(" y:") + std::to_string(y_position) +
                 std::string("]"));
+        baseAnimation->x = x;
+        baseAnimation->y = y;
     }
 }// Object
 // Game

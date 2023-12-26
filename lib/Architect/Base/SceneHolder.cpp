@@ -2,7 +2,8 @@
 // Created by OchiAnthropos on 24.12.2023.
 //
 
-#include "SceneHolder.h"
+#include "Base.h"
+
 
 namespace Game {
     void SceneHolder::AsyncRunState() {
@@ -25,9 +26,9 @@ namespace Game {
     void SceneHolder::addCCoroutineFunk(const std::function<void()> &runtime, const std::string &name, float time) {
     }
 
-    SceneHolder::SceneHolder(Scene *_scene, int _y_size, int _x_size) : scene(_scene), x_size(_x_size), y_size(_y_size) {
+    SceneHolder::SceneHolder(Scene *_scene, int _y_size, int _x_size) : scene(_scene), x_size(_x_size), y_size(_y_size) {}
 
-    }
+    SceneHolder::SceneHolder(Scene *_scene, sf::RenderWindow *context, int _y_size, int _x_size) : scene(_scene), x_size(_x_size), y_size(_y_size)  {}
 
     SceneHolder::SceneHolder() = default;
 } // Game

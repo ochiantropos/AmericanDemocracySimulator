@@ -2,9 +2,11 @@
 // Created by OchiAnthropos on 23.12.2023.
 //
 
-#include "ShipDieAnimated.h"
+#include "Objects.h"
 
 
-    namespace Game::Object {
-    } // Object
+namespace Game::Object {
+
+
+} // Object
 // Game

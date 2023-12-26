@@ -1,8 +1,9 @@
 //
 // Created by OchiAnthropos on 24.12.2023.
 //
+#include "Animation.h"
 
-#include "BoomAnimation.h"
+
 
 namespace Game {
     BoomAnimation::BoomAnimation() {

@@ -1,8 +1,7 @@
 //
 // Created by OchiAnthropos on 24.12.2023.
 //
-
-#include "DeadAnimation.h"
+#include "Animation.h"
 
 namespace Game {
     DeadAnimation::DeadAnimation() {

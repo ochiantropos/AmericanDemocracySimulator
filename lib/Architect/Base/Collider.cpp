@@ -2,7 +2,7 @@
 // Created by OchiAnthropos on 24.12.2023.
 //
 
-#include "Collider.h"
+#include "Base.h"
 
 namespace Game {
 

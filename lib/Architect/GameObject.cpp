@@ -2,8 +2,8 @@
 // Created by OchiAnthropos on 21.12.2023.
 //
 
-#include "GameObject.h"
-#include "../Debugger/Debugger.h"
+#include "Architect.h"
+
 namespace Game
 {
     void  GameObject:: update(float deltaTime)
@@ -14,10 +14,6 @@ namespace Game
     {
         Debugger::Log("Draw object");
 
-    }
-
-    GameObject::GameObject(Scene *context) {
-        currentContext = (Scene *) context;
     }
 
     GameObject::GameObject() = default;

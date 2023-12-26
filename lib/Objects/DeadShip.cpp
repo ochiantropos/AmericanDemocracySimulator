@@ -2,8 +2,7 @@
 // Created by OchiAnthropos on 24.12.2023.
 //
 
-#include "DeadShip.h"
-
+#include "Objects.h"
 
 namespace Game::Objects {
     void  DeadShip::UpdateDrawObjects() {
@@ -11,12 +10,10 @@ namespace Game::Objects {
         holder.addObject("DeadShip", sprite);
     }
 
-    DeadShip::DeadShip(sf::RenderWindow *windowContext) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
+    DeadShip::DeadShip(Scene *sceneContext) : GameObject(sceneContext) {
     }
 
-    DeadShip::DeadShip(sf::RenderWindow *windowContext, int x, int y) {
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
+    DeadShip::DeadShip(Scene *sceneContext, int x, int y)  : GameObject(sceneContext) {
 
         gameObjectName = std::string(
                 "DeadShip [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
@@ -25,10 +22,8 @@ namespace Game::Objects {
         y_position = (float) y;
     }
 
-    DeadShip::DeadShip(sf::RenderWindow *windowContext, const sf::Sprite &sprite1, int _x, int _y) {
+    DeadShip::DeadShip(Scene *sceneContext, const sf::Sprite &sprite1, int _x, int _y) : GameObject(sceneContext) {
         sprite = sprite1;
-        if (currentContext != nullptr) currentContext->windowContext = windowContext;
-
         gameObjectName = std::string(
                 "DeadShip [x:" + std::to_string(_x) + std::string(" y:") + std::to_string(_y) + std::string("]"));
 
