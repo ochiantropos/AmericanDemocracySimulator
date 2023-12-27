@@ -159,8 +159,12 @@ namespace Game {
                 last_kill_ship = Game_Kill;
                 Game_Kill = 0;
                 Game_Time = 0;
-
-
+                for (auto* ship: *active_ships)ship->deletable = true;
+                active_ships->clear();
+                for (auto* boom: *active_boom)boom->deletable = true;
+                active_boom->clear();
+                for (auto* dead_ship: *active_ships_dead)dead_ship->deletable = true;
+                active_ships_dead->clear();
             }
         }
     }
@@ -516,7 +520,7 @@ namespace Game {
             for (auto fly : flies){
                 if (fly->available)
                 {
-                    fly->Attack((float)mousePosition.x-40,(float)mousePosition.y-35);
+                    fly->Attack((float)mousePosition.x-78,(float)mousePosition.y-35);
                     break;
                 }
             }

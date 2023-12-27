@@ -38,12 +38,18 @@ GamePlayScene *scene = new GamePlayScene( new Scene("MainScene", "Main"), &windo
 int main()
 {
     sf::Music music;
-    if (!music.openFromFile(setting.ms)) {} else {
+    if (!music.openFromFile(setting.ms)) {} else {}
+    try {
+        music.setLoop(true);
         music.play();
+        auto sceneManager = SceneManager::GetInstance(); // get scene manager instance
+        auto objects = PoolSceneManager(sceneManager); // pooling the scenes and objects
+        StartGameCicle(sceneManager,objects);
+
+    } catch (exception e){
+
+
     }
-    auto sceneManager = SceneManager::GetInstance(); // get scene manager instance
-    auto objects = PoolSceneManager(sceneManager); // pooling the scenes and objects
-    StartGameCicle(sceneManager,objects);
 
 
     return 0;
