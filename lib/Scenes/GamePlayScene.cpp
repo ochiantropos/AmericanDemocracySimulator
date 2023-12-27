@@ -217,6 +217,7 @@ namespace Game {
                         last_kill_ship = Game_Kill;
                         Game_Kill = 0;
                         last_game_time= Game_Time;
+                        scene->currentState = GameState::Start;
                         Game_Time = 0;
                         dead = false;
                         start = true;
@@ -396,7 +397,12 @@ namespace Game {
         KillShip->SetPosition(20,140);
         this->scene->currentState = GameState::Menu;
         menu = true;
-
+        for (auto* ship: *active_ships)ship->deletable = true;
+        active_ships->clear();
+        for (auto* boom: *active_boom)boom->deletable = true;
+        active_boom->clear();
+        for (auto* dead_ship: *active_ships_dead)dead_ship->deletable = true;
+        active_ships_dead->clear();
         dead = false;
         start = false;
         pause = false;
@@ -409,7 +415,12 @@ namespace Game {
         KillShip->SetPosition(20,140);
         this->scene->currentState = GameState::Start;
         start = true;
-
+        for (auto* ship: *active_ships)ship->deletable = true;
+        active_ships->clear();
+        for (auto* boom: *active_boom)boom->deletable = true;
+        active_boom->clear();
+        for (auto* dead_ship: *active_ships_dead)dead_ship->deletable = true;
+        active_ships_dead->clear();
         dead = false;
         menu = false;
         pause = false;
@@ -428,7 +439,12 @@ namespace Game {
     }
     void GamePlayScene::OnEndGame() {
         Debugger::Log("[GAME] End Game Iter",Debugger::Color::DARK_RED);
-
+        for (auto* ship: *active_ships)ship->deletable = true;
+        active_ships->clear();
+        for (auto* boom: *active_boom)boom->deletable = true;
+        active_boom->clear();
+        for (auto* dead_ship: *active_ships_dead)dead_ship->deletable = true;
+        active_ships_dead->clear();
         OnComeBackToStartClickedUI();
     }
     void GamePlayScene::CheckUICollision()
