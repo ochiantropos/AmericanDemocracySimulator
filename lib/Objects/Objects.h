@@ -23,15 +23,19 @@ namespace Game::Objects {
         void MovePosition(float x, float y) override;
         void AddToHolder();
     };
-    class DeadShip : GameObject {
+    class DeadShip : public GameObject {
+
         void UpdateDrawObjects() override;
 
+    public:
         explicit DeadShip(Scene *sceneContext, const sf::Sprite& sprite1, int _x, int _y);
-        explicit DeadShip(Scene *sceneContext, int x = 0, int y = 0);
         explicit DeadShip(Scene *sceneContext);
-
+        ~DeadShip() override{};
         void SetPosition(float x, float y ) override;
         void MovePosition(float x, float y) override;
+        explicit DeadShip(Scene *sceneContext, int x = 0, int y = 0);
+
+        DeadShip(Scene *sceneContext, int x, int y, sf::Texture *texture);
     };
     class Point : public GameObject {
         void UpdateDrawObjects() override;
@@ -78,20 +82,98 @@ namespace Game::Objects {
         explicit Ship(Scene *sceneContext, const sf::Sprite& sprite1, int _x, int _y);
         explicit Ship(Scene *sceneContext, int x = 0, int y = 0);
         explicit Ship(Scene *sceneContext);
-
+        ~Ship() = default;
         void SetPosition(float x, float y ) override;
         void MovePosition(float x, float y) override;
     };
 
     class Boom : public GameObject {
+
         void UpdateDrawObjects() override;
 
         explicit Boom(Scene *sceneContext, const sf::Sprite& sprite1, int _x, int _y);
-        explicit Boom(Scene *sceneContext, int x = 0, int y = 0);
-        explicit Boom(Scene *sceneContext);
+
+        explicit Boom(Scene *sceneContext);;
 
         void SetPosition(float x, float y ) override;
         void MovePosition(float x, float y) override;
+
+    public:
+        explicit Boom(Scene *sceneContext, int x = 0, int y = 0);
+
+        Boom(Scene *sceneContext, int x, int y, sf::Texture *texture);
+
+        ~Boom() override{}
+    };
+
+    class Preview : public GameObject {
+
+        void UpdateDrawObjects() override;
+
+        explicit Preview(Scene *sceneContext, const sf::Sprite& sprite1, int _x, int _y);
+
+        explicit Preview(Scene *sceneContext);;
+
+        void SetPosition(float x, float y ) override;
+        void MovePosition(float x, float y) override;
+
+    public:
+        explicit Preview(Scene *sceneContext, int x = 0, int y = 0);
+
+        Preview(Scene *sceneContext, int x, int y, sf::Texture *texture);
+
+        ~Preview() override{}
+    };
+
+
+    class Fly : public GameObject {
+        void UpdateDrawObjects() override;
+
+    public:
+        bool available = true;
+        float attack_point_x = 0;
+        float attack_point_y = 0;
+
+        void  Attack(float x, float y){
+             available = false;
+                SetPosition(x_position,y+35);
+             attack_point_x = x;
+             attack_point_y = y;
+             state = State::FLY;
+        }
+        bool CanAttack(){
+            if (x_position <= attack_point_x)
+            {
+                return true;
+            }
+            return  false;
+        }
+        bool Repair(){
+            if (x_position <= -200)
+            {
+                state = State::STAY;
+                available = true;
+                return true;
+            }
+            return  false;
+        }
+        enum class State{
+            STAY,FLY
+        };
+
+        State state = State::STAY;
+        explicit Fly(Scene *sceneContext, const sf::Sprite& sprite1, int _x, int _y);
+        explicit Fly(Scene *sceneContext, const sf::Texture& tex, int _x, int _y);
+
+        explicit Fly(Scene *sceneContext);
+        void SetPosition(float x, float y ) override;
+        void MovePosition(float x, float y) override;
+        explicit Fly(Scene *sceneContext, int x = 0, int y = 0);
+
+        Fly(Scene *sceneContext, int x, int y, sf::Texture *texture);
+        ~Fly() override{}
+
+        void DoRapair(float _x_max);
     };
 }
 

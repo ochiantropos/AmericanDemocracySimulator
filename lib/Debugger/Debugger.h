@@ -12,6 +12,7 @@
 #pragma once
 #include "../Architect/Architect.h"
 
+
 namespace Game {
 
     class GameObject;
@@ -23,7 +24,16 @@ namespace Game {
             RED,
             GREEN,
             BLUE,
-            YELLOW
+            YELLOW,
+            CYAN,
+            MAGENTA,
+            WHITE,
+            BLACK,
+            GRAY,  // Світло-сірий колір
+            DARK_RED, // Темно-червоний
+            DARK_GREEN, // Темно-зелений
+            DARK_BLUE, // Темно-синій
+            DARK_YELLOW // Темно-жовтий
         };
         static void Log(const std::string& text, Color color = Color::DEFAULT);
         static void DebugInspector(std::map<int, std::vector<GameObject *>> objects, int max_in_layer);
@@ -36,6 +46,12 @@ namespace Game {
         static void setCyanColor(HANDLE hConsole);
         static void setMagentaColor(HANDLE hConsole);
         static void setWhiteColor(HANDLE hConsole);
+        static void setDarkYellowColor(HANDLE hConsole);
+        static void setDarkBlueColor(HANDLE hConsole);
+        static void setDarkGreenColor(HANDLE hConsole);
+        static void setGrayColor(HANDLE hConsole);
+        static void setDarkRedColor(HANDLE hConsole);
+        static void setBlackColor(HANDLE hConsole);
 
         static void LogThread(int clearTime);
 

@@ -293,4 +293,28 @@ CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/WaterAnimation.cpp.obj:
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
- C:/AmericanDemocracySimulator/Settings/AnimationSettings.h
+ C:/AmericanDemocracySimulator/Settings/AnimationSettings.h \
+ C:/AmericanDemocracySimulator/Settings/Setting.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/unistd.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/io.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/x86_64-w64-mingw32/include/getopt.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h

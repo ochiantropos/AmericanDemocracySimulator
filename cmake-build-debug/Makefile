@@ -248,6 +248,30 @@ lib/Animations/PointAnimation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PointAnimation.cpp.s
 .PHONY : lib/Animations/PointAnimation.cpp.s
 
+lib/Animations/PreviewAnimation.obj: lib/Animations/PreviewAnimation.cpp.obj
+.PHONY : lib/Animations/PreviewAnimation.obj
+
+# target to build an object file
+lib/Animations/PreviewAnimation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PreviewAnimation.cpp.obj
+.PHONY : lib/Animations/PreviewAnimation.cpp.obj
+
+lib/Animations/PreviewAnimation.i: lib/Animations/PreviewAnimation.cpp.i
+.PHONY : lib/Animations/PreviewAnimation.i
+
+# target to preprocess a source file
+lib/Animations/PreviewAnimation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PreviewAnimation.cpp.i
+.PHONY : lib/Animations/PreviewAnimation.cpp.i
+
+lib/Animations/PreviewAnimation.s: lib/Animations/PreviewAnimation.cpp.s
+.PHONY : lib/Animations/PreviewAnimation.s
+
+# target to generate assembly for a file
+lib/Animations/PreviewAnimation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Animations/PreviewAnimation.cpp.s
+.PHONY : lib/Animations/PreviewAnimation.cpp.s
+
 lib/Animations/WaterAnimation.obj: lib/Animations/WaterAnimation.cpp.obj
 .PHONY : lib/Animations/WaterAnimation.obj
 
@@ -656,6 +680,30 @@ lib/Objects/Point.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Point.cpp.s
 .PHONY : lib/Objects/Point.cpp.s
 
+lib/Objects/Preview.obj: lib/Objects/Preview.cpp.obj
+.PHONY : lib/Objects/Preview.obj
+
+# target to build an object file
+lib/Objects/Preview.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Preview.cpp.obj
+.PHONY : lib/Objects/Preview.cpp.obj
+
+lib/Objects/Preview.i: lib/Objects/Preview.cpp.i
+.PHONY : lib/Objects/Preview.i
+
+# target to preprocess a source file
+lib/Objects/Preview.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Preview.cpp.i
+.PHONY : lib/Objects/Preview.cpp.i
+
+lib/Objects/Preview.s: lib/Objects/Preview.cpp.s
+.PHONY : lib/Objects/Preview.s
+
+# target to generate assembly for a file
+lib/Objects/Preview.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/Preview.cpp.s
+.PHONY : lib/Objects/Preview.cpp.s
+
 lib/Objects/Ship.obj: lib/Objects/Ship.cpp.obj
 .PHONY : lib/Objects/Ship.obj
 
@@ -727,6 +775,30 @@ lib/Objects/WaterPool.s: lib/Objects/WaterPool.cpp.s
 lib/Objects/WaterPool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/WaterPool.cpp.s
 .PHONY : lib/Objects/WaterPool.cpp.s
+
+lib/Objects/fly.obj: lib/Objects/fly.cpp.obj
+.PHONY : lib/Objects/fly.obj
+
+# target to build an object file
+lib/Objects/fly.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/fly.cpp.obj
+.PHONY : lib/Objects/fly.cpp.obj
+
+lib/Objects/fly.i: lib/Objects/fly.cpp.i
+.PHONY : lib/Objects/fly.i
+
+# target to preprocess a source file
+lib/Objects/fly.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/fly.cpp.i
+.PHONY : lib/Objects/fly.cpp.i
+
+lib/Objects/fly.s: lib/Objects/fly.cpp.s
+.PHONY : lib/Objects/fly.s
+
+# target to generate assembly for a file
+lib/Objects/fly.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AmericanDemocracySimulator.dir\build.make CMakeFiles/AmericanDemocracySimulator.dir/lib/Objects/fly.cpp.s
+.PHONY : lib/Objects/fly.cpp.s
 
 lib/Scenes/GamePlayScene.obj: lib/Scenes/GamePlayScene.cpp.obj
 .PHONY : lib/Scenes/GamePlayScene.obj
@@ -800,6 +872,9 @@ help:
 	@echo ... lib/Animations/PointAnimation.obj
 	@echo ... lib/Animations/PointAnimation.i
 	@echo ... lib/Animations/PointAnimation.s
+	@echo ... lib/Animations/PreviewAnimation.obj
+	@echo ... lib/Animations/PreviewAnimation.i
+	@echo ... lib/Animations/PreviewAnimation.s
 	@echo ... lib/Animations/WaterAnimation.obj
 	@echo ... lib/Animations/WaterAnimation.i
 	@echo ... lib/Animations/WaterAnimation.s
@@ -851,6 +926,9 @@ help:
 	@echo ... lib/Objects/Point.obj
 	@echo ... lib/Objects/Point.i
 	@echo ... lib/Objects/Point.s
+	@echo ... lib/Objects/Preview.obj
+	@echo ... lib/Objects/Preview.i
+	@echo ... lib/Objects/Preview.s
 	@echo ... lib/Objects/Ship.obj
 	@echo ... lib/Objects/Ship.i
 	@echo ... lib/Objects/Ship.s
@@ -860,6 +938,9 @@ help:
 	@echo ... lib/Objects/WaterPool.obj
 	@echo ... lib/Objects/WaterPool.i
 	@echo ... lib/Objects/WaterPool.s
+	@echo ... lib/Objects/fly.obj
+	@echo ... lib/Objects/fly.i
+	@echo ... lib/Objects/fly.s
 	@echo ... lib/Scenes/GamePlayScene.obj
 	@echo ... lib/Scenes/GamePlayScene.i
 	@echo ... lib/Scenes/GamePlayScene.s

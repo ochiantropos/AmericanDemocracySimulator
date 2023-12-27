@@ -9,12 +9,25 @@ namespace Game
     Scene *SceneManager::createScene(std::string name) { return new Scene(std::move(name)); }
     Scene *SceneManager::createScene(std::string name, const std::string& contextName) { return new Scene(std::move(name)); }
 
-    void SceneManager::AddScene(){}
-    void SceneManager::AddScene(SceneHolder *sceneHolder){ scenes[sceneHolder->scene->ContextName] = sceneHolder; }
+    void SceneManager::AddScene(SceneHolder *sceneHolder){
+        scenes[sceneHolder->scene->Name] = sceneHolder;
+        sceneHolder->manager = this;
+    }
     void SceneManager::AddScene(SceneHolder sceneHolder){ AddScene(&sceneHolder); }
     void SceneManager::setActiveScene(SceneHolder *sceneHolder) { activeScene = sceneHolder; }
 
     void SceneManager::SwitchScene(const std::string& sceneName)
+    {
+        auto it = SceneManager::GetInstance()->scenes.find(sceneName);
+        if (it != SceneManager::GetInstance()->scenes.end()) {
+            CallToSwitchName = sceneName;
+            CallToSwitch = true;
+            Debugger::Log("Switched to scene: " + sceneName, Debugger::Color::GREEN);
+        } else {
+            Debugger::Log("Scene not found: " + sceneName, Debugger::Color::RED);
+        }
+    }
+    void SceneManager::SwitchSceneImidiatly(const std::string& sceneName)
     {
         auto it = SceneManager::GetInstance()->scenes.find(sceneName);
         if (it != SceneManager::GetInstance()->scenes.end()) {
@@ -33,6 +46,7 @@ namespace Game
 
     SceneManager *SceneManager::GetInstance() {
         if(singleton_==nullptr){
+
             singleton_ = new SceneManager();
         }
         return singleton_;

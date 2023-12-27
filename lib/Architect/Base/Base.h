@@ -6,9 +6,11 @@
 #define AMERICANDEMOCRACYSIMULATOR_BASE_H
 #pragma once
 #include "../../../Dependency.h"
+
 namespace Game {
 
     class Scene;
+    class SceneManager;
 
     class AbstractColliderType {
     public:
@@ -17,8 +19,8 @@ namespace Game {
         sf::Vector2f center = {0, 0};
     };
     template<typename TColliderType>
-    class Collider {
 
+    class Collider {
     private:
         AbstractColliderType collider{};
     public:
@@ -29,6 +31,7 @@ namespace Game {
         bool CompareCollider(Collider collider2) {
             return true;
         }
+
     };
 
     class DrawableHolder {
@@ -64,6 +67,7 @@ namespace Game {
         void Delta(float deltaTime);
         void Continue();
         void Continue(float deltaTime);
+        void SetTime(float min, float max);
     };
 
     class HolderableObject{
@@ -117,6 +121,8 @@ namespace Game {
         float deltaTime = 0;
 
     public:
+        SceneManager *manager;
+
         SceneHolder();
 
         virtual void Update() {};
@@ -154,7 +160,26 @@ namespace Game {
 //
 //        bool CheckCollision(RectangleCollider collider1, CircleCollider collider2);
 //
-//        bool CheckCollision(RectangleCollider collider1, RectangleCollider collider2);
+//        bool CheckCollision(RectangleCollider collider1, RectangleCollider collider2);\
+
+    public:
+        static bool CheckCollisionCircleRectangle(float circleX, float circleY, float radius,
+                                                  float rectX, float rectY, float rectWidth, float rectHeight) {
+            // Знаходимо ближній та дальній краї прямокутника до кола
+            float closestX = std::clamp(circleX, rectX, rectX + rectWidth);
+            float closestY = std::clamp(circleY, rectY, rectY + rectHeight);
+            // Обчислюємо відстань між центром кола та найближчою точкою на прямокутнику
+            float distanceX = circleX - closestX;
+            float distanceY = circleY - closestY;
+            // Перевірка чи відстань менше або дорівнює радіусу кола
+            return (distanceX * distanceX + distanceY * distanceY) <= (radius * radius);
+        }
+        static bool CheckCollisionRectangles(float rect1X, float rect1Y, float rect1Width, float rect1Height,
+                                             float rect2X, float rect2Y, float rect2Width, float rect2Height) {
+            bool noCollision = (rect1X + rect1Width < rect2X || rect1X > rect2X + rect2Width ||
+                                rect1Y + rect1Height < rect2Y || rect1Y > rect2Y + rect2Height);
+            return !noCollision; // Повертаємо true, якщо є колізія, false - якщо немає
+        }
     };
 
 

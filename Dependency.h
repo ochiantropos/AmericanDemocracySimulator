@@ -16,4 +16,6 @@
 #include <map>
 #include <string>
 #include <utility>
+#include <ctime>
+#include <cstdlib>
 #endif //AMERICANDEMOCRACYSIMULATOR_DEPENDENCY_H

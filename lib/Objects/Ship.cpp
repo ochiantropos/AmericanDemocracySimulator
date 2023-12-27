@@ -24,7 +24,7 @@ namespace Game::Objects {
 
     Ship::Ship(Scene *sceneContext, const sf::Sprite &sprite1, int _x, int _y) : GameObject(sceneContext) {
         sprite = sprite1;
-
+        sprite.setPosition(_x,_y);
         gameObjectName = std::string(
                 "Ship [x:" + std::to_string(_x) + std::string(" y:") + std::to_string(_y) + std::string("]"));
 

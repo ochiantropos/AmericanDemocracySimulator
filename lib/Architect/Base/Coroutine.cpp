@@ -31,14 +31,27 @@ namespace Game {
             ChangeCurrentBorder();
         }
     }
+    void Coroutine::SetTime(float min, float max) {
+        borderChangeableStatus = true;
+        borderTime = min;
+        borderTimeMin = min;
+        borderTimeMax = max;
+    }
 
     void Coroutine::ChangeCurrentBorder() {
         if (borderChangeableStatus) {
-            std::random_device rd;  // Створення об'єкта для отримання випадкових чисел
-            std::mt19937 gen(rd()); // Генератор випадкових чисел на основі rd()
-            std::uniform_int_distribution<int> distribution((int) (borderTimeMin * 1000), (int) (borderTimeMax *
-                                                                                                 1000)); // Встановлення діапазону для випадкового числа від 0 до 100 (змініть за потребою)
-            int x = distribution(gen);
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            int x = borderTimeMin;
+            if (borderTimeMax < borderTimeMin){
+                std::uniform_int_distribution<int> distribution((int) (borderTimeMax * 1000), (int) (borderTimeMin *
+                                                                                                     1000));
+               x = distribution(gen);
+            }else {
+                std::uniform_int_distribution<int> distribution((int) (borderTimeMin * 1000), (int) (borderTimeMax *
+                                                                                                     1000));
+                x = distribution(gen);
+            }
             borderTime = (float) (x) / 1000;
         }
     }
@@ -60,6 +73,7 @@ namespace Game {
         borderTimeMin = min;
         borderTimeMax = max;
     }
+
 
     Coroutine::Coroutine(std::function<void()> process, float min, float max, float start) {
         this->process = std::move(process);

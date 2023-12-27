@@ -14,6 +14,8 @@ namespace Game {
         CONSOLE_SCREEN_BUFFER_INFO csbi;
         GetConsoleScreenBufferInfo(hConsole, &csbi);
         int lastMessageIndex = csbi.dwCursorPosition.Y;
+        time_t currentTime = time(nullptr);
+        struct tm localTime = *localtime(&currentTime);
         messageIndices.push_back(lastMessageIndex);
         switch (color) {
             case Color::RED:
@@ -28,12 +30,39 @@ namespace Game {
             case Color::YELLOW:
                 setYellowColor(hConsole);
                 break;
+            case Color::CYAN:
+                setCyanColor(hConsole);
+                break;
+            case Color::MAGENTA:
+                setMagentaColor(hConsole);
+                break;
+            case Color::WHITE:
+                setWhiteColor(hConsole);
+                break;
+            case Color::BLACK:
+                setBlackColor(hConsole);
+                break;
+            case Color::GRAY:
+                setGrayColor(hConsole);
+                break;
+            case Color::DARK_RED:
+                setDarkRedColor(hConsole);
+                break;
+            case Color::DARK_GREEN:
+                setDarkGreenColor(hConsole);
+                break;
+            case Color::DARK_BLUE:
+                setDarkBlueColor(hConsole);
+                break;
+            case Color::DARK_YELLOW:
+                setDarkYellowColor(hConsole);
+                break;
             case Color::DEFAULT:
             default:
                 resetColor(hConsole);
                 break;
         }
-        std::cout << text << std::endl;
+        std::cout << "[" << std::put_time(&localTime, "%Y-%m-%d %H:%M:%S") << "] " << text << std::endl;
         resetColor(hConsole);
     }
 
@@ -54,15 +83,15 @@ namespace Game {
             for (auto* gameObject : gameObjects) {
                 if (!gameObject->CastRenderAvailable()) continue;
                 if (count < max_in_layer)
-                    Debugger::Log( layerIndexName + tabs + " "  + std::string(std::to_string(count)) + "-" + gameObject->gameObjectName , Game::Debugger::Color::BLUE);
+                    Debugger::Log(  std::string ("[INSPECTOR] ") + layerIndexName + tabs + " "  + std::string(std::to_string(count)) + "-" + gameObject->gameObjectName , Game::Debugger::Color::CYAN);
                 else if (count == max_in_layer)
 
-                    Debugger::Log( tabs + std::string(" ..... "),  Game::Debugger::Color::BLUE);
+                    Debugger::Log( "[INSPECTOR] " + tabs + std::string(" ..... "),  Game::Debugger::Color::CYAN);
                 last = gameObject;
                 count++;
             }
             if (count >= max_in_layer)
-                Debugger::Log( layerIndexName + tabs + " "  + std::string(std::to_string(count)) + "-" + last->gameObjectName , Game::Debugger::Color::BLUE);
+                Debugger::Log( std::string ("[INSPECTOR] ") + layerIndexName + tabs + " "  + std::string(std::to_string(count)) + "-" + last->gameObjectName , Game::Debugger::Color::CYAN);
         }
     }
 
@@ -87,9 +116,31 @@ namespace Game {
     void Debugger::setWhiteColor(HANDLE hConsole) {
         SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY); // Білий текст
     }
+    void Debugger::setGrayColor(HANDLE hConsole) {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE); // Світло-сірий
+    }
 
+    void Debugger::setDarkRedColor(HANDLE hConsole) {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED); // Темно-червоний
+    }
+
+    void Debugger::setDarkGreenColor(HANDLE hConsole) {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN); // Темно-зелений
+    }
+
+    void Debugger::setDarkBlueColor(HANDLE hConsole) {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE); // Темно-синій
+    }
+
+    void Debugger::setDarkYellowColor(HANDLE hConsole) {
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN); // Темно-жовтий
+    }
 
     void Debugger::resetColor(HANDLE hConsole) {
         SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN);
+    }
+
+    void Debugger::setBlackColor(HANDLE hConsole) {
+        SetConsoleTextAttribute(hConsole, 0); // Чорний колір
     }
 }

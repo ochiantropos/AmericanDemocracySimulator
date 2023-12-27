@@ -48,11 +48,16 @@ add_executable(AmericanDemocracySimulator
         lib/Animations/DeadAnimation.cpp
         lib/Animations/BoomAnimation.cpp
         lib/UI/UI.h
+        Settings/Setting.h
+        Settings/FontSettings.h
+        lib/Animations/PreviewAnimation.cpp
+        lib/Objects/Preview.cpp
+        lib/Objects/fly.cpp
 ) # add  target
 
 set(SFML_DIR "C:\\AmericanDemocracySimulator\\SFML\\lib\\cmake\\SFML") # link the graphic directory
 
-target_link_libraries(AmericanDemocracySimulator sfml-graphics)
+target_link_libraries(AmericanDemocracySimulator sfml-graphics sfml-audio)
 
 target_include_directories(AmericanDemocracySimulator PUBLIC # add other directory
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/SFML/include,

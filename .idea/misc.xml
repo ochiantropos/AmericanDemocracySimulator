@@ -4,11 +4,13 @@
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$/SFML" />
+      <file path="$PROJECT_DIR$/SFML_m" />
       <file path="$PROJECT_DIR$/lib/Animations" />
       <file path="$PROJECT_DIR$/lib/Architect" />
       <file path="$PROJECT_DIR$/lib/Debugger" />
       <file path="$PROJECT_DIR$/lib/Objects" />
       <file path="$PROJECT_DIR$/lib/Scenes" />
+      <file path="$PROJECT_DIR$/lib/UI" />
     </sourceRoots>
     <libraryRoots>
       <file path="$PROJECT_DIR$/lib/SFML" />

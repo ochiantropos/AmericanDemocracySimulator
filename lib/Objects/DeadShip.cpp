@@ -7,19 +7,32 @@
 namespace Game::Objects {
     void  DeadShip::UpdateDrawObjects() {
         sprite.setPosition((float) x_position, (float) y_position);
-        holder.addObject("DeadShip", sprite);
+        baseAnimation->DrawAnimation();
+        holder.addObject("DeadShip :" + gameObjectName, baseAnimation->GetEndFrameSprite());
+        if (baseAnimation->end) deletable = true;
     }
 
     DeadShip::DeadShip(Scene *sceneContext) : GameObject(sceneContext) {
     }
 
     DeadShip::DeadShip(Scene *sceneContext, int x, int y)  : GameObject(sceneContext) {
-
         gameObjectName = std::string(
                 "DeadShip [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
-
+        baseAnimation = new DeadAnimation();
         x_position = (float) x;
         y_position = (float) y;
+        baseAnimation->x = x;
+        baseAnimation->y = y;
+    }
+
+    DeadShip::DeadShip(Scene *sceneContext, int x, int y, sf::Texture *texture)  : GameObject(sceneContext) {
+        gameObjectName = std::string(
+                "DeadShip [x:" + std::to_string(x) + std::string(" y:") + std::to_string(y) + std::string("]"));
+        baseAnimation = new DeadAnimation(texture);
+        x_position = (float) x;
+        y_position = (float) y;
+        baseAnimation->x = x;
+        baseAnimation->y = y;
     }
 
     DeadShip::DeadShip(Scene *sceneContext, const sf::Sprite &sprite1, int _x, int _y) : GameObject(sceneContext) {

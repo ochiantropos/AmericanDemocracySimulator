@@ -18,12 +18,14 @@ namespace Game {
         int frameWidth = 16;
         int frameHeight = 16;
         float deltaTime = 0;
-
         int frameCount = 0;
         sf::Clock animationTimer;
         AnimationSettings settings = AnimationSettings();
 
     public:
+        bool end = false;
+        int end_count = 0;
+
         float x = 0;
         float y = 0;
         float frameTime = 0.2f;
@@ -72,12 +74,18 @@ namespace Game {
     class BoomAnimation: public Animation {
     public:
         BoomAnimation();
+
+        BoomAnimation(sf::Texture *_texture);
+
         sf::Sprite GetEndFrameSprite() override;
     };
 
     class DeadAnimation : public Animation {
     public:
         DeadAnimation();
+
+        DeadAnimation(sf::Texture *_texture);
+
         sf::Sprite GetEndFrameSprite() override;
     };
 
@@ -100,6 +108,15 @@ namespace Game {
     public:
         WaterAnimation();
         sf::Sprite GetEndFrameSprite() override;
+    };
+
+    class PreviewAnimation : public Animation{
+        sf::Sprite GetEndFrameSprite() override;
+
+    public:
+        PreviewAnimation();
+
+        PreviewAnimation(sf::Texture *_texture);
     };
 } // Game
 

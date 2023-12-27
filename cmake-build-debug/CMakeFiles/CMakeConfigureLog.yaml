@@ -459,3 +459,122 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "SFML_m/src/SFML/System/CMakeLists.txt:68 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-53qfr2"
+      binary: "C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-53qfr2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static -static-libgcc"
+      CMAKE_MODULE_PATH: "C:/AmericanDemocracySimulator/SFML_m/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-53qfr2'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_d70be/fast
+        mingw32-make[1]: Entering directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-53qfr2'
+        C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d70be.dir\\build.make CMakeFiles/cmTC_d70be.dir/build
+        mingw32-make[2]: Entering directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-53qfr2'
+        Building C object CMakeFiles/cmTC_d70be.dir/src.c.obj
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\\cmTC_d70be.dir\\src.c.obj -c C:\\AmericanDemocracySimulator\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-53qfr2\\src.c
+        Linking C executable cmTC_d70be.exe
+        "C:\\Program Files\\JetBrains\\CLion 2023.3.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_d70be.dir\\link.txt --verbose=1
+        "C:\\Program Files\\JetBrains\\CLion 2023.3.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_d70be.dir/objects.a
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_d70be.dir/objects.a @CMakeFiles\\cmTC_d70be.dir\\objects1.rsp
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -static -static-libgcc  -Wl,--whole-archive CMakeFiles\\cmTC_d70be.dir/objects.a -Wl,--no-whole-archive -o cmTC_d70be.exe -Wl,--out-implib,libcmTC_d70be.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_d70be.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-53qfr2'
+        mingw32-make[1]: Leaving directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-53qfr2'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "SFML_m/src/SFML/Window/CMakeLists.txt:314 (check_include_file_cxx)"
+    checks:
+      - "Looking for C++ include dinput.h"
+    directories:
+      source: "C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-adswkc"
+      binary: "C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-adswkc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static -static-libgcc"
+      CMAKE_MODULE_PATH: "C:/AmericanDemocracySimulator/SFML_m/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "DINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-adswkc'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_8a3b5/fast
+        mingw32-make[1]: Entering directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-adswkc'
+        C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8a3b5.dir\\build.make CMakeFiles/cmTC_8a3b5.dir/build
+        mingw32-make[2]: Entering directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-adswkc'
+        Building CXX object CMakeFiles/cmTC_8a3b5.dir/CheckIncludeFile.cxx.obj
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE    -o CMakeFiles\\cmTC_8a3b5.dir\\CheckIncludeFile.cxx.obj -c C:\\AmericanDemocracySimulator\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-adswkc\\CheckIncludeFile.cxx
+        Linking CXX executable cmTC_8a3b5.exe
+        "C:\\Program Files\\JetBrains\\CLion 2023.3.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_8a3b5.dir\\link.txt --verbose=1
+        "C:\\Program Files\\JetBrains\\CLion 2023.3.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_8a3b5.dir/objects.a
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_8a3b5.dir/objects.a @CMakeFiles\\cmTC_8a3b5.dir\\objects1.rsp
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -static -static-libgcc  -Wl,--whole-archive CMakeFiles\\cmTC_8a3b5.dir/objects.a -Wl,--no-whole-archive -o cmTC_8a3b5.exe -Wl,--out-implib,libcmTC_8a3b5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8a3b5.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-adswkc'
+        mingw32-make[1]: Leaving directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-adswkc'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "SFML_m/src/SFML/Window/CMakeLists.txt:339 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test ATOMIC_TEST"
+    directories:
+      source: "C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-37w38k"
+      binary: "C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-37w38k"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static -static-libgcc"
+      CMAKE_MODULE_PATH: "C:/AmericanDemocracySimulator/SFML_m/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "ATOMIC_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-37w38k'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.1/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_fad7b/fast
+        mingw32-make[1]: Entering directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-37w38k'
+        C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fad7b.dir\\build.make CMakeFiles/cmTC_fad7b.dir/build
+        mingw32-make[2]: Entering directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-37w38k'
+        Building CXX object CMakeFiles/cmTC_fad7b.dir/src.cxx.obj
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -DATOMIC_TEST   -o CMakeFiles\\cmTC_fad7b.dir\\src.cxx.obj -c C:\\AmericanDemocracySimulator\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-37w38k\\src.cxx
+        Linking CXX executable cmTC_fad7b.exe
+        "C:\\Program Files\\JetBrains\\CLion 2023.3.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_fad7b.dir\\link.txt --verbose=1
+        "C:\\Program Files\\JetBrains\\CLion 2023.3.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_fad7b.dir/objects.a
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_fad7b.dir/objects.a @CMakeFiles\\cmTC_fad7b.dir\\objects1.rsp
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE -static -static-libgcc  -Wl,--whole-archive CMakeFiles\\cmTC_fad7b.dir/objects.a -Wl,--no-whole-archive -o cmTC_fad7b.exe -Wl,--out-implib,libcmTC_fad7b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_fad7b.dir\\linkLibs.rsp
+        mingw32-make[2]: Leaving directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-37w38k'
+        mingw32-make[1]: Leaving directory 'C:/AmericanDemocracySimulator/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-37w38k'
+        
+      exitCode: 0
+...

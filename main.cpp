@@ -1,5 +1,6 @@
 ﻿#define SFML_ENABLED
 #ifdef SFML_ENABLED
+#include <SFML/Audio/Music.hpp>
 #include "lib/Architect/Architect.h"
 using namespace std;
 using namespace Game;
@@ -28,6 +29,7 @@ void EventLoopDispatch(SceneManager *sceneManager);
 map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager);
 // scenes creation
 GamePlayScene *scene = new GamePlayScene( new Scene("MainScene", "Main"), &windowContext, (int)windowContext.getSize().y, (int)windowContext.getSize().x);
+//good-morning-vietnam.mp3
 #else
 //#include "lib/Debugger/Debugger.h"
 //using namespace std;
@@ -35,12 +37,17 @@ GamePlayScene *scene = new GamePlayScene( new Scene("MainScene", "Main"), &windo
 #endif
 int main()
 {
+    sf::Music music;
+    if (!music.openFromFile(setting.ms)) {} else {
+        music.play();
+    }
     auto sceneManager = SceneManager::GetInstance(); // get scene manager instance
     auto objects = PoolSceneManager(sceneManager); // pooling the scenes and objects
     StartGameCicle(sceneManager,objects);
+
+
     return 0;
 }
-
 #ifdef SFML_ENABLED
 void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &objects)
 {
@@ -48,14 +55,13 @@ void StartGameCicle(SceneManager *sceneManager, map<int, vector<GameObject *>> &
     {
         objects = sceneManager->activeScene->scene->getObjects();
         EventLoopDispatch(sceneManager);
-        windowContext.clear(sf::Color::White);
+        windowContext.clear(sf::Color::Black);
         DrawActiveScene(objects);
         sceneManager->activeScene->DrawUI();
         windowContext.display();
         sceneManager->activeScene->Next();
     }
 }
-
 void EventLoopDispatch(SceneManager *sceneManager)
 {
     sf::Event event {};
@@ -104,19 +110,18 @@ void EventLoopDispatch(SceneManager *sceneManager)
         }
     }
 }
-
 map<int, vector<GameObject*>> PoolSceneManager(SceneManager *sceneManager)
 {
     sceneManager->AddScene(scene);
     SceneManager::PrintScenes();
-    SceneManager::SwitchScene("Main");
+    SceneManager::SwitchSceneImidiatly("MainScene");
+
     sceneManager->activeScene->scene->getObjects();
     sceneManager->activeScene->Start();
     auto objects = sceneManager->activeScene->scene->getObjects();
     Debugger::DebugInspector(objects, 2);
     return objects;
 }
-
 void DrawActiveScene(map<int, vector<GameObject *>> &objects)
 {
     for (auto& layer : objects)
@@ -135,5 +140,4 @@ void DrawActiveScene(map<int, vector<GameObject *>> &objects)
     }
     // UI
 }
-
 #endif

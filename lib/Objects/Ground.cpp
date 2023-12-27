@@ -44,5 +44,7 @@ namespace Game::Objects {
         gameObjectName = std::string(
                 "Ground [x:" + std::to_string(x_position) + std::string(" y:") + std::to_string(y_position) + std::string("]"));
     }
+
+
 } // Objects
 // Game

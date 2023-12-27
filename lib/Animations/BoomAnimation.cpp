@@ -14,7 +14,21 @@ namespace Game {
         size = texture.getSize();
     }
 
+    BoomAnimation::BoomAnimation(sf::Texture *_texture) {
+        this->frameTime = settings.DeadAnimationFrameTime;
+        this->animationName = "DIE";
+        SetFrame(settings.BoomHeight, settings.BoomWidth, settings.BoomAnimationFrame);
+        texture = *_texture;
+        size = texture.getSize();
+        sprite.setTexture(texture);
+        sprite.setTextureRect(sf::IntRect(0 * frameWidth, 0 * frameHeight, frameWidth, frameHeight));
+    }
+
     sf::Sprite BoomAnimation::GetEndFrameSprite() {
+        if (currentFrame==frameCount-1)
+        {
+            end = true;
+        }
         return Animation::GetEndFrameSprite();
     }
 } // Game

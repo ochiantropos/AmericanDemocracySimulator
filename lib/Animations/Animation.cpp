@@ -72,7 +72,6 @@ namespace Game {
         sprite.setTexture(texture);
         sprite.setTextureRect(sf::IntRect(0 * frameWidth, 0 * frameHeight, frameWidth, frameHeight));
     }
-
     void Animation::SetFrameWidth(int frame){
         frameWidth = frame;
     }
@@ -117,4 +116,7 @@ namespace Game {
         sprite.setTextureRect(sf::IntRect(column * frameWidth, row * frameHeight, frameWidth, frameHeight));
         sprite.setPosition((float)x, (float)y);
     }
+
+
+
 } // Game

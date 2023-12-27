@@ -11,11 +11,14 @@
 
 namespace Game {
     class GameObject;
+    class Scene;
+    class SceneHolder;
+    class SceneManager;
 
     enum class GameState{
         Default,
         Play,
-        Lose,
+        Preview,
         Start,
         Pause,
         Menu
@@ -29,7 +32,7 @@ namespace Game {
         sf::Clock clock;
     public:
 
-        GameState currentState = GameState::Start;
+        GameState currentState = GameState::Preview;
         sf::RenderWindow window;
         Scene() = default;
         explicit Scene(std::string name, const std::map<int, std::vector<GameObject *>> &layers);
@@ -37,6 +40,8 @@ namespace Game {
         explicit Scene(std::string name);
         explicit Scene(std::string name, std::string contextName);
         void addObject(GameObject *object, int layer);
+        void delObject(GameObject *object, int layer);
+
         std::map<int, std::vector<GameObject*>>& getObjects() {return layers;}
 // ------      values     ------
         std::string Name;
@@ -47,30 +52,36 @@ namespace Game {
         sf::RenderWindow *windowContext{};
 
 
+        void Clear();
     };
 
     class SceneManager {
     public:
         static SceneManager *singleton_;
-        static void SwitchScene(const std::string &sceneName);
+         void SwitchScene(const std::string &sceneName);
         static void PrintScenes();
         static Scene *createScene();
         static Scene *createScene(std::string name);
         static Scene *createScene(std::string name, const std::string &contextName);
-        void setActiveScene(Scene *scene) const;
-        void AddScene();
+         int CallToSwitch;
+         std::string CallToSwitchName;
+
+        void AddScene(SceneHolder *sceneHolder);
+        void AddScene(SceneHolder sceneHolder);
         SceneHolder *activeScene = nullptr;
         std::map<std::string, sf::RenderWindow *> constexts;
         std::map<std::string, SceneHolder *> scenes;
         SceneManager(SceneManager &other) = delete;
         static SceneManager *GetInstance();
-        void AddScene(SceneHolder *sceneHolder);
-        void AddScene(SceneHolder sceneHolder);
+
+
+        static void SwitchSceneImidiatly(const std::string &sceneName);
+
     protected:
         SceneManager() = default;
         void setActiveScene(SceneHolder *sceneHolder);
-        void setActiveScene(SceneHolder sceneHolder);
     };
+
     class GameObject : public AbstractGameObject{
     public:
         sf::Texture texture;
@@ -80,11 +91,12 @@ namespace Game {
         float height = 0;
         float x_position = 0;
         float y_position = 0;
-
+        bool deletable = false;
         GameObject();
-        explicit GameObject(Scene *context){currentContext = context;}
-        void update(float deltaTime) override;
-        void draw(sf::RenderWindow& window) override;
+        virtual ~GameObject() = default;
+        explicit GameObject(Scene *context) {currentContext = context;}
+        void update(float deltaTime) override {};
+        void draw(sf::RenderWindow& window) override{}
         std::map<std::string, sf::Sprite>& getObjects() {return holder.objects;}
         std::string gameObjectName = "GameObject";
         virtual void  UpdateDrawObjects() = 0;
@@ -94,7 +106,6 @@ namespace Game {
         Animation *baseAnimation;
         bool CastRenderAvailable(){
             if (currentContext == nullptr){
-                Scene::
                 Scene::DrawError(gameObjectName);
                 return false;
             }
@@ -119,8 +130,9 @@ namespace Game {
             allowedRenderStatus.push_back(GameState::Menu);
             allowedRenderStatus.push_back(GameState::Pause);
         }
-        void Allow(GameState state) { allowedRenderStatus.push_back(state); }
+
         void Allow(const std::vector<GameState>& states) { for (auto state : states) allowedRenderStatus.push_back(state); }
+        void Allow(GameState state) { allowedRenderStatus.push_back(state); }
     };
 }
 

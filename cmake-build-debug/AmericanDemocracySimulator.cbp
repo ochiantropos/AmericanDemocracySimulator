@@ -107,6 +107,12 @@
 		<Unit filename="C:/AmericanDemocracySimulator/Dependency.h">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/Settings/FontSettings.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/Settings/Setting.h">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/Animation.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
@@ -123,6 +129,9 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/PointAnimation.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/PreviewAnimation.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Animations/WaterAnimation.cpp">
@@ -188,6 +197,9 @@
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Point.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Preview.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/Ship.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
@@ -195,6 +207,9 @@
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/WaterPool.cpp">
+			<Option target="AmericanDemocracySimulator"/>
+		</Unit>
+		<Unit filename="C:/AmericanDemocracySimulator/lib/Objects/fly.cpp">
 			<Option target="AmericanDemocracySimulator"/>
 		</Unit>
 		<Unit filename="C:/AmericanDemocracySimulator/lib/Scenes/GamePlayScene.cpp">
